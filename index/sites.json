@@ -2,7 +2,7 @@
   "last_updated": "2026-04-16",
   "sites": [
     {
-      "name": "Australian Political Donations",
+      "name": "Political Donations (AU)",
       "slug": "au-donations",
       "description": "Searchable Australian political donations explorer unifying the AEC Transparency Register and all state/territory disclosure registers into one interface with filters, aggregates, and jurisdiction comparison.",
       "url": "https://au-donations.benrichardson.dev",
@@ -12,7 +12,7 @@
       "date": "2026-04-16"
     },
     {
-      "name": "Australian Hospital Performance",
+      "name": "Hospital Performance (AU)",
       "slug": "au-hospitals",
       "description": "Searchable Australian hospital performance explorer — ED 4-hour departure rates, triage response times, and elective surgery waits for 1,400+ hospitals via AIHW MyHospitals API.",
       "url": "https://au-hospitals.benrichardson.dev",
@@ -22,7 +22,7 @@
       "date": "2026-04-15"
     },
     {
-      "name": "NEMWatch",
+      "name": "NEMWatch (AU)",
       "slug": "nemwatch",
       "description": "Live Australian electricity spot prices and grid demand for all NEM regions, updated every 5 minutes from AEMO data.",
       "url": "https://nemwatch.benrichardson.dev",
@@ -32,7 +32,7 @@
       "date": "2026-04-14"
     },
     {
-      "name": "Australian Dam Levels",
+      "name": "Dam Levels (AU)",
       "slug": "au-dams",
       "description": "Live storage levels for 26 major Australian dams and reservoirs via Bureau of Meteorology Water Data Online.",
       "url": "https://audams.benrichardson.dev",
@@ -81,7 +81,7 @@
       "date": "2026-04-11"
     },
     {
-      "name": "Fire Watch Australia",
+      "name": "Fire Watch (AU)",
       "slug": "fire-watch-australia",
       "description": "Australian bushfire watch and monitoring dashboard.",
       "repo": "https://github.com/ben-gy/Fire-Watch-Australia",
@@ -90,7 +90,7 @@
       "date": "2026-01-10"
     },
     {
-      "name": "CrimeAware",
+      "name": "CrimeAware (AU)",
       "slug": "crimeaware",
       "description": "iOS crime statistics map for Australia (NSW and Victoria).",
       "repo": "https://github.com/ben-gy/CrimeAware",

@@ -3,28 +3,28 @@ Last updated: 2026-04-16
 
 === Web Sites ===
 
-Australian Political Donations
+Political Donations (AU)
   https://au-donations.benrichardson.dev
   Searchable Australian political donations explorer unifying the AEC Transparency Register and all state/territory disclosure registers.
   Tags: government, transparency, australia, data-explorer
   Repo: https://github.com/ben-gy/au-donations
   Date: 2026-04-16
 
-Australian Hospital Performance
+Hospital Performance (AU)
   https://au-hospitals.benrichardson.dev
   Searchable Australian hospital performance explorer — ED wait times, triage response, and elective surgery waits for 1,400+ hospitals.
   Tags: health, australia, data-explorer, api
   Repo: https://github.com/ben-gy/au-hospitals
   Date: 2026-04-15
 
-NEMWatch
+NEMWatch (AU)
   https://nemwatch.benrichardson.dev
   Live Australian electricity spot prices and grid demand for all NEM regions, updated every 5 minutes.
   Tags: energy, australia, real-time, dashboard
   Repo: https://github.com/ben-gy/nemwatch
   Date: 2026-04-14
 
-Australian Dam Levels
+Dam Levels (AU)
   https://audams.benrichardson.dev
   Live storage levels for 26 major Australian dams and reservoirs via BOM Water Data Online.
   Tags: environment, australia, real-time, water
@@ -60,13 +60,13 @@ Tariff Check
   Repo: https://github.com/ben-gy/tariff-check
   Date: 2026-04-11
 
-Fire Watch Australia
+Fire Watch (AU)
   Australian bushfire watch and monitoring dashboard.
   Tags: emergency, australia, fire, monitoring
   Repo: https://github.com/ben-gy/Fire-Watch-Australia
   Date: 2026-01-10
 
-CrimeAware
+CrimeAware (AU)
   iOS crime statistics map for Australia (NSW and Victoria).
   Tags: crime, australia, ios, maps
   Repo: https://github.com/ben-gy/CrimeAware
