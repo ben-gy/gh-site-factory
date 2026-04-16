@@ -1,7 +1,14 @@
 gh-site-factory — Project Index
-Last updated: 2026-04-16
+Last updated: 2026-04-17
 
 === Web Sites ===
+
+Road Crashes (AU)
+  https://au-crashes.benrichardson.dev
+  Interactive explorer for 55,000+ Australian road fatality records from the ARDD — trends, maps, demographics, and temporal heatmaps.
+  Tags: public-safety, australia, data-explorer, road-safety
+  Repo: https://github.com/ben-gy/au-crashes
+  Date: 2026-04-17
 
 Political Donations (AU)
   https://au-donations.benrichardson.dev
