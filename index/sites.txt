@@ -1,0 +1,109 @@
+gh-site-factory — Project Index
+Last updated: 2026-04-16
+
+=== Web Sites ===
+
+Australian Political Donations
+  https://au-donations.benrichardson.dev
+  Searchable Australian political donations explorer unifying the AEC Transparency Register and all state/territory disclosure registers.
+  Tags: government, transparency, australia, data-explorer
+  Repo: https://github.com/ben-gy/au-donations
+  Date: 2026-04-16
+
+Australian Hospital Performance
+  https://au-hospitals.benrichardson.dev
+  Searchable Australian hospital performance explorer — ED wait times, triage response, and elective surgery waits for 1,400+ hospitals.
+  Tags: health, australia, data-explorer, api
+  Repo: https://github.com/ben-gy/au-hospitals
+  Date: 2026-04-15
+
+NEMWatch
+  https://nemwatch.benrichardson.dev
+  Live Australian electricity spot prices and grid demand for all NEM regions, updated every 5 minutes.
+  Tags: energy, australia, real-time, dashboard
+  Repo: https://github.com/ben-gy/nemwatch
+  Date: 2026-04-14
+
+Australian Dam Levels
+  https://audams.benrichardson.dev
+  Live storage levels for 26 major Australian dams and reservoirs via BOM Water Data Online.
+  Tags: environment, australia, real-time, water
+  Repo: https://github.com/ben-gy/au-dams
+  Date: 2026-04-13
+
+ThreatGlobe
+  https://threatglobe.benrichardson.dev
+  Real-time global cyber threat observatory with interactive 3D globe.
+  Tags: security, 3d, real-time, globe
+  Repo: https://github.com/ben-gy/threatglobe
+  Date: 2026-04-12
+
+Artemis Tracker
+  https://artemistracker.benrichardson.dev
+  Real-time Artemis mission tracker with 3D trajectory visualization.
+  Tags: space, nasa, 3d, real-time
+  Repo: https://github.com/ben-gy/artemis-tracker
+  Date: 2026-04-12
+
+Dropwell
+  https://dropwell.benrichardson.dev
+  End-to-end encrypted peer-to-peer file sharing in the browser.
+  Tags: utility, encryption, p2p, file-sharing
+  Repo: https://github.com/ben-gy/dropwell
+  Date: 2026-04-12
+
+=== Apps ===
+
+Tariff Check
+  Tariff impact checker for international trade.
+  Tags: finance, trade, ios
+  Repo: https://github.com/ben-gy/tariff-check
+  Date: 2026-04-11
+
+Fire Watch Australia
+  Australian bushfire watch and monitoring dashboard.
+  Tags: emergency, australia, fire, monitoring
+  Repo: https://github.com/ben-gy/Fire-Watch-Australia
+  Date: 2026-01-10
+
+CrimeAware
+  iOS crime statistics map for Australia (NSW and Victoria).
+  Tags: crime, australia, ios, maps
+  Repo: https://github.com/ben-gy/CrimeAware
+  Date: 2026-01-05
+
+Leaf Log
+  Plant care and leaf tracking log.
+  Tags: utility, plants, ios
+  Repo: https://github.com/ben-gy/leaf-log
+  Date: 2026-04-10
+
+MedTriage
+  Medical triage decision support tool.
+  Tags: health, medical, triage
+  Repo: https://github.com/ben-gy/MedTriage
+  Date: 2026-04-10
+
+Control Room
+  Control room organization tool.
+  Tags: utility, organization
+  Repo: https://github.com/ben-gy/controlroom-org
+  Date: 2026-04-09
+
+Pace Calc
+  Running pace calculator.
+  Tags: fitness, running, calculator
+  Repo: https://github.com/ben-gy/pace-calc
+  Date: 2026-03-29
+
+Stashed
+  Stash manager for organizing and tracking items.
+  Tags: utility, ios, organization
+  Repo: https://github.com/ben-gy/stashed
+  Date: 2026-04-09
+
+Due Back
+  Due date and return tracker.
+  Tags: utility, ios, tracking
+  Repo: https://github.com/ben-gy/due-back
+  Date: 2026-03-28

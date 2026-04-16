@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "last_updated": "2026-04-16",
+  "sites": [
+    {
+      "name": "au-donations",
+      "repo": "ben-gy/au-donations",
+      "date": "2026-04-16",
+      "description": "Searchable Australian political donations explorer unifying the AEC Transparency Register and all state/territory disclosure registers into one interface with filters, aggregates, and jurisdiction comparison",
+      "category": "government-transparency",
+      "stack": "vanilla-ts",
+      "data_strategy": "embedded",
+      "data_sources": [
+        "AEC Transparency Register (transparency.aec.gov.au)",
+        "NSW Electoral Commission",
+        "Victorian Electoral Commission",
+        "Electoral Commission Queensland",
+        "WA Electoral Commission",
+        "Electoral Commission South Australia",
+        "Tasmanian Electoral Commission",
+        "Elections ACT",
+        "Northern Territory Electoral Commission"
+      ],
+      "status": "deployed",
+      "url": "https://au-donations.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-donations/pull/1"
+    },
+    {
+      "name": "au-hospitals",
+      "repo": "ben-gy/au-hospitals",
+      "date": "2026-04-15",
+      "description": "Searchable Australian hospital performance explorer — ED 4-hour departure rates, triage response times, and elective surgery waits for 1,400+ hospitals via AIHW MyHospitals API",
+      "category": "health",
+      "stack": "vanilla-ts",
+      "data_strategy": "runtime-fetch",
+      "data_sources": ["AIHW MyHospitals API (myhospitalsapi.aihw.gov.au)"],
+      "status": "deployed",
+      "url": "https://au-hospitals.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-hospitals/pull/3"
+    },
+    {
+      "name": "nemwatch",
+      "repo": "ben-gy/nemwatch",
+      "date": "2026-04-14",
+      "description": "Live Australian electricity spot prices and grid demand for all NEM regions, updated every 5 minutes from AEMO data",
+      "category": "energy",
+      "stack": "vanilla-ts",
+      "data_strategy": "runtime-fetch",
+      "data_sources": ["AEMO NEM Summary API (visualisations.aemo.com.au)"],
+      "status": "deployed",
+      "url": "https://nemwatch.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/nemwatch/pull/3"
+    },
+    {
+      "name": "au-dams",
+      "repo": "ben-gy/au-dams",
+      "date": "2026-04-13",
+      "description": "Live storage levels for 26 major Australian dams and reservoirs via BOM WISKI API",
+      "category": "environment",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": ["Bureau of Meteorology Water Data Online (KISTERS WISKI API)"],
+      "status": "deployed",
+      "url": "https://audams.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-dams/pull/1"
+    },
+    {
+      "name": "threatglobe",
+      "repo": "ben-gy/threatglobe",
+      "date": "2026-04-12",
+      "description": "Real-time global cyber threat observatory with interactive 3D globe",
+      "category": "security",
+      "stack": "react-ts",
+      "data_strategy": "pipeline",
+      "data_sources": ["AbuseIPDB", "DShield", "AlienVault OTX", "GreyNoise", "MaxMind GeoLite2"],
+      "status": "deployed",
+      "url": "https://threatglobe.benrichardson.dev"
+    },
+    {
+      "name": "artemis-tracker",
+      "repo": "ben-gy/artemis-tracker",
+      "date": "2026-04-12",
+      "description": "Real-time Artemis mission tracker with 3D trajectory visualization",
+      "category": "science",
+      "stack": "vanilla-html",
+      "data_strategy": "runtime-fetch",
+      "data_sources": ["NASA AROW", "JPL Horizons", "NASA DONKI", "DSN Now"],
+      "status": "deployed",
+      "url": "https://artemis.benrichardson.dev"
+    },
+    {
+      "name": "dropwell",
+      "repo": "ben-gy/dropwell",
+      "date": "2026-04-12",
+      "description": "End-to-end encrypted peer-to-peer file sharing in the browser",
+      "category": "utility",
+      "stack": "vanilla-ts",
+      "data_strategy": "embedded",
+      "data_sources": [],
+      "status": "deployed",
+      "url": "https://dropwell.benrichardson.dev"
+    },
+    {
+      "name": "tariff-check",
+      "repo": "ben-gy/tariff-check",
+      "date": "2026-04-11",
+      "description": "Tariff impact checker",
+      "category": "finance",
+      "stack": "unknown",
+      "data_strategy": "unknown",
+      "data_sources": [],
+      "status": "deployed"
+    },
+    {
+      "name": "Fire-Watch-Australia",
+      "repo": "ben-gy/Fire-Watch-Australia",
+      "date": "2026-01-10",
+      "description": "Australian bushfire watch and monitoring",
+      "category": "emergency",
+      "stack": "unknown",
+      "data_strategy": "unknown",
+      "data_sources": [],
+      "status": "deployed"
+    },
+    {
+      "name": "CrimeAware",
+      "repo": "ben-gy/CrimeAware",
+      "date": "2026-01-05",
+      "description": "iOS crime statistics map for Australia (NSW & Victoria)",
+      "category": "crime",
+      "stack": "unknown",
+      "data_strategy": "unknown",
+      "data_sources": [],
+      "status": "deployed"
+    },
+    {
+      "name": "leaf-log",
+      "repo": "ben-gy/leaf-log",
+      "date": "2026-04-10",
+      "description": "Plant care and leaf tracking log",
+      "category": "utility",
+      "stack": "unknown",
+      "data_strategy": "unknown",
+      "data_sources": [],
+      "status": "deployed"
+    },
+    {
+      "name": "MedTriage",
+      "repo": "ben-gy/MedTriage",
+      "date": "2026-04-10",
+      "description": "Medical triage decision support tool",
+      "category": "health",
+      "stack": "unknown",
+      "data_strategy": "unknown",
+      "data_sources": [],
+      "status": "deployed"
+    },
+    {
+      "name": "controlroom-org",
+      "repo": "ben-gy/controlroom-org",
+      "date": "2026-04-09",
+      "description": "Control room organization tool",
+      "category": "utility",
+      "stack": "unknown",
+      "data_strategy": "unknown",
+      "data_sources": [],
+      "status": "deployed"
+    },
+    {
+      "name": "pace-calc",
+      "repo": "ben-gy/pace-calc",
+      "date": "2026-03-29",
+      "description": "Running pace calculator",
+      "category": "fitness",
+      "stack": "unknown",
+      "data_strategy": "unknown",
+      "data_sources": [],
+      "status": "deployed"
+    },
+    {
+      "name": "stashed",
+      "repo": "ben-gy/stashed",
+      "date": "2026-04-09",
+      "description": "Stash manager",
+      "category": "utility",
+      "stack": "unknown",
+      "data_strategy": "unknown",
+      "data_sources": [],
+      "status": "deployed"
+    },
+    {
+      "name": "due-back",
+      "repo": "ben-gy/due-back",
+      "date": "2026-03-28",
+      "description": "Due date and return tracker",
+      "category": "utility",
+      "stack": "unknown",
+      "data_strategy": "unknown",
+      "data_sources": [],
+      "status": "deployed"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "last_updated": "2026-04-16",
+  "sites": [
+    {
+      "name": "Australian Political Donations",
+      "slug": "au-donations",
+      "description": "Searchable Australian political donations explorer unifying the AEC Transparency Register and all state/territory disclosure registers into one interface with filters, aggregates, and jurisdiction comparison.",
+      "url": "https://au-donations.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-donations",
+      "tags": ["government", "transparency", "australia", "data-explorer"],
+      "type": "web",
+      "date": "2026-04-16"
+    },
+    {
+      "name": "Australian Hospital Performance",
+      "slug": "au-hospitals",
+      "description": "Searchable Australian hospital performance explorer — ED 4-hour departure rates, triage response times, and elective surgery waits for 1,400+ hospitals via AIHW MyHospitals API.",
+      "url": "https://au-hospitals.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-hospitals",
+      "tags": ["health", "australia", "data-explorer", "api"],
+      "type": "web",
+      "date": "2026-04-15"
+    },
+    {
+      "name": "NEMWatch",
+      "slug": "nemwatch",
+      "description": "Live Australian electricity spot prices and grid demand for all NEM regions, updated every 5 minutes from AEMO data.",
+      "url": "https://nemwatch.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/nemwatch",
+      "tags": ["energy", "australia", "real-time", "dashboard"],
+      "type": "web",
+      "date": "2026-04-14"
+    },
+    {
+      "name": "Australian Dam Levels",
+      "slug": "au-dams",
+      "description": "Live storage levels for 26 major Australian dams and reservoirs via Bureau of Meteorology Water Data Online.",
+      "url": "https://audams.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-dams",
+      "tags": ["environment", "australia", "real-time", "water"],
+      "type": "web",
+      "date": "2026-04-13"
+    },
+    {
+      "name": "ThreatGlobe",
+      "slug": "threatglobe",
+      "description": "Real-time global cyber threat observatory with interactive 3D globe.",
+      "url": "https://threatglobe.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/threatglobe",
+      "tags": ["security", "3d", "real-time", "globe"],
+      "type": "web",
+      "date": "2026-04-12"
+    },
+    {
+      "name": "Artemis Tracker",
+      "slug": "artemis-tracker",
+      "description": "Real-time Artemis mission tracker with 3D trajectory visualization.",
+      "url": "https://artemistracker.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/artemis-tracker",
+      "tags": ["space", "nasa", "3d", "real-time"],
+      "type": "web",
+      "date": "2026-04-12"
+    },
+    {
+      "name": "Dropwell",
+      "slug": "dropwell",
+      "description": "End-to-end encrypted peer-to-peer file sharing in the browser.",
+      "url": "https://dropwell.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/dropwell",
+      "tags": ["utility", "encryption", "p2p", "file-sharing"],
+      "type": "web",
+      "date": "2026-04-12"
+    },
+    {
+      "name": "Tariff Check",
+      "slug": "tariff-check",
+      "description": "Tariff impact checker for international trade.",
+      "repo": "https://github.com/ben-gy/tariff-check",
+      "tags": ["finance", "trade", "ios"],
+      "type": "app",
+      "date": "2026-04-11"
+    },
+    {
+      "name": "Fire Watch Australia",
+      "slug": "fire-watch-australia",
+      "description": "Australian bushfire watch and monitoring dashboard.",
+      "repo": "https://github.com/ben-gy/Fire-Watch-Australia",
+      "tags": ["emergency", "australia", "fire", "monitoring"],
+      "type": "app",
+      "date": "2026-01-10"
+    },
+    {
+      "name": "CrimeAware",
+      "slug": "crimeaware",
+      "description": "iOS crime statistics map for Australia (NSW and Victoria).",
+      "repo": "https://github.com/ben-gy/CrimeAware",
+      "tags": ["crime", "australia", "ios", "maps"],
+      "type": "app",
+      "date": "2026-01-05"
+    },
+    {
+      "name": "Leaf Log",
+      "slug": "leaf-log",
+      "description": "Plant care and leaf tracking log.",
+      "repo": "https://github.com/ben-gy/leaf-log",
+      "tags": ["utility", "plants", "ios"],
+      "type": "app",
+      "date": "2026-04-10"
+    },
+    {
+      "name": "MedTriage",
+      "slug": "medtriage",
+      "description": "Medical triage decision support tool.",
+      "repo": "https://github.com/ben-gy/MedTriage",
+      "tags": ["health", "medical", "triage"],
+      "type": "app",
+      "date": "2026-04-10"
+    },
+    {
+      "name": "Control Room",
+      "slug": "controlroom-org",
+      "description": "Control room organization tool.",
+      "repo": "https://github.com/ben-gy/controlroom-org",
+      "tags": ["utility", "organization"],
+      "type": "app",
+      "date": "2026-04-09"
+    },
+    {
+      "name": "Pace Calc",
+      "slug": "pace-calc",
+      "description": "Running pace calculator.",
+      "repo": "https://github.com/ben-gy/pace-calc",
+      "tags": ["fitness", "running", "calculator"],
+      "type": "app",
+      "date": "2026-03-29"
+    },
+    {
+      "name": "Stashed",
+      "slug": "stashed",
+      "description": "Stash manager for organizing and tracking items.",
+      "repo": "https://github.com/ben-gy/stashed",
+      "tags": ["utility", "ios", "organization"],
+      "type": "app",
+      "date": "2026-04-09"
+    },
+    {
+      "name": "Due Back",
+      "slug": "due-back",
+      "description": "Due date and return tracker.",
+      "repo": "https://github.com/ben-gy/due-back",
+      "tags": ["utility", "ios", "tracking"],
+      "type": "app",
+      "date": "2026-03-28"
+    }
+  ]
+}
