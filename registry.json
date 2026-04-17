@@ -1,7 +1,20 @@
 {
   "version": 1,
-  "last_updated": "2026-04-17",
+  "last_updated": "2026-04-18",
   "sites": [
+    {
+      "name": "au-planning",
+      "repo": "ben-gy/au-planning",
+      "date": "2026-04-18",
+      "description": "Unified planning and development application explorer across Australian councils — search, filter, and visualise DAs by type, status, suburb, and processing time with 7 interactive views",
+      "category": "housing",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": ["City of Casey (VIC) Open Data API"],
+      "status": "deployed",
+      "url": "https://au-planning.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-planning/pull/1"
+    },
     {
       "name": "au-road-deaths",
       "repo": "ben-gy/au-road-deaths",

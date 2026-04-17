@@ -1,7 +1,14 @@
 gh-site-factory — Project Index
-Last updated: 2026-04-17
+Last updated: 2026-04-18
 
 === Web Sites ===
+
+Development Applications (AU)
+  https://au-planning.benrichardson.dev
+  Unified planning and development application explorer across Australian councils — search, filter, and visualise DAs by type, status, suburb, and processing time.
+  Tags: housing, planning, australia, data-explorer, council
+  Repo: https://github.com/ben-gy/au-planning
+  Date: 2026-04-18
 
 Road Deaths (AU)
   https://au-road-deaths.benrichardson.dev
