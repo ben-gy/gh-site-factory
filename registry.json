@@ -3,6 +3,19 @@
   "last_updated": "2026-04-17",
   "sites": [
     {
+      "name": "au-road-deaths",
+      "repo": "ben-gy/au-road-deaths",
+      "date": "2026-04-17",
+      "description": "Interactive explorer for 58,000+ Australian road fatality records (1989–2026) from the BITRE ARDD, with 9 views including trends, choropleth map, demographics heatmap, and cross-reference matrix",
+      "category": "public-safety",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": ["BITRE Australian Road Deaths Database (datahub.roadsafety.gov.au)"],
+      "status": "deployed",
+      "url": "https://au-road-deaths.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-road-deaths/pull/3"
+    },
+    {
       "name": "au-crashes",
       "repo": "ben-gy/au-crashes",
       "date": "2026-04-17",

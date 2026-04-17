@@ -3,6 +3,13 @@ Last updated: 2026-04-17
 
 === Web Sites ===
 
+Road Deaths (AU)
+  https://au-road-deaths.benrichardson.dev
+  Explore 37 years of Australian road fatality data — by state, demographics, time, speed, and road type.
+  Tags: public-safety, australia, data-explorer, road-safety, bitre
+  Repo: https://github.com/ben-gy/au-road-deaths
+  Date: 2026-04-17
+
 Road Crashes (AU)
   https://au-crashes.benrichardson.dev
   Interactive explorer for 55,000+ Australian road fatality records from the ARDD — trends, maps, demographics, and temporal heatmaps.
