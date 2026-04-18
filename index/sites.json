@@ -12,22 +12,12 @@
       "date": "2026-04-18"
     },
     {
-      "name": "Road Deaths (AU)",
-      "slug": "au-road-deaths",
-      "description": "Explore 37 years of Australian road fatality data — by state, demographics, time, speed, and road type.",
-      "url": "https://au-road-deaths.benrichardson.dev",
-      "repo": "https://github.com/ben-gy/au-road-deaths",
-      "tags": ["public-safety", "australia", "data-explorer", "road-safety", "bitre"],
-      "type": "web",
-      "date": "2026-04-17"
-    },
-    {
       "name": "Road Crashes (AU)",
       "slug": "au-crashes",
-      "description": "Interactive explorer for 55,000+ Australian road fatality records from the ARDD — trends, maps, demographics, and temporal heatmaps.",
+      "description": "Interactive explorer for 58,000+ Australian road fatality records (1989–2026) from the BITRE ARDD — trends, maps, demographics, and temporal heatmaps.",
       "url": "https://au-crashes.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-crashes",
-      "tags": ["public-safety", "australia", "data-explorer", "road-safety"],
+      "tags": ["public-safety", "australia", "data-explorer", "road-safety", "bitre"],
       "type": "web",
       "date": "2026-04-17"
     },
