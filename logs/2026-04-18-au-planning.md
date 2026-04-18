@@ -60,7 +60,23 @@ IDEAS.md: "Australian planning & development applications map — unified DA/pla
 - Most active suburb: Berwick (574 applications)
 - Data spans 2021-07 to 2026-04
 
+## V2 Overhaul (same day)
+User feedback: "the data is great but it's not insightful — take it way further." Applied:
+- Removed 5k record cap — now fetches ALL 23,261 records from Casey
+- Used OpenDataSoft export endpoint to bypass 10k offset limit
+- Added chunked data architecture (council-stats.json + per-council detail files)
+- Embedded ABS LGA population data for per-capita calculations
+- Added PlanningAlerts API infrastructure (ready when API key is added)
+- New views: Leaderboard (ranked councils with colour-coded metrics), Insights (auto-detected anomalies), States (cross-state comparison)
+- Council drill-down panel with comparison to national median
+- Anomaly detection: processing time outliers, stalled apps, rejection rates
+- Fixed map to fill viewport (absolute positioning)
+- Updated SKILL.md with "Actionable Insights (MANDATORY)" and "Data Completeness (MANDATORY)" sections
+- Added "NEVER cap the data" rule to SKILL
+
 ## Errors & Resolutions
 - TypeScript error in processing.ts: `.filter()` on tuple array lost type information. Fixed by using intermediate variable with explicit type annotation.
 - Unused import `sortedEntries` in suburbs.ts. Removed.
-- No other errors encountered.
+- OpenDataSoft API offset limit (offset+limit capped at 10,000). Fixed by switching to the `/exports/json` endpoint which returns all records in one call.
+- Node.js fetch intermittent failure on first pipeline run. Resolved on retry.
+- Analysis test failures: with only 2 councils, median equals their average, making 2x outlier detection impossible. Fixed by using 3 councils in test data.
