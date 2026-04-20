@@ -1,7 +1,14 @@
 gh-site-factory — Project Index
-Last updated: 2026-04-19
+Last updated: 2026-04-21
 
 === Web Sites ===
+
+DSN Watch
+  https://dsnwatch.benrichardson.dev
+  Live view of NASA's Deep Space Network — every antenna, every spacecraft, right now. A consumer-friendly reimagining of NASA's DSN Now dashboard.
+  Tags: science, space, nasa, live-data, dashboard
+  Repo: https://github.com/ben-gy/dsnwatch
+  Date: 2026-04-21
 
 Crime Statistics (AU)
   https://au-crime.benrichardson.dev
@@ -64,13 +71,6 @@ Artemis Tracker
   Real-time Artemis mission tracker with 3D trajectory visualization.
   Tags: space, nasa, 3d, real-time
   Repo: https://github.com/ben-gy/artemis-tracker
-  Date: 2026-04-12
-
-Dropwell
-  https://dropwell.benrichardson.dev
-  End-to-end encrypted peer-to-peer file sharing in the browser.
-  Tags: utility, encryption, p2p, file-sharing
-  Repo: https://github.com/ben-gy/dropwell
   Date: 2026-04-12
 
 === Apps ===
