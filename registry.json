@@ -1,7 +1,26 @@
 {
   "version": 1,
-  "last_updated": "2026-04-18",
+  "last_updated": "2026-04-19",
   "sites": [
+    {
+      "name": "au-crime",
+      "repo": "ben-gy/au-crime",
+      "date": "2026-04-19",
+      "description": "Standardised Australian crime data explorer — unifies ABS, BOCSAR, QLD Police, SA Police, and other state data sources into one interactive dashboard with 8 views including map, matrix heatmap, leaderboards, and auto-anomaly detection across all 8 states/territories",
+      "category": "crime",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "ABS Recorded Crime - Victims (Cat. 4510.0)",
+        "NSW BOCSAR Open Datasets",
+        "QLD Police (data.qld.gov.au)",
+        "SA Police (data.sa.gov.au)",
+        "ABS Estimated Resident Population"
+      ],
+      "status": "deployed",
+      "url": "https://au-crime.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-crime/pull/3"
+    },
     {
       "name": "au-planning",
       "repo": "ben-gy/au-planning",

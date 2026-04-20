@@ -1,7 +1,14 @@
 gh-site-factory — Project Index
-Last updated: 2026-04-18
+Last updated: 2026-04-19
 
 === Web Sites ===
+
+Crime Statistics (AU)
+  https://au-crime.benrichardson.dev
+  Explore and compare crime statistics across every Australian state and territory — standardised ANZSOC categories, per-capita rates, and auto-detected anomalies in one interactive dashboard.
+  Tags: crime, australia, data-explorer, government-data, anzsoc
+  Repo: https://github.com/ben-gy/au-crime
+  Date: 2026-04-19
 
 Development Applications (AU)
   https://au-planning.benrichardson.dev
