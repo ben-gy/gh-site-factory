@@ -1,6 +1,16 @@
 {
-  "last_updated": "2026-04-19",
+  "last_updated": "2026-04-21",
   "sites": [
+    {
+      "name": "DSN Watch",
+      "slug": "dsnwatch",
+      "description": "Live view of NASA's Deep Space Network — every antenna, every spacecraft, right now. A consumer-friendly reimagining of NASA's DSN Now dashboard.",
+      "url": "https://dsnwatch.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/dsnwatch",
+      "tags": ["science", "space", "nasa", "live-data", "dashboard"],
+      "type": "web",
+      "date": "2026-04-21"
+    },
     {
       "name": "Crime Statistics (AU)",
       "slug": "au-crime",
@@ -88,16 +98,6 @@
       "url": "https://artemistracker.benrichardson.dev",
       "repo": "https://github.com/ben-gy/artemis-tracker",
       "tags": ["space", "nasa", "3d", "real-time"],
-      "type": "web",
-      "date": "2026-04-12"
-    },
-    {
-      "name": "Dropwell",
-      "slug": "dropwell",
-      "description": "End-to-end encrypted peer-to-peer file sharing in the browser.",
-      "url": "https://dropwell.benrichardson.dev",
-      "repo": "https://github.com/ben-gy/dropwell",
-      "tags": ["utility", "encryption", "p2p", "file-sharing"],
       "type": "web",
       "date": "2026-04-12"
     },
