@@ -1,7 +1,18 @@
 {
   "version": 1,
-  "last_updated": "2026-04-19",
+  "last_updated": "2026-06-14",
   "sites": [
+    {
+      "name": "worldcupinvitations",
+      "repo": "ben-gy/worldcupinvitations",
+      "date": "2026-06-14",
+      "description": "Disguise every 2026 World Cup knockout match as a believable work meeting — pick your profession, browse the full bracket, and download one calendar file so you can watch in peace.",
+      "category": "fun",
+      "stack": "vanilla-js",
+      "data_strategy": "static",
+      "status": "deployed",
+      "url": "https://26wc.ben.gy"
+    },
     {
       "name": "au-crime",
       "repo": "ben-gy/au-crime",
@@ -29,7 +40,9 @@
       "category": "housing",
       "stack": "vanilla-ts",
       "data_strategy": "pipeline",
-      "data_sources": ["City of Casey (VIC) Open Data API"],
+      "data_sources": [
+        "City of Casey (VIC) Open Data API"
+      ],
       "status": "deployed",
       "url": "https://au-planning.benrichardson.dev",
       "pr_url": "https://github.com/ben-gy/au-planning/pull/1"
@@ -42,7 +55,9 @@
       "category": "public-safety",
       "stack": "vanilla-ts",
       "data_strategy": "pipeline",
-      "data_sources": ["BITRE Australian Road Deaths Database (datahub.roadsafety.gov.au)"],
+      "data_sources": [
+        "BITRE Australian Road Deaths Database (datahub.roadsafety.gov.au)"
+      ],
       "status": "deployed",
       "url": "https://au-crashes.benrichardson.dev",
       "pr_url": "https://github.com/ben-gy/au-crashes/pull/1"
@@ -78,7 +93,9 @@
       "category": "health",
       "stack": "vanilla-ts",
       "data_strategy": "runtime-fetch",
-      "data_sources": ["AIHW MyHospitals API (myhospitalsapi.aihw.gov.au)"],
+      "data_sources": [
+        "AIHW MyHospitals API (myhospitalsapi.aihw.gov.au)"
+      ],
       "status": "deployed",
       "url": "https://au-hospitals.benrichardson.dev",
       "pr_url": "https://github.com/ben-gy/au-hospitals/pull/3"
@@ -91,7 +108,9 @@
       "category": "energy",
       "stack": "vanilla-ts",
       "data_strategy": "runtime-fetch",
-      "data_sources": ["AEMO NEM Summary API (visualisations.aemo.com.au)"],
+      "data_sources": [
+        "AEMO NEM Summary API (visualisations.aemo.com.au)"
+      ],
       "status": "deployed",
       "url": "https://nemwatch.benrichardson.dev",
       "pr_url": "https://github.com/ben-gy/nemwatch/pull/3"
@@ -104,7 +123,9 @@
       "category": "environment",
       "stack": "vanilla-ts",
       "data_strategy": "pipeline",
-      "data_sources": ["Bureau of Meteorology Water Data Online (KISTERS WISKI API)"],
+      "data_sources": [
+        "Bureau of Meteorology Water Data Online (KISTERS WISKI API)"
+      ],
       "status": "deployed",
       "url": "https://audams.benrichardson.dev",
       "pr_url": "https://github.com/ben-gy/au-dams/pull/1"
@@ -117,7 +138,13 @@
       "category": "security",
       "stack": "react-ts",
       "data_strategy": "pipeline",
-      "data_sources": ["AbuseIPDB", "DShield", "AlienVault OTX", "GreyNoise", "MaxMind GeoLite2"],
+      "data_sources": [
+        "AbuseIPDB",
+        "DShield",
+        "AlienVault OTX",
+        "GreyNoise",
+        "MaxMind GeoLite2"
+      ],
       "status": "deployed",
       "url": "https://threatglobe.benrichardson.dev"
     },
@@ -129,7 +156,12 @@
       "category": "science",
       "stack": "vanilla-html",
       "data_strategy": "runtime-fetch",
-      "data_sources": ["NASA AROW", "JPL Horizons", "NASA DONKI", "DSN Now"],
+      "data_sources": [
+        "NASA AROW",
+        "JPL Horizons",
+        "NASA DONKI",
+        "DSN Now"
+      ],
       "status": "deployed",
       "url": "https://artemis.benrichardson.dev"
     },

@@ -1,13 +1,36 @@
 {
-  "last_updated": "2026-04-19",
+  "last_updated": "2026-06-14",
   "sites": [
+    {
+      "name": "World Cup Invitations",
+      "slug": "26wc",
+      "description": "Disguise every 2026 World Cup knockout match as a believable work meeting — pick your profession, browse the full bracket, and download one calendar file so you can watch in peace.",
+      "url": "https://26wc.ben.gy",
+      "repo": "https://github.com/ben-gy/worldcupinvitations",
+      "tags": [
+        "football",
+        "world-cup",
+        "calendar",
+        "fun",
+        "productivity",
+        "ics"
+      ],
+      "type": "web",
+      "date": "2026-06-14"
+    },
     {
       "name": "Crime Statistics (AU)",
       "slug": "au-crime",
       "description": "Explore and compare crime statistics across every Australian state and territory — standardised ANZSOC categories, per-capita rates, and auto-detected anomalies in one interactive dashboard.",
       "url": "https://au-crime.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-crime",
-      "tags": ["crime", "australia", "data-explorer", "government-data", "anzsoc"],
+      "tags": [
+        "crime",
+        "australia",
+        "data-explorer",
+        "government-data",
+        "anzsoc"
+      ],
       "type": "web",
       "date": "2026-04-19"
     },
@@ -17,7 +40,13 @@
       "description": "Unified planning and development application explorer across Australian councils — search, filter, and visualise DAs by type, status, suburb, and processing time.",
       "url": "https://au-planning.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-planning",
-      "tags": ["housing", "planning", "australia", "data-explorer", "council"],
+      "tags": [
+        "housing",
+        "planning",
+        "australia",
+        "data-explorer",
+        "council"
+      ],
       "type": "web",
       "date": "2026-04-18"
     },
@@ -27,7 +56,13 @@
       "description": "Interactive explorer for 58,000+ Australian road fatality records (1989–2026) from the BITRE ARDD — trends, maps, demographics, and temporal heatmaps.",
       "url": "https://au-crashes.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-crashes",
-      "tags": ["public-safety", "australia", "data-explorer", "road-safety", "bitre"],
+      "tags": [
+        "public-safety",
+        "australia",
+        "data-explorer",
+        "road-safety",
+        "bitre"
+      ],
       "type": "web",
       "date": "2026-04-17"
     },
@@ -37,7 +72,12 @@
       "description": "Searchable Australian political donations explorer unifying the AEC Transparency Register and all state/territory disclosure registers into one interface with filters, aggregates, and jurisdiction comparison.",
       "url": "https://au-donations.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-donations",
-      "tags": ["government", "transparency", "australia", "data-explorer"],
+      "tags": [
+        "government",
+        "transparency",
+        "australia",
+        "data-explorer"
+      ],
       "type": "web",
       "date": "2026-04-16"
     },
@@ -47,7 +87,12 @@
       "description": "Searchable Australian hospital performance explorer — ED 4-hour departure rates, triage response times, and elective surgery waits for 1,400+ hospitals via AIHW MyHospitals API.",
       "url": "https://au-hospitals.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-hospitals",
-      "tags": ["health", "australia", "data-explorer", "api"],
+      "tags": [
+        "health",
+        "australia",
+        "data-explorer",
+        "api"
+      ],
       "type": "web",
       "date": "2026-04-15"
     },
@@ -57,7 +102,12 @@
       "description": "Live Australian electricity spot prices and grid demand for all NEM regions, updated every 5 minutes from AEMO data.",
       "url": "https://nemwatch.benrichardson.dev",
       "repo": "https://github.com/ben-gy/nemwatch",
-      "tags": ["energy", "australia", "real-time", "dashboard"],
+      "tags": [
+        "energy",
+        "australia",
+        "real-time",
+        "dashboard"
+      ],
       "type": "web",
       "date": "2026-04-14"
     },
@@ -67,7 +117,12 @@
       "description": "Live storage levels for 26 major Australian dams and reservoirs via Bureau of Meteorology Water Data Online.",
       "url": "https://audams.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-dams",
-      "tags": ["environment", "australia", "real-time", "water"],
+      "tags": [
+        "environment",
+        "australia",
+        "real-time",
+        "water"
+      ],
       "type": "web",
       "date": "2026-04-13"
     },
@@ -77,7 +132,12 @@
       "description": "Real-time global cyber threat observatory with interactive 3D globe.",
       "url": "https://threatglobe.benrichardson.dev",
       "repo": "https://github.com/ben-gy/threatglobe",
-      "tags": ["security", "3d", "real-time", "globe"],
+      "tags": [
+        "security",
+        "3d",
+        "real-time",
+        "globe"
+      ],
       "type": "web",
       "date": "2026-04-12"
     },
@@ -87,7 +147,12 @@
       "description": "Real-time Artemis mission tracker with 3D trajectory visualization.",
       "url": "https://artemistracker.benrichardson.dev",
       "repo": "https://github.com/ben-gy/artemis-tracker",
-      "tags": ["space", "nasa", "3d", "real-time"],
+      "tags": [
+        "space",
+        "nasa",
+        "3d",
+        "real-time"
+      ],
       "type": "web",
       "date": "2026-04-12"
     },
@@ -97,7 +162,12 @@
       "description": "End-to-end encrypted peer-to-peer file sharing in the browser.",
       "url": "https://dropwell.benrichardson.dev",
       "repo": "https://github.com/ben-gy/dropwell",
-      "tags": ["utility", "encryption", "p2p", "file-sharing"],
+      "tags": [
+        "utility",
+        "encryption",
+        "p2p",
+        "file-sharing"
+      ],
       "type": "web",
       "date": "2026-04-12"
     },
@@ -106,7 +176,11 @@
       "slug": "tariff-check",
       "description": "Tariff impact checker for international trade.",
       "repo": "https://github.com/ben-gy/tariff-check",
-      "tags": ["finance", "trade", "ios"],
+      "tags": [
+        "finance",
+        "trade",
+        "ios"
+      ],
       "type": "app",
       "date": "2026-04-11"
     },
@@ -115,7 +189,12 @@
       "slug": "fire-watch-australia",
       "description": "Australian bushfire watch and monitoring dashboard.",
       "repo": "https://github.com/ben-gy/Fire-Watch-Australia",
-      "tags": ["emergency", "australia", "fire", "monitoring"],
+      "tags": [
+        "emergency",
+        "australia",
+        "fire",
+        "monitoring"
+      ],
       "type": "app",
       "date": "2026-01-10"
     },
@@ -124,7 +203,12 @@
       "slug": "crimeaware",
       "description": "iOS crime statistics map for Australia (NSW and Victoria).",
       "repo": "https://github.com/ben-gy/CrimeAware",
-      "tags": ["crime", "australia", "ios", "maps"],
+      "tags": [
+        "crime",
+        "australia",
+        "ios",
+        "maps"
+      ],
       "type": "app",
       "date": "2026-01-05"
     },
@@ -133,7 +217,11 @@
       "slug": "leaf-log",
       "description": "Plant care and leaf tracking log.",
       "repo": "https://github.com/ben-gy/leaf-log",
-      "tags": ["utility", "plants", "ios"],
+      "tags": [
+        "utility",
+        "plants",
+        "ios"
+      ],
       "type": "app",
       "date": "2026-04-10"
     },
@@ -142,7 +230,11 @@
       "slug": "medtriage",
       "description": "Medical triage decision support tool.",
       "repo": "https://github.com/ben-gy/MedTriage",
-      "tags": ["health", "medical", "triage"],
+      "tags": [
+        "health",
+        "medical",
+        "triage"
+      ],
       "type": "app",
       "date": "2026-04-10"
     },
@@ -151,7 +243,10 @@
       "slug": "controlroom-org",
       "description": "Control room organization tool.",
       "repo": "https://github.com/ben-gy/controlroom-org",
-      "tags": ["utility", "organization"],
+      "tags": [
+        "utility",
+        "organization"
+      ],
       "type": "app",
       "date": "2026-04-09"
     },
@@ -160,7 +255,11 @@
       "slug": "pace-calc",
       "description": "Running pace calculator.",
       "repo": "https://github.com/ben-gy/pace-calc",
-      "tags": ["fitness", "running", "calculator"],
+      "tags": [
+        "fitness",
+        "running",
+        "calculator"
+      ],
       "type": "app",
       "date": "2026-03-29"
     },
@@ -169,7 +268,11 @@
       "slug": "stashed",
       "description": "Stash manager for organizing and tracking items.",
       "repo": "https://github.com/ben-gy/stashed",
-      "tags": ["utility", "ios", "organization"],
+      "tags": [
+        "utility",
+        "ios",
+        "organization"
+      ],
       "type": "app",
       "date": "2026-04-09"
     },
@@ -178,7 +281,11 @@
       "slug": "due-back",
       "description": "Due date and return tracker.",
       "repo": "https://github.com/ben-gy/due-back",
-      "tags": ["utility", "ios", "tracking"],
+      "tags": [
+        "utility",
+        "ios",
+        "tracking"
+      ],
       "type": "app",
       "date": "2026-03-28"
     }
