@@ -3,6 +3,17 @@
   "last_updated": "2026-06-14",
   "sites": [
     {
+      "name": "leader-skills",
+      "repo": "ben-gy/leader-skills",
+      "date": "2026-06-14",
+      "description": "Explore well-documented leaders, then build your own leadership operating system.",
+      "category": "tools",
+      "stack": "vanilla-js",
+      "data_strategy": "static",
+      "status": "deployed",
+      "url": "https://leader-skills.benrichardson.dev"
+    },
+    {
       "name": "worldcupinvitations",
       "repo": "ben-gy/worldcupinvitations",
       "date": "2026-06-14",

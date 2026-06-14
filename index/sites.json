@@ -2,6 +2,20 @@
   "last_updated": "2026-06-14",
   "sites": [
     {
+      "name": "Leader Skills",
+      "slug": "leader-skills",
+      "description": "Explore well-documented leaders, then build your own leadership operating system.",
+      "url": "https://leader-skills.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/leader-skills",
+      "tags": [
+        "leadership",
+        "skills",
+        "explorer"
+      ],
+      "type": "web",
+      "date": "2026-06-14"
+    },
+    {
       "name": "World Cup Invitations",
       "slug": "26wc",
       "description": "Disguise every 2026 World Cup knockout match as a believable work meeting — pick your profession, browse the full bracket, and download one calendar file so you can watch in peace.",
