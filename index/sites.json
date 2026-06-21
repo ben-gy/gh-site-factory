@@ -33,6 +33,16 @@
       "date": "2026-06-14"
     },
     {
+      "name": "DSN Watch",
+      "slug": "dsnwatch",
+      "description": "Live view of NASA's Deep Space Network — every antenna, every spacecraft, right now. A consumer-friendly reimagining of NASA's DSN Now dashboard.",
+      "url": "https://dsnwatch.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/dsnwatch",
+      "tags": ["science", "space", "nasa", "live-data", "dashboard"],
+      "type": "web",
+      "date": "2026-04-21"
+    },
+    {
       "name": "Crime Statistics (AU)",
       "slug": "au-crime",
       "description": "Explore and compare crime statistics across every Australian state and territory — standardised ANZSOC categories, per-capita rates, and auto-detected anomalies in one interactive dashboard.",

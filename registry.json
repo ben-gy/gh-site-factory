@@ -25,6 +25,21 @@
       "url": "https://26wc.ben.gy"
     },
     {
+      "name": "dsnwatch",
+      "repo": "ben-gy/dsnwatch",
+      "date": "2026-04-21",
+      "description": "Live, consumer-friendly dashboard of NASA's Deep Space Network — three ground complexes, 14 dishes, spacecraft currently tracked, signal flow, MSPA matrix, educational glossary, and session-long history",
+      "category": "science",
+      "stack": "vanilla-ts",
+      "data_strategy": "runtime-fetch",
+      "data_sources": [
+        "NASA DSN Now XML feed (eyes.nasa.gov/dsn/data/dsn.xml)"
+      ],
+      "status": "deployed",
+      "url": "https://dsnwatch.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/dsnwatch/pull/3"
+    },
+    {
       "name": "au-crime",
       "repo": "ben-gy/au-crime",
       "date": "2026-04-19",
@@ -175,18 +190,6 @@
       ],
       "status": "deployed",
       "url": "https://artemis.benrichardson.dev"
-    },
-    {
-      "name": "dropwell",
-      "repo": "ben-gy/dropwell",
-      "date": "2026-04-12",
-      "description": "End-to-end encrypted peer-to-peer file sharing in the browser",
-      "category": "utility",
-      "stack": "vanilla-ts",
-      "data_strategy": "embedded",
-      "data_sources": [],
-      "status": "deployed",
-      "url": "https://dropwell.benrichardson.dev"
     },
     {
       "name": "tariff-check",
