@@ -1,7 +1,23 @@
 {
   "version": 1,
-  "last_updated": "2026-06-14",
+  "last_updated": "2026-06-21",
   "sites": [
+    {
+      "name": "au-agedcare",
+      "repo": "ben-gy/au-agedcare",
+      "date": "2026-06-21",
+      "description": "Search and compare every Australian residential aged care home — Star Ratings, staffing, resident surveys, and quality measures from the May 2026 Department of Health quarterly extract",
+      "category": "health",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "Department of Health Star Ratings quarterly data extract (health.gov.au)",
+        "AIHW GEN aged care data (gen-agedcaredata.gov.au)",
+        "Australian Postcodes (matthewproctor/australianpostcodes)"
+      ],
+      "status": "deploy_failed",
+      "url": "https://au-agedcare.benrichardson.dev"
+    },
     {
       "name": "leader-skills",
       "repo": "ben-gy/leader-skills",
