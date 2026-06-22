@@ -1,7 +1,22 @@
 {
   "version": 1,
-  "last_updated": "2026-06-21",
+  "last_updated": "2026-06-22",
   "sites": [
+    {
+      "name": "au-ndis-watch",
+      "repo": "ben-gy/au-ndis-watch",
+      "date": "2026-06-22",
+      "description": "Every NDIS Commission compliance action — banning orders, registration revocations, civil penalties, and infringements against Australian disability providers and workers — searchable by name, mappable by state, with auto-generated insights and a plain-language glossary",
+      "category": "government-transparency",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "NDIS Commission Compliance Actions (data.gov.au)",
+        "ABS Estimated Resident Population (June 2024)"
+      ],
+      "status": "deploy_failed",
+      "url": "https://au-ndis-watch.benrichardson.dev"
+    },
     {
       "name": "au-agedcare",
       "repo": "ben-gy/au-agedcare",
