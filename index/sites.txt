@@ -1,7 +1,14 @@
 gh-site-factory — Project Index
-Last updated: 2026-06-14
+Last updated: 2026-06-24
 
 === Web Sites ===
+
+Charity Watch (AU)
+  https://au-charities.benrichardson.dev
+  Look up any of Australia's 65,000+ registered charities — sector, finances, where money comes from and goes, plus auto-detected anomalies.
+  Tags: government-transparency, charity, acnc, donations, finance
+  Repo: https://github.com/ben-gy/au-charities
+  Date: 2026-06-24
 
 DSN Watch
   https://dsnwatch.benrichardson.dev

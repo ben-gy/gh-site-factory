@@ -1,6 +1,22 @@
 {
-  "last_updated": "2026-06-14",
+  "last_updated": "2026-06-24",
   "sites": [
+    {
+      "name": "Charity Watch (AU)",
+      "slug": "au-charities",
+      "description": "Look up any of Australia's 65,000+ registered charities — sector, finances, where money comes from and goes, plus auto-detected anomalies.",
+      "url": "https://au-charities.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-charities",
+      "tags": [
+        "government-transparency",
+        "charity",
+        "acnc",
+        "donations",
+        "finance"
+      ],
+      "type": "web",
+      "date": "2026-06-24"
+    },
     {
       "name": "Leader Skills",
       "slug": "leader-skills",

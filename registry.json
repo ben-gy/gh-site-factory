@@ -1,7 +1,40 @@
 {
   "version": 1,
-  "last_updated": "2026-06-22",
+  "last_updated": "2026-06-24",
   "sites": [
+    {
+      "name": "au-charities",
+      "repo": "ben-gy/au-charities",
+      "date": "2026-06-24",
+      "description": "Look up any of Australia's 65,000+ registered charities — sector, finances, where money comes from and goes, plus auto-detected anomalies, leaderboards, Sankey flow, sector × beneficiary matrix and per-capita state map",
+      "category": "government-transparency",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "ACNC Register of Australian Charities (data.gov.au)",
+        "ACNC 2023 Annual Information Statement (data.gov.au)",
+        "ABS Estimated Resident Population (June 2024)"
+      ],
+      "status": "deploy_failed",
+      "url": "https://au-charities.benrichardson.dev",
+      "notes": "Build + Cloudflare DNS complete (au-charities CNAME → ben-gy.github.io); gh repo create + push blocked by expired gh auth. Run `gh auth login`, then `cd sites/2026-06-24-au-charities && gh repo create ben-gy/au-charities --private --source=. --push`"
+    },
+    {
+      "name": "au-pollution",
+      "repo": "ben-gy/au-pollution",
+      "date": "2026-06-23",
+      "description": "Every industrial polluter in Australia — 8,140 facilities, 93 substances, 25 years of National Pollutant Inventory data — searchable, mappable, with auto-detected anomalies, Sankey flow, treemap, heatmap and per-capita state comparison",
+      "category": "environment",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "National Pollutant Inventory (data.gov.au)",
+        "ABS Estimated Resident Population (June 2024)"
+      ],
+      "status": "deploy_failed",
+      "url": "https://au-pollution.benrichardson.dev",
+      "notes": "Build + DNS complete; deploy blocked by gh auth — push manually after `gh auth login`"
+    },
     {
       "name": "au-ndis-watch",
       "repo": "ben-gy/au-ndis-watch",
