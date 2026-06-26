@@ -15,9 +15,9 @@
         "ACECQA National Register of Approved Providers (acecqa.gov.au)",
         "ABS Estimated Resident Population by State"
       ],
-      "status": "deploy_failed",
+      "status": "deployed",
       "url": "https://au-childcare.benrichardson.dev",
-      "notes": "Build + Cloudflare DNS complete (au-childcare CNAME → ben-gy.github.io); gh repo create + push blocked by expired gh auth. Run `gh auth login`, then `cd sites/2026-06-25-au-childcare && gh repo create ben-gy/au-childcare --private --source=. --push`"
+      "pr_url": "https://github.com/ben-gy/au-childcare/pull/3"
     },
     {
       "name": "au-charities",
@@ -32,9 +32,9 @@
         "ACNC 2023 Annual Information Statement (data.gov.au)",
         "ABS Estimated Resident Population (June 2024)"
       ],
-      "status": "deploy_failed",
+      "status": "deployed",
       "url": "https://au-charities.benrichardson.dev",
-      "notes": "Build + Cloudflare DNS complete (au-charities CNAME → ben-gy.github.io); gh repo create + push blocked by expired gh auth. Run `gh auth login`, then `cd sites/2026-06-24-au-charities && gh repo create ben-gy/au-charities --private --source=. --push`"
+      "pr_url": "https://github.com/ben-gy/au-charities/pull/3"
     },
     {
       "name": "au-pollution",
