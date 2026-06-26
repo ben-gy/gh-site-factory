@@ -3,6 +3,13 @@ Last updated: 2026-04-19
 
 === Web Sites ===
 
+Flight Delays (AU)
+  https://au-flights.benrichardson.dev
+  Which Australian domestic flights run on time? Compare every major route and airline by on-time arrivals, delays and cancellations — 22 years of official BITRE data, mapped and searchable.
+  Tags: transport, aviation, flights, on-time-performance, travel
+  Repo: https://github.com/ben-gy/au-flights
+  Date: 2026-06-26
+
 Crime Statistics (AU)
   https://au-crime.benrichardson.dev
   Explore and compare crime statistics across every Australian state and territory — standardised ANZSOC categories, per-capita rates, and auto-detected anomalies in one interactive dashboard.

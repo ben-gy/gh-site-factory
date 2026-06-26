@@ -2,6 +2,22 @@
   "last_updated": "2026-06-26",
   "sites": [
     {
+      "name": "Flight Delays (AU)",
+      "slug": "au-flights",
+      "description": "Which Australian domestic flights run on time? Compare every major route and airline by on-time arrivals, delays and cancellations — 22 years of official BITRE data, mapped and searchable.",
+      "url": "https://au-flights.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-flights",
+      "tags": [
+        "transport",
+        "aviation",
+        "flights",
+        "on-time-performance",
+        "travel"
+      ],
+      "type": "web",
+      "date": "2026-06-26"
+    },
+    {
       "name": "Pullshark",
       "slug": "pullshark",
       "description": "Discover open-source products trending on GitHub, ranked daily by an HN-style decay.",
