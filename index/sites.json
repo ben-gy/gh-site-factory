@@ -2,6 +2,22 @@
   "last_updated": "2026-06-26",
   "sites": [
     {
+      "name": "NDIS Watch (AU)",
+      "slug": "au-ndis-watch",
+      "description": "Search every NDIS Commission compliance action — banning orders, registration revocations, suspensions, and notices against Australian disability providers and workers — by name, state, and severity.",
+      "url": "https://au-ndis-watch.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-ndis-watch",
+      "tags": [
+        "government-transparency",
+        "ndis",
+        "disability",
+        "enforcement",
+        "family"
+      ],
+      "type": "web",
+      "date": "2026-06-22"
+    },
+    {
       "name": "Aged Care Quality (AU)",
       "slug": "au-agedcare",
       "description": "Search and compare every Australian residential aged care home — Star Ratings, staffing, resident surveys, and quality measures from official government data.",

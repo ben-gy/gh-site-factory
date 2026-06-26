@@ -64,8 +64,9 @@
         "NDIS Commission Compliance Actions (data.gov.au)",
         "ABS Estimated Resident Population (June 2024)"
       ],
-      "status": "deploy_failed",
-      "url": "https://au-ndis-watch.benrichardson.dev"
+      "status": "deployed",
+      "url": "https://au-ndis-watch.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-ndis-watch/pull/1"
     },
     {
       "name": "au-agedcare",

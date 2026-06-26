@@ -1,6 +1,8 @@
 # Build Log: NDIS Watch (AU)
-**Date:** 2026-06-22
-**Status:** deploy_failed (build + tests + local preview all passed; deployment blocked by expired `gh` token)
+**Date:** 2026-06-22 (built) · 2026-06-26 (deployed)
+**Status:** deployed
+
+> **Update 2026-06-26:** `gh` auth restored. Repo created (`ben-gy/au-ndis-watch`), pushed, GitHub Pages enabled (workflow build), Cloudflare DNS CNAME created, custom-domain CNAME set. First Deploy workflow run failed on a race (Pages not yet enabled when it started); re-running after Pages was enabled succeeded. Site is live and serving over the custom domain (title, JS/CSS assets, and all 3,203 actions' JSON verified via HTTP). PR opened at https://github.com/ben-gy/au-ndis-watch/pull/1. TLS cert was still provisioning at hand-off (HTTP 200; HTTPS pending Let's Encrypt issuance, normally <15 min) — a final CNAME cycle was triggered to push it along.
 
 ## Idea Source
 Researched — IDEAS.md was empty. After ruling out ACECQA childcare quality ratings (data is behind Cloudflare and the snapshot XLSX is unguessable), I pivoted to the NDIS Commission Compliance Actions dataset on data.gov.au, which is openly downloadable as a 3 MB CSV with ~3,200 enforcement records spanning 2019–2026.

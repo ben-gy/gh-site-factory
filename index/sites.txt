@@ -3,6 +3,13 @@ Last updated: 2026-06-26
 
 === Web Sites ===
 
+NDIS Watch (AU)
+  https://au-ndis-watch.benrichardson.dev
+  Search every NDIS Commission compliance action — banning orders, registration revocations, suspensions, and notices against Australian disability providers and workers — by name, state, and severity.
+  Tags: government-transparency, ndis, disability, enforcement, family
+  Repo: https://github.com/ben-gy/au-ndis-watch
+  Date: 2026-06-22
+
 Aged Care Quality (AU)
   https://au-agedcare.benrichardson.dev
   Search and compare every Australian residential aged care home — Star Ratings, staffing, resident surveys, and quality measures from official government data.
