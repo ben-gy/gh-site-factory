@@ -1,6 +1,21 @@
 {
-  "last_updated": "2026-06-14",
+  "last_updated": "2026-06-26",
   "sites": [
+    {
+      "name": "Pullshark",
+      "slug": "pullshark",
+      "description": "Discover open-source products trending on GitHub, ranked daily by an HN-style decay.",
+      "url": "https://pullshark.ben.gy",
+      "repo": "https://github.com/ben-gy/pullshark-board",
+      "tags": [
+        "github",
+        "open-source",
+        "discovery",
+        "products"
+      ],
+      "type": "web",
+      "date": "2026-06-26"
+    },
     {
       "name": "Leader Skills",
       "slug": "leader-skills",

@@ -1,7 +1,18 @@
 {
   "version": 1,
-  "last_updated": "2026-06-14",
+  "last_updated": "2026-06-26",
   "sites": [
+    {
+      "name": "pullshark-board",
+      "repo": "ben-gy/pullshark-board",
+      "date": "2026-06-26",
+      "description": "Discover open-source products trending on GitHub, ranked daily by an HN-style decay.",
+      "category": "misc",
+      "stack": "vanilla-js",
+      "data_strategy": "static",
+      "status": "deployed",
+      "url": "https://pullshark.ben.gy"
+    },
     {
       "name": "leader-skills",
       "repo": "ben-gy/leader-skills",
