@@ -1,7 +1,24 @@
 {
   "version": 1,
-  "last_updated": "2026-06-24",
+  "last_updated": "2026-06-26",
   "sites": [
+    {
+      "name": "au-childcare",
+      "repo": "ben-gy/au-childcare",
+      "date": "2026-06-25",
+      "description": "Search and compare every Australian childcare and early-learning service — 18,206 services, 7,206 providers, with overall NQS rating, all seven Quality Area sub-scores, previous-cycle ratings, provider chain rollups, leaderboards, map, matrix heatmap, Sankey flow, and auto-detected insights",
+      "category": "education",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "ACECQA National Register of Approved Services (acecqa.gov.au)",
+        "ACECQA National Register of Approved Providers (acecqa.gov.au)",
+        "ABS Estimated Resident Population by State"
+      ],
+      "status": "deploy_failed",
+      "url": "https://au-childcare.benrichardson.dev",
+      "notes": "Build + Cloudflare DNS complete (au-childcare CNAME → ben-gy.github.io); gh repo create + push blocked by expired gh auth. Run `gh auth login`, then `cd sites/2026-06-25-au-childcare && gh repo create ben-gy/au-childcare --private --source=. --push`"
+    },
     {
       "name": "au-charities",
       "repo": "ben-gy/au-charities",
@@ -63,8 +80,9 @@
         "AIHW GEN aged care data (gen-agedcaredata.gov.au)",
         "Australian Postcodes (matthewproctor/australianpostcodes)"
       ],
-      "status": "deploy_failed",
-      "url": "https://au-agedcare.benrichardson.dev"
+      "status": "deployed",
+      "url": "https://au-agedcare.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-agedcare/pull/2"
     },
     {
       "name": "leader-skills",

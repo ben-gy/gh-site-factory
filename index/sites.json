@@ -1,6 +1,37 @@
 {
-  "last_updated": "2026-06-24",
+  "last_updated": "2026-06-26",
   "sites": [
+    {
+      "name": "Aged Care Quality (AU)",
+      "slug": "au-agedcare",
+      "description": "Search and compare every Australian residential aged care home — Star Ratings, staffing, resident surveys, and quality measures from official government data.",
+      "url": "https://au-agedcare.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-agedcare",
+      "tags": [
+        "health",
+        "aged-care",
+        "star-ratings",
+        "family"
+      ],
+      "type": "web",
+      "date": "2026-06-21"
+    },
+    {
+      "name": "Childcare Watch (AU)",
+      "slug": "au-childcare",
+      "description": "Search and compare every Australian childcare and early-learning service — NQS ratings, all seven Quality Area sub-scores, provider chains, leaderboards, and rating-change tracking.",
+      "url": "https://au-childcare.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-childcare",
+      "tags": [
+        "education",
+        "childcare",
+        "nqs",
+        "acecqa",
+        "family"
+      ],
+      "type": "web",
+      "date": "2026-06-25"
+    },
     {
       "name": "Charity Watch (AU)",
       "slug": "au-charities",

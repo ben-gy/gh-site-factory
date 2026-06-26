@@ -1,7 +1,21 @@
 gh-site-factory — Project Index
-Last updated: 2026-06-24
+Last updated: 2026-06-26
 
 === Web Sites ===
+
+Aged Care Quality (AU)
+  https://au-agedcare.benrichardson.dev
+  Search and compare every Australian residential aged care home — Star Ratings, staffing, resident surveys, and quality measures from official government data.
+  Tags: health, aged-care, star-ratings, family
+  Repo: https://github.com/ben-gy/au-agedcare
+  Date: 2026-06-21
+
+Childcare Watch (AU)
+  https://au-childcare.benrichardson.dev
+  Search and compare every Australian childcare and early-learning service — NQS ratings, all seven Quality Area sub-scores, provider chains, leaderboards, and rating-change tracking.
+  Tags: education, childcare, nqs, acecqa, family
+  Repo: https://github.com/ben-gy/au-childcare
+  Date: 2026-06-25
 
 Charity Watch (AU)
   https://au-charities.benrichardson.dev
