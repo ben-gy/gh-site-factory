@@ -29,6 +29,89 @@
       "url": "https://pullshark.ben.gy"
     },
     {
+      "name": "au-childcare",
+      "repo": "ben-gy/au-childcare",
+      "date": "2026-06-25",
+      "description": "Search and compare every Australian childcare and early-learning service — 18,206 services, 7,206 providers, with overall NQS rating, all seven Quality Area sub-scores, previous-cycle ratings, provider chain rollups, leaderboards, map, matrix heatmap, Sankey flow, and auto-detected insights",
+      "category": "education",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "ACECQA National Register of Approved Services (acecqa.gov.au)",
+        "ACECQA National Register of Approved Providers (acecqa.gov.au)",
+        "ABS Estimated Resident Population by State"
+      ],
+      "status": "deployed",
+      "url": "https://au-childcare.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-childcare/pull/3"
+    },
+    {
+      "name": "au-charities",
+      "repo": "ben-gy/au-charities",
+      "date": "2026-06-24",
+      "description": "Look up any of Australia's 65,000+ registered charities — sector, finances, where money comes from and goes, plus auto-detected anomalies, leaderboards, Sankey flow, sector × beneficiary matrix and per-capita state map",
+      "category": "government-transparency",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "ACNC Register of Australian Charities (data.gov.au)",
+        "ACNC 2023 Annual Information Statement (data.gov.au)",
+        "ABS Estimated Resident Population (June 2024)"
+      ],
+      "status": "deployed",
+      "url": "https://au-charities.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-charities/pull/3"
+    },
+    {
+      "name": "au-pollution",
+      "repo": "ben-gy/au-pollution",
+      "date": "2026-06-23",
+      "description": "Every industrial polluter in Australia — 8,140 facilities, 93 substances, 25 years of National Pollutant Inventory data — searchable, mappable, with auto-detected anomalies, Sankey flow, treemap, heatmap and per-capita state comparison",
+      "category": "environment",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "National Pollutant Inventory (data.gov.au)",
+        "ABS Estimated Resident Population (June 2024)"
+      ],
+      "status": "deploy_failed",
+      "url": "https://au-pollution.benrichardson.dev",
+      "notes": "Build + DNS complete; deploy blocked by gh auth — push manually after `gh auth login`"
+    },
+    {
+      "name": "au-ndis-watch",
+      "repo": "ben-gy/au-ndis-watch",
+      "date": "2026-06-22",
+      "description": "Every NDIS Commission compliance action — banning orders, registration revocations, civil penalties, and infringements against Australian disability providers and workers — searchable by name, mappable by state, with auto-generated insights and a plain-language glossary",
+      "category": "government-transparency",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "NDIS Commission Compliance Actions (data.gov.au)",
+        "ABS Estimated Resident Population (June 2024)"
+      ],
+      "status": "deployed",
+      "url": "https://au-ndis-watch.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-ndis-watch/pull/1"
+    },
+    {
+      "name": "au-agedcare",
+      "repo": "ben-gy/au-agedcare",
+      "date": "2026-06-21",
+      "description": "Search and compare every Australian residential aged care home — Star Ratings, staffing, resident surveys, and quality measures from the May 2026 Department of Health quarterly extract",
+      "category": "health",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "Department of Health Star Ratings quarterly data extract (health.gov.au)",
+        "AIHW GEN aged care data (gen-agedcaredata.gov.au)",
+        "Australian Postcodes (matthewproctor/australianpostcodes)"
+      ],
+      "status": "deployed",
+      "url": "https://au-agedcare.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-agedcare/pull/2"
+    },
+    {
       "name": "leader-skills",
       "repo": "ben-gy/leader-skills",
       "date": "2026-06-14",
@@ -49,6 +132,21 @@
       "data_strategy": "static",
       "status": "deployed",
       "url": "https://26wc.ben.gy"
+    },
+    {
+      "name": "dsnwatch",
+      "repo": "ben-gy/dsnwatch",
+      "date": "2026-04-21",
+      "description": "Live, consumer-friendly dashboard of NASA's Deep Space Network — three ground complexes, 14 dishes, spacecraft currently tracked, signal flow, MSPA matrix, educational glossary, and session-long history",
+      "category": "science",
+      "stack": "vanilla-ts",
+      "data_strategy": "runtime-fetch",
+      "data_sources": [
+        "NASA DSN Now XML feed (eyes.nasa.gov/dsn/data/dsn.xml)"
+      ],
+      "status": "deployed",
+      "url": "https://dsnwatch.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/dsnwatch/pull/3"
     },
     {
       "name": "au-crime",
@@ -201,18 +299,6 @@
       ],
       "status": "deployed",
       "url": "https://artemis.benrichardson.dev"
-    },
-    {
-      "name": "dropwell",
-      "repo": "ben-gy/dropwell",
-      "date": "2026-04-12",
-      "description": "End-to-end encrypted peer-to-peer file sharing in the browser",
-      "category": "utility",
-      "stack": "vanilla-ts",
-      "data_strategy": "embedded",
-      "data_sources": [],
-      "status": "deployed",
-      "url": "https://dropwell.benrichardson.dev"
     },
     {
       "name": "tariff-check",

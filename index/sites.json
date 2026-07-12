@@ -33,6 +33,69 @@
       "date": "2026-06-26"
     },
     {
+      "name": "Childcare Watch (AU)",
+      "slug": "au-childcare",
+      "description": "Search and compare every Australian childcare and early-learning service — NQS ratings, all seven Quality Area sub-scores, provider chains, leaderboards, and rating-change tracking.",
+      "url": "https://au-childcare.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-childcare",
+      "tags": [
+        "education",
+        "childcare",
+        "nqs",
+        "acecqa",
+        "family"
+      ],
+      "type": "web",
+      "date": "2026-06-25"
+    },
+    {
+      "name": "Charity Watch (AU)",
+      "slug": "au-charities",
+      "description": "Look up any of Australia's 65,000+ registered charities — sector, finances, where money comes from and goes, plus auto-detected anomalies.",
+      "url": "https://au-charities.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-charities",
+      "tags": [
+        "government-transparency",
+        "charity",
+        "acnc",
+        "donations",
+        "finance"
+      ],
+      "type": "web",
+      "date": "2026-06-24"
+    },
+    {
+      "name": "NDIS Watch (AU)",
+      "slug": "au-ndis-watch",
+      "description": "Search every NDIS Commission compliance action — banning orders, registration revocations, suspensions, and notices against Australian disability providers and workers — by name, state, and severity.",
+      "url": "https://au-ndis-watch.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-ndis-watch",
+      "tags": [
+        "government-transparency",
+        "ndis",
+        "disability",
+        "enforcement",
+        "family"
+      ],
+      "type": "web",
+      "date": "2026-06-22"
+    },
+    {
+      "name": "Aged Care Quality (AU)",
+      "slug": "au-agedcare",
+      "description": "Search and compare every Australian residential aged care home — Star Ratings, staffing, resident surveys, and quality measures from official government data.",
+      "url": "https://au-agedcare.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-agedcare",
+      "tags": [
+        "health",
+        "aged-care",
+        "star-ratings",
+        "family"
+      ],
+      "type": "web",
+      "date": "2026-06-21"
+    },
+    {
       "name": "Leader Skills",
       "slug": "leader-skills",
       "description": "Explore well-documented leaders, then build your own leadership operating system.",
@@ -62,6 +125,16 @@
       ],
       "type": "web",
       "date": "2026-06-14"
+    },
+    {
+      "name": "DSN Watch",
+      "slug": "dsnwatch",
+      "description": "Live view of NASA's Deep Space Network — every antenna, every spacecraft, right now. A consumer-friendly reimagining of NASA's DSN Now dashboard.",
+      "url": "https://dsnwatch.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/dsnwatch",
+      "tags": ["science", "space", "nasa", "live-data", "dashboard"],
+      "type": "web",
+      "date": "2026-04-21"
     },
     {
       "name": "Crime Statistics (AU)",

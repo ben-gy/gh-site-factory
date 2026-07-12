@@ -1,5 +1,5 @@
 gh-site-factory — Project Index
-Last updated: 2026-04-19
+Last updated: 2026-06-26
 
 === Web Sites ===
 
@@ -9,6 +9,41 @@ Flight Delays (AU)
   Tags: transport, aviation, flights, on-time-performance, travel
   Repo: https://github.com/ben-gy/au-flights
   Date: 2026-06-26
+
+NDIS Watch (AU)
+  https://au-ndis-watch.benrichardson.dev
+  Search every NDIS Commission compliance action — banning orders, registration revocations, suspensions, and notices against Australian disability providers and workers — by name, state, and severity.
+  Tags: government-transparency, ndis, disability, enforcement, family
+  Repo: https://github.com/ben-gy/au-ndis-watch
+  Date: 2026-06-22
+
+Aged Care Quality (AU)
+  https://au-agedcare.benrichardson.dev
+  Search and compare every Australian residential aged care home — Star Ratings, staffing, resident surveys, and quality measures from official government data.
+  Tags: health, aged-care, star-ratings, family
+  Repo: https://github.com/ben-gy/au-agedcare
+  Date: 2026-06-21
+
+Childcare Watch (AU)
+  https://au-childcare.benrichardson.dev
+  Search and compare every Australian childcare and early-learning service — NQS ratings, all seven Quality Area sub-scores, provider chains, leaderboards, and rating-change tracking.
+  Tags: education, childcare, nqs, acecqa, family
+  Repo: https://github.com/ben-gy/au-childcare
+  Date: 2026-06-25
+
+Charity Watch (AU)
+  https://au-charities.benrichardson.dev
+  Look up any of Australia's 65,000+ registered charities — sector, finances, where money comes from and goes, plus auto-detected anomalies.
+  Tags: government-transparency, charity, acnc, donations, finance
+  Repo: https://github.com/ben-gy/au-charities
+  Date: 2026-06-24
+
+DSN Watch
+  https://dsnwatch.benrichardson.dev
+  Live view of NASA's Deep Space Network — every antenna, every spacecraft, right now. A consumer-friendly reimagining of NASA's DSN Now dashboard.
+  Tags: science, space, nasa, live-data, dashboard
+  Repo: https://github.com/ben-gy/dsnwatch
+  Date: 2026-04-21
 
 Crime Statistics (AU)
   https://au-crime.benrichardson.dev
@@ -71,13 +106,6 @@ Artemis Tracker
   Real-time Artemis mission tracker with 3D trajectory visualization.
   Tags: space, nasa, 3d, real-time
   Repo: https://github.com/ben-gy/artemis-tracker
-  Date: 2026-04-12
-
-Dropwell
-  https://dropwell.benrichardson.dev
-  End-to-end encrypted peer-to-peer file sharing in the browser.
-  Tags: utility, encryption, p2p, file-sharing
-  Repo: https://github.com/ben-gy/dropwell
   Date: 2026-04-12
 
 === Apps ===
