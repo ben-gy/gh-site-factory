@@ -1,7 +1,14 @@
 gh-site-factory — Project Index
-Last updated: 2026-06-26
+Last updated: 2026-07-12
 
 === Web Sites ===
+
+Machinery of Government (AU)
+  https://au-gov.benrichardson.dev
+  Interactive map of the Australian Government — every department, agency, statutory body and public entity across 17 portfolios, with a Cabinet view, treemap, matrix, relationship graph, map, timeline, searchable table, and auto-computed insights.
+  Tags: government-transparency, public-administration, cabinet, portfolios, reference
+  Repo: https://github.com/ben-gy/au-gov
+  Date: 2026-07-12
 
 Flight Delays (AU)
   https://au-flights.benrichardson.dev

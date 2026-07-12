@@ -1,7 +1,23 @@
 {
   "version": 1,
-  "last_updated": "2026-06-26",
+  "last_updated": "2026-07-12",
   "sites": [
+    {
+      "name": "au-gov",
+      "repo": "ben-gy/au-gov",
+      "date": "2026-07-12",
+      "description": "Interactive map of the Australian Government — every department, agency, statutory body, and public entity from the AGOR (1,381 bodies across 17 portfolios) with Cabinet view, treemap, portfolio × body-type matrix heatmap, force-directed relationship graph, Leaflet map, timeline of creation, searchable table, and auto-computed insights",
+      "category": "government-transparency",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "Australian Government Organisations Register (AGOR) via data.gov.au",
+        "PM&C ministry list (13 May 2025)"
+      ],
+      "status": "deployed",
+      "url": "https://au-gov.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-gov/pull/1"
+    },
     {
       "name": "au-flights",
       "repo": "ben-gy/au-flights",

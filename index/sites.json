@@ -1,6 +1,22 @@
 {
-  "last_updated": "2026-06-26",
+  "last_updated": "2026-07-12",
   "sites": [
+    {
+      "name": "Machinery of Government (AU)",
+      "slug": "au-gov",
+      "description": "Interactive map of the Australian Government — every department, agency, statutory body and public entity across 17 portfolios, with a Cabinet view, treemap, matrix, relationship graph, map, timeline, searchable table, and auto-computed insights.",
+      "url": "https://au-gov.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-gov",
+      "tags": [
+        "government-transparency",
+        "public-administration",
+        "cabinet",
+        "portfolios",
+        "reference"
+      ],
+      "type": "web",
+      "date": "2026-07-12"
+    },
     {
       "name": "Flight Delays (AU)",
       "slug": "au-flights",
