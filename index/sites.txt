@@ -3,6 +3,13 @@ Last updated: 2026-07-12
 
 === Web Sites ===
 
+Government Contracts (AU)
+  https://au-contracts.benrichardson.dev
+  Follow the public money — every Australian Government contract, ranked by supplier, agency and category, with a professional & consulting focus and six interactive visualisations.
+  Tags: government-transparency, procurement, spending, consulting, AusTender
+  Repo: https://github.com/ben-gy/au-contracts
+  Date: 2026-07-12
+
 Pokies Losses (AU)
   https://au-pokies.benrichardson.dev
   How much your community loses to poker machines — Australian pokies losses by Local Government Area, ranked per-adult, mapped, and compared across states.

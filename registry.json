@@ -3,6 +3,22 @@
   "last_updated": "2026-07-12",
   "sites": [
     {
+      "name": "au-contracts",
+      "repo": "ben-gy/au-contracts",
+      "date": "2026-07-12",
+      "description": "Australian Government procurement explorer — 166k AusTender contract notices across FY2023-24 and FY2024-25 de-duplicated to 121k contracts worth $126.8B, with supplier/agency/category leaderboards, a professional & consulting focus (canonical big-firm ranking incl. PwC's post-scandal collapse), the 1,000 biggest contracts, a supplier-agency network graph, category-to-agency Sankey, agency-category matrix, monthly trend, supplier-state map, and auto-detected findings",
+      "category": "government-transparency",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "AusTender OCDS API (api.tenders.gov.au)",
+        "Department of Finance — Australian Government contract notices"
+      ],
+      "status": "deployed",
+      "url": "https://au-contracts.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-contracts/pull/1"
+    },
+    {
       "name": "au-pokies",
       "repo": "ben-gy/au-pokies",
       "date": "2026-07-12",

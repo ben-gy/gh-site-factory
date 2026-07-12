@@ -2,6 +2,22 @@
   "last_updated": "2026-07-12",
   "sites": [
     {
+      "name": "Government Contracts (AU)",
+      "slug": "au-contracts",
+      "description": "Follow the public money — every Australian Government contract, ranked by supplier, agency and category, with a professional & consulting focus and six interactive visualisations.",
+      "url": "https://au-contracts.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-contracts",
+      "tags": [
+        "government-transparency",
+        "procurement",
+        "spending",
+        "consulting",
+        "AusTender"
+      ],
+      "type": "web",
+      "date": "2026-07-12"
+    },
+    {
       "name": "Pokies Losses (AU)",
       "slug": "au-pokies",
       "description": "How much your community loses to poker machines — Australian pokies losses by Local Government Area, ranked per-adult, mapped, and compared across states.",
