@@ -3,10 +3,25 @@
   "last_updated": "2026-07-12",
   "sites": [
     {
+      "name": "au-pay-gap",
+      "repo": "ben-gy/au-pay-gap",
+      "date": "2026-07-12",
+      "description": "Searchable explorer for the WGEA employer gender pay gaps — 8,600+ Australian employers with median/average base-salary and total-remuneration gaps (2024-25 + 2023-24), women's representation across pay quartiles, and average pay per quartile. Seven views: explorer, industry rankings, glass-pyramid representation, distribution histogram, industry-by-size heatmap, year-on-year movers, and auto-insights, plus a rich employer drill-down.",
+      "category": "government-transparency",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "WGEA Employer Gender Pay Gaps spreadsheet (wgea.gov.au)"
+      ],
+      "status": "deployed",
+      "url": "https://au-pay-gap.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-pay-gap/pull/3"
+    },
+    {
       "name": "au-contracts",
       "repo": "ben-gy/au-contracts",
       "date": "2026-07-12",
-      "description": "Australian Government procurement explorer — 166k AusTender contract notices across FY2023-24 and FY2024-25 de-duplicated to 121k contracts worth $126.8B, with supplier/agency/category leaderboards, a professional & consulting focus (canonical big-firm ranking incl. PwC's post-scandal collapse), the 1,000 biggest contracts, a supplier-agency network graph, category-to-agency Sankey, agency-category matrix, monthly trend, supplier-state map, and auto-detected findings",
+      "description": "Australian federal government procurement explorer — every AusTender contract notice for FY2025-26 (~66,000 contracts worth ~$118B across 128 agencies), pulled from the live Open Contracting (OCDS) API, with supplier/agency leaderboards, a supplier↔agency network graph, agency→category Sankey, agency×category matrix, Leaflet state choropleth, monthly trends, a value-distribution histogram, auto-detected insights and a searchable contract database with click-through drill-down",
       "category": "government-transparency",
       "stack": "vanilla-ts",
       "data_strategy": "pipeline",
@@ -16,7 +31,7 @@
       ],
       "status": "deployed",
       "url": "https://au-contracts.benrichardson.dev",
-      "pr_url": "https://github.com/ben-gy/au-contracts/pull/1"
+      "pr_url": "https://github.com/ben-gy/au-contracts/pull/4"
     },
     {
       "name": "au-pokies",

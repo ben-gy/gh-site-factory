@@ -2,9 +2,25 @@
   "last_updated": "2026-07-12",
   "sites": [
     {
+      "name": "Gender Pay Gap (AU)",
+      "slug": "au-pay-gap",
+      "description": "Search the gender pay gap at 8,600+ Australian employers — official WGEA data ranked, compared to industry and national medians, tracked year-on-year, and broken down by pay quartile.",
+      "url": "https://au-pay-gap.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-pay-gap",
+      "tags": [
+        "gender-equality",
+        "pay-gap",
+        "workplace",
+        "WGEA",
+        "government-transparency"
+      ],
+      "type": "web",
+      "date": "2026-07-12"
+    },
+    {
       "name": "Government Contracts (AU)",
       "slug": "au-contracts",
-      "description": "Follow the public money — every Australian Government contract, ranked by supplier, agency and category, with a professional & consulting focus and six interactive visualisations.",
+      "description": "Follow the public money — every Australian federal government contract for FY2025-26, with supplier and agency leaderboards, a relationship network, spend-flow, state map and a searchable database.",
       "url": "https://au-contracts.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-contracts",
       "tags": [

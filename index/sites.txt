@@ -3,9 +3,16 @@ Last updated: 2026-07-12
 
 === Web Sites ===
 
+Gender Pay Gap (AU)
+  https://au-pay-gap.benrichardson.dev
+  Search the gender pay gap at 8,600+ Australian employers — official WGEA data ranked, compared to industry and national medians, tracked year-on-year, and broken down by pay quartile.
+  Tags: gender-equality, pay-gap, workplace, WGEA, government-transparency
+  Repo: https://github.com/ben-gy/au-pay-gap
+  Date: 2026-07-12
+
 Government Contracts (AU)
   https://au-contracts.benrichardson.dev
-  Follow the public money — every Australian Government contract, ranked by supplier, agency and category, with a professional & consulting focus and six interactive visualisations.
+  Follow the public money — every Australian federal government contract for FY2025-26, with supplier and agency leaderboards, a relationship network, spend-flow, state map and a searchable database.
   Tags: government-transparency, procurement, spending, consulting, AusTender
   Repo: https://github.com/ben-gy/au-contracts
   Date: 2026-07-12
