@@ -3,6 +3,13 @@ Last updated: 2026-07-12
 
 === Web Sites ===
 
+Pokies Losses (AU)
+  https://au-pokies.benrichardson.dev
+  How much your community loses to poker machines — Australian pokies losses by Local Government Area, ranked per-adult, mapped, and compared across states.
+  Tags: public-health, gambling, pokies, government-transparency, map
+  Repo: https://github.com/ben-gy/au-pokies
+  Date: 2026-07-12
+
 Machinery of Government (AU)
   https://au-gov.benrichardson.dev
   Interactive map of the Australian Government — every department, agency, statutory body and public entity across 17 portfolios, with a Cabinet view, treemap, matrix, relationship graph, map, timeline, searchable table, and auto-computed insights.

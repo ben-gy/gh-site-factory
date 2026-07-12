@@ -3,6 +3,25 @@
   "last_updated": "2026-07-12",
   "sites": [
     {
+      "name": "au-pokies",
+      "repo": "ben-gy/au-pokies",
+      "date": "2026-07-12",
+      "description": "Australian poker machine (pokies) losses by Local Government Area — unifies fragmented state regulator data into one interface with a per-adult leaderboard, Leaflet map, state cross-reference matrix, squarified treemap, per-capita dot plot, and auto-detected insights; highlights that WA bans suburban pokies entirely",
+      "category": "public-health",
+      "stack": "vanilla-ts",
+      "data_strategy": "embedded",
+      "data_sources": [
+        "Liquor & Gaming NSW (gaming machine data by LGA)",
+        "Victorian Gambling and Casino Control Commission (VGCCC)",
+        "QLD Office of Liquor and Gaming Regulation",
+        "SA Consumer & Business Services",
+        "QGSO Australian Gambling Statistics"
+      ],
+      "status": "deployed",
+      "url": "https://au-pokies.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-pokies/pull/1"
+    },
+    {
       "name": "au-gov",
       "repo": "ben-gy/au-gov",
       "date": "2026-07-12",
