@@ -3,6 +3,22 @@
   "last_updated": "2026-07-12",
   "sites": [
     {
+      "name": "nsw-pokies",
+      "repo": "ben-gy/nsw-pokies",
+      "date": "2026-07-12",
+      "description": "Poker machine (pokies) losses for every NSW council area — unifies Liquor & Gaming NSW clubs + hotels gaming-machine data (all 128 LGAs, ~$9bn/yr in player losses) with a leaderboard, Leaflet choropleth, six-year statewide trend, treemap, loss-per-adult distribution, auto-insights and a per-council drill-down.",
+      "category": "public-health",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "Liquor & Gaming NSW — Gaming Machine Data (Clubs & Hotels, by LGA)",
+        "Geoscape Administrative Boundaries — NSW LGA (data.gov.au)"
+      ],
+      "status": "deployed",
+      "url": "https://nsw-pokies.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/nsw-pokies/pull/2"
+    },
+    {
       "name": "au-pay-gap",
       "repo": "ben-gy/au-pay-gap",
       "date": "2026-07-12",

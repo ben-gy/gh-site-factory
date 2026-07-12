@@ -2,6 +2,22 @@
   "last_updated": "2026-07-12",
   "sites": [
     {
+      "name": "Pokies Losses (NSW)",
+      "slug": "nsw-pokies",
+      "description": "How much each NSW council area loses to poker machines — clubs and hotels ranked, mapped and tracked over six years, with loss-per-adult comparisons for all 128 LGAs.",
+      "url": "https://nsw-pokies.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/nsw-pokies",
+      "tags": [
+        "gambling",
+        "public-health",
+        "government-transparency",
+        "NSW",
+        "pokies"
+      ],
+      "type": "web",
+      "date": "2026-07-12"
+    },
+    {
       "name": "Gender Pay Gap (AU)",
       "slug": "au-pay-gap",
       "description": "Search the gender pay gap at 8,600+ Australian employers — official WGEA data ranked, compared to industry and national medians, tracked year-on-year, and broken down by pay quartile.",
