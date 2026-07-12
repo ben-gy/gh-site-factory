@@ -4,7 +4,7 @@
     {
       "name": "Regional Unemployment",
       "slug": "au-jobs",
-      "icon": "💼",
+      "icon": "briefcase",
       "category": "data-explorers",
       "country": "AU",
       "description": "The unemployment rate for every Australian local government area — 15 years of official Small Area Labour Markets data, mapped, ranked and charted, with hotspots and trends surfaced automatically.",
@@ -23,7 +23,7 @@
     {
       "name": "NSW Pokies Losses",
       "slug": "nsw-pokies",
-      "icon": "🎰",
+      "icon": "dices",
       "category": "data-explorers",
       "country": "AU",
       "description": "How much each NSW council area loses to poker machines — clubs and hotels ranked, mapped and tracked over six years, with loss-per-adult comparisons for all 128 LGAs.",
@@ -42,7 +42,7 @@
     {
       "name": "Gender Pay Gap",
       "slug": "au-pay-gap",
-      "icon": "⚖️",
+      "icon": "scale",
       "category": "data-explorers",
       "country": "AU",
       "description": "Search the gender pay gap at 8,600+ Australian employers — official WGEA data ranked, compared to industry and national medians, tracked year-on-year, and broken down by pay quartile.",
@@ -61,7 +61,7 @@
     {
       "name": "Government Contracts",
       "slug": "au-contracts",
-      "icon": "📜",
+      "icon": "scroll-text",
       "category": "data-explorers",
       "country": "AU",
       "description": "Follow the public money — every Australian federal government contract for FY2025-26, with supplier and agency leaderboards, a relationship network, spend-flow, state map and a searchable database.",
@@ -80,7 +80,7 @@
     {
       "name": "Pokies Losses",
       "slug": "au-pokies",
-      "icon": "🎰",
+      "icon": "coins",
       "category": "data-explorers",
       "country": "AU",
       "description": "How much your community loses to poker machines — Australian pokies losses by Local Government Area, ranked per-adult, mapped, and compared across states.",
@@ -99,7 +99,7 @@
     {
       "name": "Machinery of Government",
       "slug": "au-gov",
-      "icon": "🏛️",
+      "icon": "landmark",
       "category": "data-explorers",
       "country": "AU",
       "description": "Interactive map of the Australian Government — every department, agency, statutory body and public entity across 17 portfolios, with a Cabinet view, treemap, matrix, relationship graph, map, timeline, searchable table, and auto-computed insights.",
@@ -118,7 +118,7 @@
     {
       "name": "Flight Delays",
       "slug": "au-flights",
-      "icon": "✈️",
+      "icon": "plane",
       "category": "data-explorers",
       "country": "AU",
       "description": "Which Australian domestic flights run on time? Compare every major route and airline by on-time arrivals, delays and cancellations — 22 years of official BITRE data, mapped and searchable.",
@@ -137,7 +137,7 @@
     {
       "name": "Pullshark",
       "slug": "pullshark",
-      "icon": "🦈",
+      "icon": "trending-up",
       "category": "live-dashboards",
       "description": "Discover open-source products trending on GitHub, ranked daily by an HN-style decay.",
       "url": "https://pullshark.ben.gy",
@@ -154,7 +154,7 @@
     {
       "name": "Childcare Watch",
       "slug": "au-childcare",
-      "icon": "🧸",
+      "icon": "baby",
       "category": "data-explorers",
       "country": "AU",
       "description": "Search and compare every Australian childcare and early-learning service — NQS ratings, all seven Quality Area sub-scores, provider chains, leaderboards, and rating-change tracking.",
@@ -173,7 +173,7 @@
     {
       "name": "Charity Watch",
       "slug": "au-charities",
-      "icon": "🎗️",
+      "icon": "heart-handshake",
       "category": "data-explorers",
       "country": "AU",
       "description": "Look up any of Australia's 65,000+ registered charities — sector, finances, where money comes from and goes, plus auto-detected anomalies.",
@@ -192,7 +192,7 @@
     {
       "name": "NDIS Watch",
       "slug": "au-ndis-watch",
-      "icon": "♿",
+      "icon": "accessibility",
       "category": "data-explorers",
       "country": "AU",
       "description": "Search every NDIS Commission compliance action — banning orders, registration revocations, suspensions, and notices against Australian disability providers and workers — by name, state, and severity.",
@@ -211,7 +211,7 @@
     {
       "name": "Aged Care Quality",
       "slug": "au-agedcare",
-      "icon": "🧓",
+      "icon": "hand-heart",
       "category": "data-explorers",
       "country": "AU",
       "description": "Search and compare every Australian residential aged care home — Star Ratings, staffing, resident surveys, and quality measures from official government data.",
@@ -229,7 +229,7 @@
     {
       "name": "Leader Skills",
       "slug": "leader-skills",
-      "icon": "🧭",
+      "icon": "compass",
       "category": "data-explorers",
       "description": "Explore well-documented leaders, then build your own leadership operating system.",
       "url": "https://leader-skills.benrichardson.dev",
@@ -245,7 +245,7 @@
     {
       "name": "World Cup Invitations",
       "slug": "26wc",
-      "icon": "⚽",
+      "icon": "trophy",
       "category": "fun",
       "description": "Disguise every 2026 World Cup knockout match as a believable work meeting — pick your profession, browse the full bracket, and download one calendar file so you can watch in peace.",
       "url": "https://26wc.ben.gy",
@@ -264,7 +264,7 @@
     {
       "name": "DSN Watch",
       "slug": "dsnwatch",
-      "icon": "🛰️",
+      "icon": "satellite-dish",
       "category": "live-dashboards",
       "description": "Live view of NASA's Deep Space Network — every antenna, every spacecraft, right now. A consumer-friendly reimagining of NASA's DSN Now dashboard.",
       "url": "https://dsnwatch.benrichardson.dev",
@@ -282,7 +282,7 @@
     {
       "name": "Crime Statistics",
       "slug": "au-crime",
-      "icon": "🚨",
+      "icon": "siren",
       "category": "data-explorers",
       "country": "AU",
       "description": "Explore and compare crime statistics across every Australian state and territory — standardised ANZSOC categories, per-capita rates, and auto-detected anomalies in one interactive dashboard.",
@@ -301,7 +301,7 @@
     {
       "name": "Development Applications",
       "slug": "au-planning",
-      "icon": "🏗️",
+      "icon": "building-2",
       "category": "data-explorers",
       "country": "AU",
       "description": "Unified planning and development application explorer across Australian councils — search, filter, and visualise DAs by type, status, suburb, and processing time.",
@@ -320,7 +320,7 @@
     {
       "name": "Road Crashes",
       "slug": "au-crashes",
-      "icon": "🛣️",
+      "icon": "car",
       "category": "data-explorers",
       "country": "AU",
       "description": "Interactive explorer for 58,000+ Australian road fatality records (1989–2026) from the BITRE ARDD — trends, maps, demographics, and temporal heatmaps.",
@@ -339,7 +339,7 @@
     {
       "name": "Political Donations",
       "slug": "au-donations",
-      "icon": "💰",
+      "icon": "banknote",
       "category": "data-explorers",
       "country": "AU",
       "description": "Searchable Australian political donations explorer unifying the AEC Transparency Register and all state/territory disclosure registers into one interface with filters, aggregates, and jurisdiction comparison.",
@@ -357,7 +357,7 @@
     {
       "name": "Hospital Performance",
       "slug": "au-hospitals",
-      "icon": "🏥",
+      "icon": "hospital",
       "category": "data-explorers",
       "country": "AU",
       "description": "Searchable Australian hospital performance explorer — ED 4-hour departure rates, triage response times, and elective surgery waits for 1,400+ hospitals via AIHW MyHospitals API.",
@@ -375,7 +375,7 @@
     {
       "name": "NEMWatch",
       "slug": "nemwatch",
-      "icon": "⚡",
+      "icon": "zap",
       "category": "live-dashboards",
       "country": "AU",
       "description": "Live Australian electricity spot prices and grid demand for all NEM regions, updated every 5 minutes from AEMO data.",
@@ -393,7 +393,7 @@
     {
       "name": "Dam Levels",
       "slug": "au-dams",
-      "icon": "🌊",
+      "icon": "waves",
       "category": "live-dashboards",
       "country": "AU",
       "description": "Live storage levels for 26 major Australian dams and reservoirs via Bureau of Meteorology Water Data Online.",
@@ -411,7 +411,7 @@
     {
       "name": "ThreatGlobe",
       "slug": "threatglobe",
-      "icon": "🌐",
+      "icon": "globe",
       "category": "live-dashboards",
       "description": "Real-time global cyber threat observatory with interactive 3D globe.",
       "url": "https://threatglobe.benrichardson.dev",
@@ -428,7 +428,7 @@
     {
       "name": "Artemis Tracker",
       "slug": "artemis-tracker",
-      "icon": "🚀",
+      "icon": "rocket",
       "category": "live-dashboards",
       "description": "Real-time Artemis mission tracker with 3D trajectory visualization.",
       "url": "https://artemistracker.benrichardson.dev",
@@ -445,7 +445,7 @@
     {
       "name": "Dropwell",
       "slug": "dropwell",
-      "icon": "💧",
+      "icon": "droplet",
       "category": "files",
       "description": "End-to-end encrypted peer-to-peer file sharing in the browser.",
       "url": "https://dropwell.benrichardson.dev",
@@ -462,7 +462,7 @@
     {
       "name": "Tariff Check",
       "slug": "tariff-check",
-      "icon": "🧾",
+      "icon": "receipt",
       "category": "ios-apps",
       "description": "Tariff impact checker for international trade.",
       "repo": "https://github.com/ben-gy/tariff-check",
@@ -477,7 +477,7 @@
     {
       "name": "Fire Watch",
       "slug": "fire-watch-australia",
-      "icon": "🔥",
+      "icon": "flame",
       "category": "ios-apps",
       "country": "AU",
       "description": "Australian bushfire watch and monitoring dashboard.",
@@ -494,7 +494,7 @@
     {
       "name": "CrimeAware",
       "slug": "crimeaware",
-      "icon": "🗺️",
+      "icon": "map",
       "category": "ios-apps",
       "country": "AU",
       "description": "iOS crime statistics map for Australia (NSW and Victoria).",
@@ -511,7 +511,7 @@
     {
       "name": "Leaf Log",
       "slug": "leaf-log",
-      "icon": "🌿",
+      "icon": "leaf",
       "category": "ios-apps",
       "description": "Plant care and leaf tracking log.",
       "repo": "https://github.com/ben-gy/leaf-log",
@@ -526,7 +526,7 @@
     {
       "name": "MedTriage",
       "slug": "medtriage",
-      "icon": "🩺",
+      "icon": "stethoscope",
       "category": "ios-apps",
       "description": "Medical triage decision support tool.",
       "repo": "https://github.com/ben-gy/MedTriage",
@@ -541,7 +541,7 @@
     {
       "name": "Control Room",
       "slug": "controlroom-org",
-      "icon": "🎛️",
+      "icon": "sliders-horizontal",
       "category": "ios-apps",
       "description": "Control room organization tool.",
       "repo": "https://github.com/ben-gy/controlroom-org",
@@ -555,7 +555,7 @@
     {
       "name": "Pace Calc",
       "slug": "pace-calc",
-      "icon": "🏃",
+      "icon": "timer",
       "category": "ios-apps",
       "description": "Running pace calculator.",
       "repo": "https://github.com/ben-gy/pace-calc",
@@ -570,7 +570,7 @@
     {
       "name": "Stashed",
       "slug": "stashed",
-      "icon": "📦",
+      "icon": "package",
       "category": "ios-apps",
       "description": "Stash manager for organizing and tracking items.",
       "repo": "https://github.com/ben-gy/stashed",
@@ -585,7 +585,7 @@
     {
       "name": "Due Back",
       "slug": "due-back",
-      "icon": "⏰",
+      "icon": "alarm-clock",
       "category": "ios-apps",
       "description": "Due date and return tracker.",
       "repo": "https://github.com/ben-gy/due-back",
