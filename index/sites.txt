@@ -3,6 +3,13 @@ Last updated: 2026-07-12
 
 === Web Sites ===
 
+Regional Unemployment (AU)
+  https://au-jobs.benrichardson.dev
+  The unemployment rate for every Australian local government area — 15 years of official Small Area Labour Markets data, mapped, ranked and charted, with hotspots and trends surfaced automatically.
+  Tags: economy, unemployment, labour-market, AU, jobs
+  Repo: https://github.com/ben-gy/au-jobs
+  Date: 2026-07-12
+
 Pokies Losses (NSW)
   https://nsw-pokies.benrichardson.dev
   How much each NSW council area loses to poker machines — clubs and hotels ranked, mapped and tracked over six years, with loss-per-adult comparisons for all 128 LGAs.

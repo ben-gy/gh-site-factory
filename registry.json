@@ -3,6 +3,22 @@
   "last_updated": "2026-07-12",
   "sites": [
     {
+      "name": "au-jobs",
+      "repo": "ben-gy/au-jobs",
+      "date": "2026-07-12",
+      "description": "Interactive explorer for the Small Area Labour Markets dataset — smoothed unemployment rate, unemployed persons and labour force for all ~544 Australian local government areas across 62 quarters (Dec 2010–Mar 2026). Seven views: Leaflet choropleth, leaderboard, sortable table with sparklines, 15-year state trend lines, state comparison + quarter heatmap, distribution histogram, and auto-detected insights, plus a hash-linkable per-LGA drill-down.",
+      "category": "economy",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "Small Area Labour Markets (Smoothed LGA), Jobs and Skills Australia / DEWR",
+        "ABS ASGS 2024 Local Government Area boundaries"
+      ],
+      "status": "deployed",
+      "url": "https://au-jobs.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-jobs/pull/1"
+    },
+    {
       "name": "nsw-pokies",
       "repo": "ben-gy/nsw-pokies",
       "date": "2026-07-12",

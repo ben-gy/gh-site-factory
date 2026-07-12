@@ -2,6 +2,22 @@
   "last_updated": "2026-07-12",
   "sites": [
     {
+      "name": "Regional Unemployment (AU)",
+      "slug": "au-jobs",
+      "description": "The unemployment rate for every Australian local government area — 15 years of official Small Area Labour Markets data, mapped, ranked and charted, with hotspots and trends surfaced automatically.",
+      "url": "https://au-jobs.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-jobs",
+      "tags": [
+        "economy",
+        "unemployment",
+        "labour-market",
+        "AU",
+        "jobs"
+      ],
+      "type": "web",
+      "date": "2026-07-12"
+    },
+    {
       "name": "Pokies Losses (NSW)",
       "slug": "nsw-pokies",
       "description": "How much each NSW council area loses to poker machines — clubs and hotels ranked, mapped and tracked over six years, with loss-per-adult comparisons for all 128 LGAs.",
