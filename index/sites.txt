@@ -3,6 +3,13 @@ Last updated: 2026-06-26
 
 === Web Sites ===
 
+Flight Delays (AU)
+  https://au-flights.benrichardson.dev
+  Which Australian domestic flights run on time? Compare every major route and airline by on-time arrivals, delays and cancellations — 22 years of official BITRE data, mapped and searchable.
+  Tags: transport, aviation, flights, on-time-performance, travel
+  Repo: https://github.com/ben-gy/au-flights
+  Date: 2026-06-26
+
 NDIS Watch (AU)
   https://au-ndis-watch.benrichardson.dev
   Search every NDIS Commission compliance action — banning orders, registration revocations, suspensions, and notices against Australian disability providers and workers — by name, state, and severity.
@@ -158,3 +165,4 @@ Due Back
   Date: 2026-03-28
 26wc
 leader-skills
+pullshark

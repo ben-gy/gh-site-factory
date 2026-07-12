@@ -3,6 +3,32 @@
   "last_updated": "2026-06-26",
   "sites": [
     {
+      "name": "au-flights",
+      "repo": "ben-gy/au-flights",
+      "date": "2026-06-26",
+      "description": "On-time performance for every competitive Australian domestic route and airline — 22 years (118,000 rows) of BITRE punctuality, delay and cancellation data with an airline leaderboard, route drill-downs, Leaflet map, force-directed network graph, airline × airport matrix, seasonality heatmap and auto-detected insights",
+      "category": "transport",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "BITRE Domestic Airline On Time Performance (data.gov.au)"
+      ],
+      "status": "deployed",
+      "url": "https://au-flights.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-flights/pull/1"
+    },
+    {
+      "name": "pullshark-board",
+      "repo": "ben-gy/pullshark-board",
+      "date": "2026-06-26",
+      "description": "Discover open-source products trending on GitHub, ranked daily by an HN-style decay.",
+      "category": "misc",
+      "stack": "vanilla-js",
+      "data_strategy": "static",
+      "status": "deployed",
+      "url": "https://pullshark.ben.gy"
+    },
+    {
       "name": "au-childcare",
       "repo": "ben-gy/au-childcare",
       "date": "2026-06-25",

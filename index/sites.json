@@ -2,35 +2,35 @@
   "last_updated": "2026-06-26",
   "sites": [
     {
-      "name": "NDIS Watch (AU)",
-      "slug": "au-ndis-watch",
-      "description": "Search every NDIS Commission compliance action — banning orders, registration revocations, suspensions, and notices against Australian disability providers and workers — by name, state, and severity.",
-      "url": "https://au-ndis-watch.benrichardson.dev",
-      "repo": "https://github.com/ben-gy/au-ndis-watch",
+      "name": "Flight Delays (AU)",
+      "slug": "au-flights",
+      "description": "Which Australian domestic flights run on time? Compare every major route and airline by on-time arrivals, delays and cancellations — 22 years of official BITRE data, mapped and searchable.",
+      "url": "https://au-flights.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-flights",
       "tags": [
-        "government-transparency",
-        "ndis",
-        "disability",
-        "enforcement",
-        "family"
+        "transport",
+        "aviation",
+        "flights",
+        "on-time-performance",
+        "travel"
       ],
       "type": "web",
-      "date": "2026-06-22"
+      "date": "2026-06-26"
     },
     {
-      "name": "Aged Care Quality (AU)",
-      "slug": "au-agedcare",
-      "description": "Search and compare every Australian residential aged care home — Star Ratings, staffing, resident surveys, and quality measures from official government data.",
-      "url": "https://au-agedcare.benrichardson.dev",
-      "repo": "https://github.com/ben-gy/au-agedcare",
+      "name": "Pullshark",
+      "slug": "pullshark",
+      "description": "Discover open-source products trending on GitHub, ranked daily by an HN-style decay.",
+      "url": "https://pullshark.ben.gy",
+      "repo": "https://github.com/ben-gy/pullshark-board",
       "tags": [
-        "health",
-        "aged-care",
-        "star-ratings",
-        "family"
+        "github",
+        "open-source",
+        "discovery",
+        "products"
       ],
       "type": "web",
-      "date": "2026-06-21"
+      "date": "2026-06-26"
     },
     {
       "name": "Childcare Watch (AU)",
@@ -63,6 +63,37 @@
       ],
       "type": "web",
       "date": "2026-06-24"
+    },
+    {
+      "name": "NDIS Watch (AU)",
+      "slug": "au-ndis-watch",
+      "description": "Search every NDIS Commission compliance action — banning orders, registration revocations, suspensions, and notices against Australian disability providers and workers — by name, state, and severity.",
+      "url": "https://au-ndis-watch.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-ndis-watch",
+      "tags": [
+        "government-transparency",
+        "ndis",
+        "disability",
+        "enforcement",
+        "family"
+      ],
+      "type": "web",
+      "date": "2026-06-22"
+    },
+    {
+      "name": "Aged Care Quality (AU)",
+      "slug": "au-agedcare",
+      "description": "Search and compare every Australian residential aged care home — Star Ratings, staffing, resident surveys, and quality measures from official government data.",
+      "url": "https://au-agedcare.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-agedcare",
+      "tags": [
+        "health",
+        "aged-care",
+        "star-ratings",
+        "family"
+      ],
+      "type": "web",
+      "date": "2026-06-21"
     },
     {
       "name": "Leader Skills",
