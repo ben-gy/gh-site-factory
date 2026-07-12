@@ -190,9 +190,8 @@
         "National Pollutant Inventory (data.gov.au)",
         "ABS Estimated Resident Population (June 2024)"
       ],
-      "status": "deploy_failed",
-      "url": "https://au-pollution.benrichardson.dev",
-      "notes": "Build + DNS complete; deploy blocked by gh auth — push manually after `gh auth login`"
+      "status": "deployed",
+      "url": "https://au-pollution.benrichardson.dev"
     },
     {
       "name": "au-ndis-watch",

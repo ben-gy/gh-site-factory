@@ -71,25 +71,43 @@ export function attachSvgZoom(
 
   // Drag to pan. A capture-phase click listener swallows the click that ends a
   // drag so node click handlers don't fire after panning.
+  //
+  // Capture is deferred until movement actually exceeds the threshold. If we
+  // captured on pointerdown, a plain click's pointerup (and the click it
+  // generates) would retarget to the SVG and never reach child node handlers —
+  // making every node click dead. Deferring means a click never captures.
+  const THRESHOLD = 4;
+  let pointerDown = false;
   let dragging = false;
   let moved = 0;
+  let startX = 0;
+  let startY = 0;
   let lastX = 0;
   let lastY = 0;
+  let activePointerId = -1;
   let suppressClick = false;
 
   const onPointerDown = (e: PointerEvent) => {
     if (e.button !== 0) return;
-    dragging = true;
+    pointerDown = true;
+    dragging = false;
     moved = 0;
-    lastX = e.clientX;
-    lastY = e.clientY;
-    svg.setPointerCapture(e.pointerId);
-    svg.style.cursor = 'grabbing';
+    startX = lastX = e.clientX;
+    startY = lastY = e.clientY;
+    activePointerId = e.pointerId;
+    // NOTE: no setPointerCapture and no cursor change here — see comment above.
   };
   const onPointerMove = (e: PointerEvent) => {
-    if (!dragging) return;
+    if (!pointerDown) return;
     const rect = svg.getBoundingClientRect();
     if (!rect.width || !rect.height) return;
+    if (!dragging) {
+      // Only promote to a drag (and capture) once past the threshold.
+      if (Math.abs(e.clientX - startX) + Math.abs(e.clientY - startY) <= THRESHOLD) return;
+      dragging = true;
+      try { svg.setPointerCapture(activePointerId); } catch { /* pointer already gone */ }
+      svg.style.cursor = 'grabbing';
+    }
     const pdx = e.clientX - lastX;
     const pdy = e.clientY - lastY;
     moved += Math.abs(pdx) + Math.abs(pdy);
@@ -99,11 +117,14 @@ export function attachSvgZoom(
     apply();
   };
   const onPointerUp = (e: PointerEvent) => {
-    if (!dragging) return;
+    if (!pointerDown) return;
+    pointerDown = false;
+    if (dragging) {
+      try { svg.releasePointerCapture(e.pointerId); } catch { /* nothing captured */ }
+      svg.style.cursor = 'grab';
+      if (moved > THRESHOLD) suppressClick = true;
+    }
     dragging = false;
-    svg.releasePointerCapture(e.pointerId);
-    svg.style.cursor = 'grab';
-    if (moved > 4) suppressClick = true;
   };
   const onClickCapture = (e: MouseEvent) => {
     if (suppressClick) {
