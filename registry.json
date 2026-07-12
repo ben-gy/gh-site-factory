@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "last_updated": "2026-07-12",
+  "last_updated": "2026-07-13",
   "sites": [
+    {
+      "name": "au-relations",
+      "repo": "ben-gy/au-relations",
+      "date": "2026-07-13",
+      "description": "How Australia formally relates to every other government — the full DFAT Australian Treaties Database (4,512 treaty records since 1901), the complete overseas diplomatic network including accreditation coverage, all 19 FTAs and curated organisation memberships, joined per country. Seven views: countries leaderboard with sparklines, 3-mode Leaflet world map, searchable treaty database, 125-year timeline, force-directed embassy accreditation network, subject × country matrix, and auto-insights, plus a hash-linkable per-country drill-down.",
+      "category": "government-transparency",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "DFAT Australian Treaties Database (docs.dfat.gov.au JSON API)",
+        "DFAT embassies and consulates overseas list (dfat.gov.au)",
+        "DFAT trade agreements pages (curated)",
+        "Curated international organisation membership lists"
+      ],
+      "status": "deployed",
+      "url": "https://au-relations.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-relations/pull/3"
+    },
     {
       "name": "au-jobs",
       "repo": "ben-gy/au-jobs",

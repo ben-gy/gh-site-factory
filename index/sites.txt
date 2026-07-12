@@ -1,7 +1,14 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-12
+Last updated: 2026-07-13
 
 === Web Sites ===
+
+Foreign Relations (AU)
+  https://au-relations.benrichardson.dev
+  How Australia formally relates to every other government — 4,500+ treaties, the entire embassy network, trade agreements and organisation memberships, joined per country.
+  Tags: treaties, diplomacy, foreign-affairs, DFAT, government-transparency
+  Repo: https://github.com/ben-gy/au-relations
+  Date: 2026-07-13
 
 Regional Unemployment (AU)
   https://au-jobs.benrichardson.dev

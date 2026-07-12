@@ -1,6 +1,25 @@
 {
-  "last_updated": "2026-07-12",
+  "last_updated": "2026-07-13",
   "sites": [
+    {
+      "name": "Foreign Relations",
+      "slug": "au-relations",
+      "icon": "globe",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "How Australia formally relates to every other government — 4,500+ treaties, the entire embassy network, trade agreements and organisation memberships, joined per country.",
+      "url": "https://au-relations.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-relations",
+      "tags": [
+        "treaties",
+        "diplomacy",
+        "foreign-affairs",
+        "DFAT",
+        "government-transparency"
+      ],
+      "type": "web",
+      "date": "2026-07-13"
+    },
     {
       "name": "Regional Unemployment",
       "slug": "au-jobs",
