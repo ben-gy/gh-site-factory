@@ -4,6 +4,8 @@
     {
       "name": "Regional Unemployment (AU)",
       "slug": "au-jobs",
+      "icon": "💼",
+      "category": "data-explorers",
       "description": "The unemployment rate for every Australian local government area — 15 years of official Small Area Labour Markets data, mapped, ranked and charted, with hotspots and trends surfaced automatically.",
       "url": "https://au-jobs.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-jobs",
@@ -20,6 +22,8 @@
     {
       "name": "Pokies Losses (NSW)",
       "slug": "nsw-pokies",
+      "icon": "🎰",
+      "category": "data-explorers",
       "description": "How much each NSW council area loses to poker machines — clubs and hotels ranked, mapped and tracked over six years, with loss-per-adult comparisons for all 128 LGAs.",
       "url": "https://nsw-pokies.benrichardson.dev",
       "repo": "https://github.com/ben-gy/nsw-pokies",
@@ -36,6 +40,8 @@
     {
       "name": "Gender Pay Gap (AU)",
       "slug": "au-pay-gap",
+      "icon": "⚖️",
+      "category": "data-explorers",
       "description": "Search the gender pay gap at 8,600+ Australian employers — official WGEA data ranked, compared to industry and national medians, tracked year-on-year, and broken down by pay quartile.",
       "url": "https://au-pay-gap.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-pay-gap",
@@ -52,6 +58,8 @@
     {
       "name": "Government Contracts (AU)",
       "slug": "au-contracts",
+      "icon": "📜",
+      "category": "data-explorers",
       "description": "Follow the public money — every Australian federal government contract for FY2025-26, with supplier and agency leaderboards, a relationship network, spend-flow, state map and a searchable database.",
       "url": "https://au-contracts.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-contracts",
@@ -68,6 +76,8 @@
     {
       "name": "Pokies Losses (AU)",
       "slug": "au-pokies",
+      "icon": "🎰",
+      "category": "data-explorers",
       "description": "How much your community loses to poker machines — Australian pokies losses by Local Government Area, ranked per-adult, mapped, and compared across states.",
       "url": "https://au-pokies.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-pokies",
@@ -84,6 +94,8 @@
     {
       "name": "Machinery of Government (AU)",
       "slug": "au-gov",
+      "icon": "🏛️",
+      "category": "data-explorers",
       "description": "Interactive map of the Australian Government — every department, agency, statutory body and public entity across 17 portfolios, with a Cabinet view, treemap, matrix, relationship graph, map, timeline, searchable table, and auto-computed insights.",
       "url": "https://au-gov.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-gov",
@@ -100,6 +112,8 @@
     {
       "name": "Flight Delays (AU)",
       "slug": "au-flights",
+      "icon": "✈️",
+      "category": "data-explorers",
       "description": "Which Australian domestic flights run on time? Compare every major route and airline by on-time arrivals, delays and cancellations — 22 years of official BITRE data, mapped and searchable.",
       "url": "https://au-flights.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-flights",
@@ -116,6 +130,8 @@
     {
       "name": "Pullshark",
       "slug": "pullshark",
+      "icon": "🦈",
+      "category": "live-dashboards",
       "description": "Discover open-source products trending on GitHub, ranked daily by an HN-style decay.",
       "url": "https://pullshark.ben.gy",
       "repo": "https://github.com/ben-gy/pullshark-board",
@@ -131,6 +147,8 @@
     {
       "name": "Childcare Watch (AU)",
       "slug": "au-childcare",
+      "icon": "🧸",
+      "category": "data-explorers",
       "description": "Search and compare every Australian childcare and early-learning service — NQS ratings, all seven Quality Area sub-scores, provider chains, leaderboards, and rating-change tracking.",
       "url": "https://au-childcare.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-childcare",
@@ -147,6 +165,8 @@
     {
       "name": "Charity Watch (AU)",
       "slug": "au-charities",
+      "icon": "🎗️",
+      "category": "data-explorers",
       "description": "Look up any of Australia's 65,000+ registered charities — sector, finances, where money comes from and goes, plus auto-detected anomalies.",
       "url": "https://au-charities.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-charities",
@@ -163,6 +183,8 @@
     {
       "name": "NDIS Watch (AU)",
       "slug": "au-ndis-watch",
+      "icon": "♿",
+      "category": "data-explorers",
       "description": "Search every NDIS Commission compliance action — banning orders, registration revocations, suspensions, and notices against Australian disability providers and workers — by name, state, and severity.",
       "url": "https://au-ndis-watch.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-ndis-watch",
@@ -179,6 +201,8 @@
     {
       "name": "Aged Care Quality (AU)",
       "slug": "au-agedcare",
+      "icon": "🧓",
+      "category": "data-explorers",
       "description": "Search and compare every Australian residential aged care home — Star Ratings, staffing, resident surveys, and quality measures from official government data.",
       "url": "https://au-agedcare.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-agedcare",
@@ -194,6 +218,8 @@
     {
       "name": "Leader Skills",
       "slug": "leader-skills",
+      "icon": "🧭",
+      "category": "data-explorers",
       "description": "Explore well-documented leaders, then build your own leadership operating system.",
       "url": "https://leader-skills.benrichardson.dev",
       "repo": "https://github.com/ben-gy/leader-skills",
@@ -208,6 +234,8 @@
     {
       "name": "World Cup Invitations",
       "slug": "26wc",
+      "icon": "⚽",
+      "category": "fun",
       "description": "Disguise every 2026 World Cup knockout match as a believable work meeting — pick your profession, browse the full bracket, and download one calendar file so you can watch in peace.",
       "url": "https://26wc.ben.gy",
       "repo": "https://github.com/ben-gy/worldcupinvitations",
@@ -225,16 +253,26 @@
     {
       "name": "DSN Watch",
       "slug": "dsnwatch",
+      "icon": "🛰️",
+      "category": "live-dashboards",
       "description": "Live view of NASA's Deep Space Network — every antenna, every spacecraft, right now. A consumer-friendly reimagining of NASA's DSN Now dashboard.",
       "url": "https://dsnwatch.benrichardson.dev",
       "repo": "https://github.com/ben-gy/dsnwatch",
-      "tags": ["science", "space", "nasa", "live-data", "dashboard"],
+      "tags": [
+        "science",
+        "space",
+        "nasa",
+        "live-data",
+        "dashboard"
+      ],
       "type": "web",
       "date": "2026-04-21"
     },
     {
       "name": "Crime Statistics (AU)",
       "slug": "au-crime",
+      "icon": "🚨",
+      "category": "data-explorers",
       "description": "Explore and compare crime statistics across every Australian state and territory — standardised ANZSOC categories, per-capita rates, and auto-detected anomalies in one interactive dashboard.",
       "url": "https://au-crime.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-crime",
@@ -251,6 +289,8 @@
     {
       "name": "Development Applications (AU)",
       "slug": "au-planning",
+      "icon": "🏗️",
+      "category": "data-explorers",
       "description": "Unified planning and development application explorer across Australian councils — search, filter, and visualise DAs by type, status, suburb, and processing time.",
       "url": "https://au-planning.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-planning",
@@ -267,6 +307,8 @@
     {
       "name": "Road Crashes (AU)",
       "slug": "au-crashes",
+      "icon": "🛣️",
+      "category": "data-explorers",
       "description": "Interactive explorer for 58,000+ Australian road fatality records (1989–2026) from the BITRE ARDD — trends, maps, demographics, and temporal heatmaps.",
       "url": "https://au-crashes.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-crashes",
@@ -283,6 +325,8 @@
     {
       "name": "Political Donations (AU)",
       "slug": "au-donations",
+      "icon": "💰",
+      "category": "data-explorers",
       "description": "Searchable Australian political donations explorer unifying the AEC Transparency Register and all state/territory disclosure registers into one interface with filters, aggregates, and jurisdiction comparison.",
       "url": "https://au-donations.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-donations",
@@ -298,6 +342,8 @@
     {
       "name": "Hospital Performance (AU)",
       "slug": "au-hospitals",
+      "icon": "🏥",
+      "category": "data-explorers",
       "description": "Searchable Australian hospital performance explorer — ED 4-hour departure rates, triage response times, and elective surgery waits for 1,400+ hospitals via AIHW MyHospitals API.",
       "url": "https://au-hospitals.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-hospitals",
@@ -313,6 +359,8 @@
     {
       "name": "NEMWatch (AU)",
       "slug": "nemwatch",
+      "icon": "⚡",
+      "category": "live-dashboards",
       "description": "Live Australian electricity spot prices and grid demand for all NEM regions, updated every 5 minutes from AEMO data.",
       "url": "https://nemwatch.benrichardson.dev",
       "repo": "https://github.com/ben-gy/nemwatch",
@@ -328,6 +376,8 @@
     {
       "name": "Dam Levels (AU)",
       "slug": "au-dams",
+      "icon": "🌊",
+      "category": "live-dashboards",
       "description": "Live storage levels for 26 major Australian dams and reservoirs via Bureau of Meteorology Water Data Online.",
       "url": "https://audams.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-dams",
@@ -343,6 +393,8 @@
     {
       "name": "ThreatGlobe",
       "slug": "threatglobe",
+      "icon": "🌐",
+      "category": "live-dashboards",
       "description": "Real-time global cyber threat observatory with interactive 3D globe.",
       "url": "https://threatglobe.benrichardson.dev",
       "repo": "https://github.com/ben-gy/threatglobe",
@@ -358,6 +410,8 @@
     {
       "name": "Artemis Tracker",
       "slug": "artemis-tracker",
+      "icon": "🚀",
+      "category": "live-dashboards",
       "description": "Real-time Artemis mission tracker with 3D trajectory visualization.",
       "url": "https://artemistracker.benrichardson.dev",
       "repo": "https://github.com/ben-gy/artemis-tracker",
@@ -373,6 +427,8 @@
     {
       "name": "Dropwell",
       "slug": "dropwell",
+      "icon": "💧",
+      "category": "files",
       "description": "End-to-end encrypted peer-to-peer file sharing in the browser.",
       "url": "https://dropwell.benrichardson.dev",
       "repo": "https://github.com/ben-gy/dropwell",
@@ -388,6 +444,8 @@
     {
       "name": "Tariff Check",
       "slug": "tariff-check",
+      "icon": "🧾",
+      "category": "ios-apps",
       "description": "Tariff impact checker for international trade.",
       "repo": "https://github.com/ben-gy/tariff-check",
       "tags": [
@@ -401,6 +459,8 @@
     {
       "name": "Fire Watch (AU)",
       "slug": "fire-watch-australia",
+      "icon": "🔥",
+      "category": "ios-apps",
       "description": "Australian bushfire watch and monitoring dashboard.",
       "repo": "https://github.com/ben-gy/Fire-Watch-Australia",
       "tags": [
@@ -415,6 +475,8 @@
     {
       "name": "CrimeAware (AU)",
       "slug": "crimeaware",
+      "icon": "🗺️",
+      "category": "ios-apps",
       "description": "iOS crime statistics map for Australia (NSW and Victoria).",
       "repo": "https://github.com/ben-gy/CrimeAware",
       "tags": [
@@ -429,6 +491,8 @@
     {
       "name": "Leaf Log",
       "slug": "leaf-log",
+      "icon": "🌿",
+      "category": "ios-apps",
       "description": "Plant care and leaf tracking log.",
       "repo": "https://github.com/ben-gy/leaf-log",
       "tags": [
@@ -442,6 +506,8 @@
     {
       "name": "MedTriage",
       "slug": "medtriage",
+      "icon": "🩺",
+      "category": "ios-apps",
       "description": "Medical triage decision support tool.",
       "repo": "https://github.com/ben-gy/MedTriage",
       "tags": [
@@ -455,6 +521,8 @@
     {
       "name": "Control Room",
       "slug": "controlroom-org",
+      "icon": "🎛️",
+      "category": "ios-apps",
       "description": "Control room organization tool.",
       "repo": "https://github.com/ben-gy/controlroom-org",
       "tags": [
@@ -467,6 +535,8 @@
     {
       "name": "Pace Calc",
       "slug": "pace-calc",
+      "icon": "🏃",
+      "category": "ios-apps",
       "description": "Running pace calculator.",
       "repo": "https://github.com/ben-gy/pace-calc",
       "tags": [
@@ -480,6 +550,8 @@
     {
       "name": "Stashed",
       "slug": "stashed",
+      "icon": "📦",
+      "category": "ios-apps",
       "description": "Stash manager for organizing and tracking items.",
       "repo": "https://github.com/ben-gy/stashed",
       "tags": [
@@ -493,6 +565,8 @@
     {
       "name": "Due Back",
       "slug": "due-back",
+      "icon": "⏰",
+      "category": "ios-apps",
       "description": "Due date and return tracker.",
       "repo": "https://github.com/ben-gy/due-back",
       "tags": [
