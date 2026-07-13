@@ -3,6 +3,13 @@ Last updated: 2026-07-13
 
 === Web Sites ===
 
+Temporary Visa Holders (AU)
+  https://au-visas.benrichardson.dev
+  How many people live in Australia on each temporary visa — 2.9 million holders by nationality, visa type and over 14 years, from the official Home Affairs data, mapped, ranked and charted.
+  Tags: immigration, visas, migration, students, government-transparency
+  Repo: https://github.com/ben-gy/au-visas
+  Date: 2026-07-13
+
 Foreign Relations (AU)
   https://au-relations.benrichardson.dev
   How Australia formally relates to every other government — 4,500+ treaties, the entire embassy network, trade agreements and organisation memberships, joined per country.
