@@ -1,7 +1,14 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-13
+Last updated: 2026-07-14
 
 === Web Sites ===
+
+Super Funds (AU)
+  https://au-super.benrichardson.dev
+  Compare every Australian MySuper default super fund — 10-year net returns, fees at your balance, and the APRA performance test — all 52 products side by side.
+  Tags: superannuation, retirement, fees, investing, finance
+  Repo: https://github.com/ben-gy/au-super
+  Date: 2026-07-14
 
 Temporary Visa Holders (AU)
   https://au-visas.benrichardson.dev

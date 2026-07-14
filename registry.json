@@ -1,7 +1,23 @@
 {
   "version": 1,
-  "last_updated": "2026-07-13",
+  "last_updated": "2026-07-14",
   "sites": [
+    {
+      "name": "au-super",
+      "repo": "ben-gy/au-super",
+      "date": "2026-07-14",
+      "description": "Compare every Australian MySuper default super product — all 52 products (37 trustees, $1.21tn member assets, as at 30 June 2025) from APRA's Comprehensive Product Performance Package. 3/5/7/10-year net investment returns, total fees at five balance sizes, the annual performance-test result and margin over benchmark, growth allocation and member numbers. Seven views: sortable Explorer, Rankings with metric toggle, a Fees-vs-Returns scatter with the low-fee/high-return sweet spot shaded, a fee heatmap across balance tiers, a trustee treemap, a returns/fees distribution histogram, and auto-detected Insights, plus a hash-linkable per-product drill-down with the lifecycle glide-path.",
+      "category": "finance",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "APRA MySuper Comprehensive Product Performance Package (apra.gov.au)",
+        "APRA annual superannuation performance test 2025 (apra.gov.au)"
+      ],
+      "status": "deployed",
+      "url": "https://au-super.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-super/pull/2"
+    },
     {
       "name": "au-visas",
       "repo": "ben-gy/au-visas",

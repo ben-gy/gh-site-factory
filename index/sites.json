@@ -1,6 +1,25 @@
 {
-  "last_updated": "2026-07-13",
+  "last_updated": "2026-07-14",
   "sites": [
+    {
+      "name": "Super Funds",
+      "slug": "au-super",
+      "icon": "piggy-bank",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Compare every Australian MySuper default super fund — 10-year net returns, fees at your balance, and the APRA performance test — all 52 products side by side.",
+      "url": "https://au-super.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-super",
+      "tags": [
+        "superannuation",
+        "retirement",
+        "fees",
+        "investing",
+        "finance"
+      ],
+      "type": "web",
+      "date": "2026-07-14"
+    },
     {
       "name": "Temporary Visa Holders",
       "slug": "au-visas",
