@@ -1,6 +1,24 @@
 {
-  "last_updated": "2026-07-15",
+  "last_updated": "2026-07-16",
   "sites": [
+    {
+      "name": "Ben Richardson OS",
+      "slug": "benrichardson-dev",
+      "icon": "monitor",
+      "category": "emulator",
+      "description": "A pixel-perfect 1984 Macintosh System 1 desktop in the browser — draggable windows, nine desk accessories, fourteen games, and a pile of easter eggs.",
+      "url": "https://benrichardson.dev",
+      "repo": "https://github.com/ben-gy/benrichardson.dev",
+      "tags": [
+        "macintosh",
+        "system-1",
+        "retro",
+        "emulator",
+        "1984"
+      ],
+      "type": "web",
+      "date": "2026-07-16"
+    },
     {
       "name": "Immunisation Coverage",
       "slug": "au-immunisation",

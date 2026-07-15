@@ -177,3 +177,4 @@ Artemis Tracker
   Repo: https://github.com/ben-gy/artemis-tracker
   Date: 2026-04-12
 voynich-investigation
+benrichardson-dev

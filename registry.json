@@ -1,7 +1,18 @@
 {
   "version": 1,
-  "last_updated": "2026-07-15",
+  "last_updated": "2026-07-16",
   "sites": [
+    {
+      "name": "benrichardson.dev",
+      "repo": "ben-gy/benrichardson.dev",
+      "date": "2026-07-16",
+      "description": "A pixel-perfect 1984 Macintosh System 1 desktop in the browser — draggable windows, nine desk accessories, fourteen games, and a pile of easter eggs.",
+      "category": "emulator",
+      "stack": "vanilla-js",
+      "data_strategy": "static",
+      "status": "deployed",
+      "url": "https://benrichardson.dev"
+    },
     {
       "name": "au-immunisation",
       "repo": "ben-gy/au-immunisation",
