@@ -1,7 +1,18 @@
 {
   "version": 1,
-  "last_updated": "2026-07-16",
+  "last_updated": "2026-07-15",
   "sites": [
+    {
+      "name": "voynich-investigation",
+      "repo": "ben-gy/voynich-investigation",
+      "date": "2026-07-15",
+      "description": "A forensic, statistics-first reading of the Voynich Manuscript — an interactive report styled after a botanical dichotomous key.",
+      "category": "science",
+      "stack": "vanilla-html",
+      "data_strategy": "static",
+      "status": "deployed",
+      "url": "https://voynich.benrichardson.dev"
+    },
     {
       "name": "benrichardson.dev",
       "repo": "ben-gy/benrichardson.dev",
@@ -28,17 +39,6 @@
       "status": "deployed",
       "url": "https://au-immunisation.benrichardson.dev",
       "pr_url": "https://github.com/ben-gy/au-immunisation/pull/1"
-    },
-    {
-      "name": "voynich-investigation",
-      "repo": "ben-gy/voynich-investigation",
-      "date": "2026-07-15",
-      "description": "A forensic, statistics-first reading of the Voynich Manuscript — an interactive report styled after a botanical dichotomous key.",
-      "category": "research",
-      "stack": "vanilla-html",
-      "data_strategy": "static",
-      "status": "deployed",
-      "url": "https://voynich.benrichardson.dev"
     },
     {
       "name": "au-super",

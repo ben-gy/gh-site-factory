@@ -1,6 +1,24 @@
 {
-  "last_updated": "2026-07-16",
+  "last_updated": "2026-07-15",
   "sites": [
+    {
+      "name": "The Withered Key",
+      "slug": "voynich-investigation",
+      "icon": "key",
+      "category": "science",
+      "description": "A forensic, statistics-first reading of the Voynich Manuscript — an interactive report styled after a botanical dichotomous key.",
+      "url": "https://voynich.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/voynich-investigation",
+      "tags": [
+        "voynich",
+        "cryptography",
+        "statistics",
+        "data-viz",
+        "manuscript"
+      ],
+      "type": "web",
+      "date": "2026-07-15"
+    },
     {
       "name": "Ben Richardson OS",
       "slug": "benrichardson-dev",
@@ -34,22 +52,6 @@
         "health",
         "herd-immunity",
         "data-viz"
-      ],
-      "type": "web",
-      "date": "2026-07-15"
-    },
-    {
-      "name": "The Withered Key",
-      "slug": "voynich-investigation",
-      "description": "A forensic, statistics-first reading of the Voynich Manuscript — an interactive report styled after a botanical dichotomous key.",
-      "url": "https://voynich.benrichardson.dev",
-      "repo": "https://github.com/ben-gy/voynich-investigation",
-      "tags": [
-        "voynich",
-        "cryptography",
-        "statistics",
-        "data-viz",
-        "manuscript"
       ],
       "type": "web",
       "date": "2026-07-15"
