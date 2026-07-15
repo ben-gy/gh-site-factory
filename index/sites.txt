@@ -1,7 +1,13 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-14
+Last updated: 2026-07-15
 
 === Web Sites ===
+
+Immunisation Coverage (AU)
+  https://au-immunisation.benrichardson.dev
+  Childhood vaccination coverage for every Australian region, mapped against the 95% herd-immunity line — find your area, see which vaccines lag, and the First Nations gap.
+  Tags: immunisation, vaccination, health, herd-immunity, data-viz
+  Repo: https://github.com/ben-gy/au-immunisation
 
 Super Funds (AU)
   https://au-super.benrichardson.dev

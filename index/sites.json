@@ -2,6 +2,25 @@
   "last_updated": "2026-07-15",
   "sites": [
     {
+      "name": "Immunisation Coverage",
+      "slug": "au-immunisation",
+      "icon": "syringe",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Childhood vaccination coverage for every Australian region, mapped against the 95% herd-immunity line — find your area, see which vaccines lag, and the First Nations gap.",
+      "url": "https://au-immunisation.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-immunisation",
+      "tags": [
+        "immunisation",
+        "vaccination",
+        "health",
+        "herd-immunity",
+        "data-viz"
+      ],
+      "type": "web",
+      "date": "2026-07-15"
+    },
+    {
       "name": "The Withered Key",
       "slug": "voynich-investigation",
       "description": "A forensic, statistics-first reading of the Voynich Manuscript — an interactive report styled after a botanical dichotomous key.",

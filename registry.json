@@ -3,6 +3,22 @@
   "last_updated": "2026-07-15",
   "sites": [
     {
+      "name": "au-immunisation",
+      "repo": "ben-gy/au-immunisation",
+      "date": "2026-07-15",
+      "description": "Childhood immunisation coverage for every Australian SA3 region, measured against the 95% herd-immunity line — unifying the Australian Immunisation Register's per-state (SA3) and per-PHN (all children + First Nations) releases with ABS ASGS 2021 boundaries. Eight views: SA3 choropleth map with per-region drill-down, priority leaderboard, searchable Explorer of every region × vaccine, vaccine × state heatmap, First Nations equity (all vs Aboriginal & Torres Strait Islander per PHN, ranked by gap), 2015–2025 national trend, coverage-distribution histogram, and auto-detected insights. Headline: most regions now sit below 95% and coverage has slipped since its 2020 peak.",
+      "category": "health",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "Australian Immunisation Register — childhood immunisation coverage (PHN + SA3), Dept of Health, Disability and Ageing (health.gov.au)",
+        "ABS ASGS 2021 SA3 boundaries (geo.abs.gov.au ArcGIS)"
+      ],
+      "status": "deployed",
+      "url": "https://au-immunisation.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-immunisation/pull/1"
+    },
+    {
       "name": "voynich-investigation",
       "repo": "ben-gy/voynich-investigation",
       "date": "2026-07-15",
