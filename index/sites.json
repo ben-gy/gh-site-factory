@@ -1,6 +1,21 @@
 {
-  "last_updated": "2026-07-14",
+  "last_updated": "2026-07-15",
   "sites": [
+    {
+      "name": "Voynich Decoder",
+      "slug": "voynich-decoder",
+      "description": "A Python toolkit for deciphering the Voynich Manuscript — page extraction, computer-vision alphabet building, and EVA-to-English character mapping.",
+      "url": "https://github.com/ben-gy/voynich-decoder",
+      "repo": "https://github.com/ben-gy/voynich-decoder",
+      "tags": [
+        "voynich",
+        "cryptography",
+        "python",
+        "computer-vision"
+      ],
+      "type": "web",
+      "date": "2026-07-15"
+    },
     {
       "name": "Super Funds",
       "slug": "au-super",
