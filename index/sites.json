@@ -1,6 +1,24 @@
 {
-  "last_updated": "2026-07-15",
+  "last_updated": "2026-07-16",
   "sites": [
+    {
+      "name": "PIP-OS",
+      "slug": "pipboy",
+      "icon": "radio",
+      "category": "emulator",
+      "description": "An unofficial Pip-Boy 3000 homage — S.P.E.C.I.A.L. stats, six holotape mini-games, a hand-drawn wasteland map, six radio stations, and CRT phosphor glow.",
+      "url": "https://pipboy.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/pipboy",
+      "tags": [
+        "fallout",
+        "pip-boy",
+        "retro",
+        "games",
+        "crt"
+      ],
+      "type": "web",
+      "date": "2026-07-16"
+    },
     {
       "name": "The Withered Key",
       "slug": "voynich-investigation",

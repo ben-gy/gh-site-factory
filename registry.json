@@ -1,7 +1,18 @@
 {
   "version": 1,
-  "last_updated": "2026-07-15",
+  "last_updated": "2026-07-16",
   "sites": [
+    {
+      "name": "pipboy",
+      "repo": "ben-gy/pipboy",
+      "date": "2026-07-16",
+      "description": "An unofficial Pip-Boy 3000 homage — S.P.E.C.I.A.L. stats, six holotape mini-games, a hand-drawn wasteland map, six radio stations, and CRT phosphor glow.",
+      "category": "emulator",
+      "stack": "vanilla-js",
+      "data_strategy": "static",
+      "status": "deployed",
+      "url": "https://pipboy.benrichardson.dev"
+    },
     {
       "name": "voynich-investigation",
       "repo": "ben-gy/voynich-investigation",
