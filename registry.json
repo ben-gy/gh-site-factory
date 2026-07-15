@@ -1,7 +1,18 @@
 {
   "version": 1,
-  "last_updated": "2026-07-16",
+  "last_updated": "2026-07-13",
   "sites": [
+    {
+      "name": "au-visas",
+      "repo": "ben-gy/au-visas",
+      "date": "2026-07-13",
+      "description": "How many people live in Australia on each temporary visa — 2.9 million holders by nationality, visa type and over 14 years, from the official Home Affairs data, mapped, ranked and charted.",
+      "category": "data-explorers",
+      "stack": "vanilla-js",
+      "data_strategy": "static",
+      "status": "deployed",
+      "url": "https://visas.benrichardson.dev"
+    },
     {
       "name": "pipboy",
       "repo": "ben-gy/pipboy",
@@ -66,22 +77,6 @@
       "status": "deployed",
       "url": "https://au-super.benrichardson.dev",
       "pr_url": "https://github.com/ben-gy/au-super/pull/2"
-    },
-    {
-      "name": "au-visas",
-      "repo": "ben-gy/au-visas",
-      "date": "2026-07-13",
-      "description": "Interactive explorer for Australia's temporary visa population — the Dept of Home Affairs BP0019 stock dataset (2.88M holders, 59 monthly/quarterly snapshots Dec 2011–May 2026, 218 nationalities, 11 visa categories, 66 subclasses) extracted from the workbook's embedded pivot cache. Seven views: auto-insights, Leaflet world choropleth by citizenship, nationalities leaderboard with 14-year sparklines, nested category→subclass treemap, stacked-area trends, nationality×visa matrix heatmap, and a nationality→visa Sankey, plus a hash-linkable per-nationality drill-down.",
-      "category": "immigration",
-      "stack": "vanilla-ts",
-      "data_strategy": "pipeline",
-      "data_sources": [
-        "Temporary visa holders in Australia (BP0019), Dept of Home Affairs via data.gov.au",
-        "Natural Earth 1:50m admin-0 country boundaries"
-      ],
-      "status": "deployed",
-      "url": "https://au-visas.benrichardson.dev",
-      "pr_url": "https://github.com/ben-gy/au-visas/pull/1"
     },
     {
       "name": "au-relations",

@@ -1,6 +1,24 @@
 {
-  "last_updated": "2026-07-16",
+  "last_updated": "2026-07-13",
   "sites": [
+    {
+      "name": "Temporary Visa Holders",
+      "slug": "au-visas",
+      "icon": "plane",
+      "category": "data-explorers",
+      "description": "How many people live in Australia on each temporary visa — 2.9 million holders by nationality, visa type and over 14 years, from the official Home Affairs data, mapped, ranked and charted.",
+      "url": "https://visas.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-visas",
+      "tags": [
+        "visas",
+        "immigration",
+        "australia",
+        "data-viz",
+        "home-affairs"
+      ],
+      "type": "web",
+      "date": "2026-07-13"
+    },
     {
       "name": "PIP-OS",
       "slug": "pipboy",
@@ -92,25 +110,6 @@
       ],
       "type": "web",
       "date": "2026-07-14"
-    },
-    {
-      "name": "Temporary Visa Holders",
-      "slug": "au-visas",
-      "icon": "plane",
-      "category": "data-explorers",
-      "country": "AU",
-      "description": "How many people live in Australia on each temporary visa — 2.9 million holders by nationality, visa type and over 14 years, from the official Home Affairs data, mapped, ranked and charted.",
-      "url": "https://au-visas.benrichardson.dev",
-      "repo": "https://github.com/ben-gy/au-visas",
-      "tags": [
-        "immigration",
-        "visas",
-        "migration",
-        "students",
-        "government-transparency"
-      ],
-      "type": "web",
-      "date": "2026-07-13"
     },
     {
       "name": "Foreign Relations",
