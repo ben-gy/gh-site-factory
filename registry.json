@@ -1,7 +1,18 @@
 {
   "version": 1,
-  "last_updated": "2026-07-13",
+  "last_updated": "2026-06-22",
   "sites": [
+    {
+      "name": "au-ndis-watch",
+      "repo": "ben-gy/au-ndis-watch",
+      "date": "2026-06-22",
+      "description": "Search every NDIS Commission compliance action — banning orders, registration revocations, suspensions, and notices against Australian disability providers and workers — by name, state, and severity.",
+      "category": "data-explorers",
+      "stack": "vanilla-js",
+      "data_strategy": "static",
+      "status": "deployed",
+      "url": "https://ndis-watch.benrichardson.dev"
+    },
     {
       "name": "au-visas",
       "repo": "ben-gy/au-visas",
@@ -268,22 +279,6 @@
       ],
       "status": "deployed",
       "url": "https://au-pollution.benrichardson.dev"
-    },
-    {
-      "name": "au-ndis-watch",
-      "repo": "ben-gy/au-ndis-watch",
-      "date": "2026-06-22",
-      "description": "Every NDIS Commission compliance action — banning orders, registration revocations, civil penalties, and infringements against Australian disability providers and workers — searchable by name, mappable by state, with auto-generated insights and a plain-language glossary",
-      "category": "government-transparency",
-      "stack": "vanilla-ts",
-      "data_strategy": "pipeline",
-      "data_sources": [
-        "NDIS Commission Compliance Actions (data.gov.au)",
-        "ABS Estimated Resident Population (June 2024)"
-      ],
-      "status": "deployed",
-      "url": "https://au-ndis-watch.benrichardson.dev",
-      "pr_url": "https://github.com/ben-gy/au-ndis-watch/pull/1"
     },
     {
       "name": "au-agedcare",

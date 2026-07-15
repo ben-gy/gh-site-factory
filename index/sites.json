@@ -1,6 +1,24 @@
 {
-  "last_updated": "2026-07-13",
+  "last_updated": "2026-06-22",
   "sites": [
+    {
+      "name": "NDIS Watch",
+      "slug": "au-ndis-watch",
+      "icon": "accessibility",
+      "category": "data-explorers",
+      "description": "Search every NDIS Commission compliance action — banning orders, registration revocations, suspensions, and notices against Australian disability providers and workers — by name, state, and severity.",
+      "url": "https://ndis-watch.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-ndis-watch",
+      "tags": [
+        "ndis",
+        "compliance",
+        "disability",
+        "australia",
+        "accountability"
+      ],
+      "type": "web",
+      "date": "2026-06-22"
+    },
     {
       "name": "Temporary Visa Holders",
       "slug": "au-visas",
@@ -317,25 +335,6 @@
       ],
       "type": "web",
       "date": "2026-06-24"
-    },
-    {
-      "name": "NDIS Watch",
-      "slug": "au-ndis-watch",
-      "icon": "accessibility",
-      "category": "data-explorers",
-      "country": "AU",
-      "description": "Search every NDIS Commission compliance action — banning orders, registration revocations, suspensions, and notices against Australian disability providers and workers — by name, state, and severity.",
-      "url": "https://au-ndis-watch.benrichardson.dev",
-      "repo": "https://github.com/ben-gy/au-ndis-watch",
-      "tags": [
-        "government-transparency",
-        "ndis",
-        "disability",
-        "enforcement",
-        "family"
-      ],
-      "type": "web",
-      "date": "2026-06-22"
     },
     {
       "name": "Aged Care Quality",
