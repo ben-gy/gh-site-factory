@@ -3,15 +3,15 @@
   "last_updated": "2026-07-15",
   "sites": [
     {
-      "name": "voynich-decoder",
-      "repo": "ben-gy/voynich-decoder",
+      "name": "voynich-investigation",
+      "repo": "ben-gy/voynich-investigation",
       "date": "2026-07-15",
-      "description": "A Python toolkit for deciphering the Voynich Manuscript — page extraction, computer-vision alphabet building, and EVA-to-English character mapping.",
+      "description": "A forensic, statistics-first reading of the Voynich Manuscript — an interactive report styled after a botanical dichotomous key.",
       "category": "research",
-      "stack": "python",
+      "stack": "vanilla-html",
       "data_strategy": "static",
       "status": "deployed",
-      "url": "https://github.com/ben-gy/voynich-decoder"
+      "url": "https://voynich.benrichardson.dev"
     },
     {
       "name": "au-super",
