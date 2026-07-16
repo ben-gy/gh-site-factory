@@ -1,7 +1,23 @@
 {
   "version": 1,
-  "last_updated": "2026-06-22",
+  "last_updated": "2026-07-16",
   "sites": [
+    {
+      "name": "au-mp-expenses",
+      "repo": "ben-gy/au-mp-expenses",
+      "date": "2026-07-16",
+      "description": "Every taxpayer-funded work expense claimed by Australia's federal MPs and Senators since the 2022 election — the full IPEA quarterly expenditure data (15 quarters, Jul 2022–Mar 2026, ~$618M, 334 current & former parliamentarians) unified into one interface. Eight views: a party-coloured Rankings leaderboard (rank by total or any category), a searchable Explorer table with quarterly sparklines, a Leaflet choropleth of all 150 federal electorates shaded by member spend, a category treemap + party×category per-member heatmap, party total-vs-average comparison, a quarterly trend chart with the 2025 election marked, a per-parliamentarian distribution histogram, and auto-detected Insights, plus a hash-linkable per-person drill-down with category breakdown, quarterly trend and biggest individual claims. Headline: PM Anthony Albanese tops at ~$15.3M; Office Administration and Office Facilities each account for ~28% of all spending.",
+      "category": "government-transparency",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "IPEA Current and Former Parliamentarians' Expenditure (data.gov.au)",
+        "Digital Atlas of Australia — Federal Electoral Divisions March 2025 (digital.atlas.gov.au)"
+      ],
+      "status": "deployed",
+      "url": "https://au-mp-expenses.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-mp-expenses/pull/1"
+    },
     {
       "name": "au-ndis-watch",
       "repo": "ben-gy/au-ndis-watch",

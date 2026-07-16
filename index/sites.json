@@ -1,6 +1,25 @@
 {
-  "last_updated": "2026-06-22",
+  "last_updated": "2026-07-16",
   "sites": [
+    {
+      "name": "Parliamentary Expenses",
+      "slug": "au-mp-expenses",
+      "icon": "landmark",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every taxpayer-funded work expense claimed by Australia's federal MPs and Senators since the 2022 election — search, rank and map ~$618M of IPEA expenditure by person, party, category and electorate.",
+      "url": "https://au-mp-expenses.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-mp-expenses",
+      "tags": [
+        "parliament",
+        "expenses",
+        "transparency",
+        "politics",
+        "ipea"
+      ],
+      "type": "web",
+      "date": "2026-07-16"
+    },
     {
       "name": "NDIS Watch",
       "slug": "au-ndis-watch",

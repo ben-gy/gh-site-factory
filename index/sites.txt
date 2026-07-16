@@ -1,7 +1,13 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-15
+Last updated: 2026-07-16
 
 === Web Sites ===
+
+Parliamentary Expenses (AU)
+  https://au-mp-expenses.benrichardson.dev
+  Every taxpayer-funded work expense claimed by Australia's federal MPs and Senators since the 2022 election — search, rank and map ~$618M of IPEA expenditure by person, party, category and electorate.
+  Tags: parliament, expenses, transparency, politics, ipea
+  Repo: https://github.com/ben-gy/au-mp-expenses
 
 Immunisation Coverage (AU)
   https://au-immunisation.benrichardson.dev
