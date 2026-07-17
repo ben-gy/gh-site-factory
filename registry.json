@@ -1,7 +1,26 @@
 {
   "version": 1,
-  "last_updated": "2026-07-17",
+  "last_updated": "2026-07-18",
   "sites": [
+    {
+      "name": "au-income",
+      "repo": "ben-gy/au-income",
+      "date": "2026-07-18",
+      "description": "What Australians actually earn in every postcode — the ATO's 2023-24 taxation statistics (16,379,323 individuals across 2,283 postcodes, Tables 6/7/8) joined to real ABS ASGS 2021 postal-area boundaries. Built around the median-vs-average gap, the measure that separates two kinds of 'rich postcode' an income ranking makes look identical: Toorak's median is $82,873 but its average is $277,708 (3.35x — a few enormous incomes), while Pilbara mining towns hold the highest medians in the country (Fortescue $142,580, Rocklea $111,679) with averages level with or below them (1.03x — everyone earns well, no rich tail). The typical Toorak earner makes less than a Karratha mine worker; with a 1,000-taxpayer floor the top 8 medians nationally are all mining postcodes and Double Bay is 11th. Eight views: Leaflet choropleth of 2,266 postal areas across 7 metrics, the signature log-log Gap scatter with the average=median diagonal, rankings, searchable Explorer with 20-year sparklines, postcode x ANZSCO occupation heatmap (Blackwater 27% Machinery Operators vs Erskineville 38% Professionals), a click-through distribution histogram plus national income-band composition, 20 years of median income by state on a real time axis, and auto-detected insights (The Ponds negatively gears at 25.7%, 4x the typical postcode; 30% of Brunswick still owes HELP debt) — plus a hash-linkable per-postcode drill-down with rank, 20-year history, income/age/occupation mix, deductions, negative gearing and HELP debt.",
+      "category": "economy",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "ATO Taxation Statistics 2023-24 — Individuals Table 6 (161 items by postcode) (data.gov.au)",
+        "ATO Taxation Statistics 2023-24 — Individuals Table 7 (income/age/occupation bands by postcode) (data.gov.au)",
+        "ATO Taxation Statistics 2023-24 — Individuals Table 8 (median + average income, 12 year-points) (data.gov.au)",
+        "ABS ASGS 2021 Postal Area digital boundaries (abs.gov.au)",
+        "matthewproctor/australianpostcodes (postcode → locality)"
+      ],
+      "status": "deployed",
+      "url": "https://au-income.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-income/pull/3"
+    },
     {
       "name": "au-solar",
       "repo": "ben-gy/au-solar",

@@ -1,7 +1,13 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-17
+Last updated: 2026-07-18
 
 === Web Sites ===
+
+Income by Postcode (AU)
+  https://au-income.benrichardson.dev
+  What people actually earn in every Australian postcode — median vs average income, negative gearing and HELP debt, straight from ATO tax data.
+  Tags: income, tax, postcode, ato, inequality
+  Repo: https://github.com/ben-gy/au-income
 
 Rooftop Solar (AU)
   https://au-solar.benrichardson.dev

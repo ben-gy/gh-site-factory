@@ -1,6 +1,25 @@
 {
-  "last_updated": "2026-07-17",
+  "last_updated": "2026-07-18",
   "sites": [
+    {
+      "name": "Income by Postcode",
+      "slug": "au-income",
+      "icon": "wallet",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "What people actually earn in every Australian postcode — median vs average income, negative gearing and HELP debt, straight from ATO tax data.",
+      "url": "https://au-income.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-income",
+      "tags": [
+        "income",
+        "tax",
+        "postcode",
+        "ato",
+        "inequality"
+      ],
+      "type": "web",
+      "date": "2026-07-18"
+    },
     {
       "name": "Rooftop Solar",
       "slug": "au-solar",
