@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "last_updated": "2026-07-16",
+  "last_updated": "2026-07-17",
   "sites": [
+    {
+      "name": "au-solar",
+      "repo": "ben-gy/au-solar",
+      "date": "2026-07-17",
+      "description": "Every rooftop solar system and home battery in Australia by postcode — 4,437,265 solar systems (Apr 2001–May 2026) and 401,185 batteries since the Cheaper Home Batteries rebate began in July 2025, from the Clean Energy Regulator's SRES postcode data, joined to ABS Census 2021 dwelling counts so the numbers are per-home rather than raw counts. Signature finding: owner-occupied detached-house share explains ~40% of the gap between postcodes (r=0.63, n=2,079) — Angle Vale SA has 203 systems per 100 homes while South Wharf in Melbourne (98% apartments) has 0.4, a 508× gap driven by the renter/apartment split incentive. Eight views: Leaflet choropleth of all 2,640 ABS postal areas with 4 metrics, the Solar Divide scatter with fitted trend line and R², rankings leaderboard, searchable Explorer with sparklines, the battery rebate surge month by month, a 25-year state-stacked timeline annotated with policy milestones, a distribution histogram with click-through, and auto-detected insights — plus a hash-linkable per-postcode drill-down with rank, tenure/dwelling mix and monthly history.",
+      "category": "energy",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "Clean Energy Regulator — small-scale installation postcode data (cer.gov.au)",
+        "ABS Census 2021 General Community Profile, Postal Areas, table G37 (abs.gov.au)",
+        "ABS ASGS 2021 Postal Area digital boundaries (abs.gov.au)",
+        "matthewproctor/australianpostcodes (postcode → locality/state/LGA)"
+      ],
+      "status": "deployed",
+      "url": "https://au-solar.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-solar/pull/3"
+    },
     {
       "name": "au-mp-expenses",
       "repo": "ben-gy/au-mp-expenses",

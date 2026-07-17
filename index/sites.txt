@@ -1,7 +1,13 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-16
+Last updated: 2026-07-17
 
 === Web Sites ===
+
+Rooftop Solar (AU)
+  https://au-solar.benrichardson.dev
+  Every rooftop solar panel and home battery in Australia by postcode — see how your suburb compares, and why renters and apartments are being left behind.
+  Tags: solar, energy, batteries, housing, postcode
+  Repo: https://github.com/ben-gy/au-solar
 
 Parliamentary Expenses (AU)
   https://au-mp-expenses.benrichardson.dev

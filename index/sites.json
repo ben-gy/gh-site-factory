@@ -1,6 +1,25 @@
 {
-  "last_updated": "2026-07-16",
+  "last_updated": "2026-07-17",
   "sites": [
+    {
+      "name": "Rooftop Solar",
+      "slug": "au-solar",
+      "icon": "sun",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every rooftop solar panel and home battery in Australia by postcode — see how your suburb compares, and why renters and apartments are being left behind.",
+      "url": "https://au-solar.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-solar",
+      "tags": [
+        "solar",
+        "energy",
+        "batteries",
+        "housing",
+        "postcode"
+      ],
+      "type": "web",
+      "date": "2026-07-17"
+    },
     {
       "name": "Parliamentary Expenses",
       "slug": "au-mp-expenses",
