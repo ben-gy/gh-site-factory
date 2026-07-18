@@ -3,6 +3,26 @@
   "last_updated": "2026-07-18",
   "sites": [
     {
+      "name": "au-welfare",
+      "repo": "ben-gy/au-welfare",
+      "date": "2026-07-18",
+      "description": "Every Australian government payment by recipient count and per-capita rate, for all 2,454 SA2 areas (roughly suburbs) and all 150 federal electorates — the DSS quarterly payment demographics joined to ABS Estimated Resident Population by age, which is what turns unreadable counts into comparable rates. Built around the fact that the Age Pension is 2.6m of the country's 5.4m income support recipients, so any welfare measure that includes it mostly measures how old an area is: Tea Gardens - Hawks Nest posts a 40.0% headline rate but only 24.9% of its working-age population is on a payment (a 15.2-point gap that is age structure, not hardship), while Elizabeth in Adelaide runs the other way at 50.2% headline against 61.5% working-age. The site's default measure is therefore the working-age rate (income support excluding the Age Pension over the 15-64 population, 15.7% nationally), and its signature view is a scatter of headline against working-age rate with an agreement diagonal — the only form that can separate a retirement town from a distressed one. A third derived metric, Age Pension take-up (recipients over the 65+ population), reads as a wealth measure because the pension is means-tested: 55.9% nationally but 12.2% in Bellevue Hill and 13.3% in Toorak. Nine views: SA2 choropleth across 6 measures, the Pension Illusion scatter with zoom/pan and ranked side panels, rankings against the national median, searchable Explorer with 12-quarter sparklines, a counts-only electorate map and payment-family composition, a region x payment-family mix heatmap (Bribie Island 70% pension vs Dandenong North 31% unemployment), 173 months of national history with the April 2020 JobSeeker doubling annotated, a distribution histogram that click-throughs into a filtered Explorer, and auto-detected insights — plus a hash-linkable per-suburb drill-down. Data notes: DSS rounds every count to the nearest 5 so rankings apply a 5,000-resident floor; supplements and concession cards are never summed into the income support total because people hold them alongside a payment; rates are suppressed (not clamped) where the denominator is too small, after industrial-estate SA2s produced 500% take-up rates against a 65+ population of 1; electorates carry no per-capita rates because the ABS publishes no population for the 2024 electoral boundaries.",
+      "category": "government-transparency",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "DSS Payment Demographics by 2021 SA2 (data.gov.au)",
+        "DSS Payment Demographics by 2024 Commonwealth Electoral Division (data.gov.au)",
+        "DSS Income Support Recipients Monthly Time Series, Jan 2012 onwards (data.gov.au)",
+        "ABS Estimated Resident Population by SA2 and age, ERP_ASGS2021 (data.api.abs.gov.au)",
+        "ABS ASGS 2021 SA2 boundaries (geo.abs.gov.au)",
+        "Digital Atlas of Australia — Federal Electoral Divisions March 2025"
+      ],
+      "status": "deployed",
+      "url": "https://au-welfare.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-welfare/pull/1"
+    },
+    {
       "name": "au-medicines",
       "repo": "ben-gy/au-medicines",
       "date": "2026-07-18",

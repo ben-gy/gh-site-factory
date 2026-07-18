@@ -2,6 +2,25 @@
   "last_updated": "2026-07-18",
   "sites": [
     {
+      "name": "Welfare Payments",
+      "slug": "au-welfare",
+      "icon": "hand-coins",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Who receives government income support in every Australian suburb — and what the Age Pension hides.",
+      "url": "https://au-welfare.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-welfare",
+      "tags": [
+        "government",
+        "welfare",
+        "centrelink",
+        "pension",
+        "suburbs"
+      ],
+      "type": "web",
+      "date": "2026-07-18"
+    },
+    {
       "name": "Prescription Medicines",
       "slug": "au-medicines",
       "icon": "pill",
