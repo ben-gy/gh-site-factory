@@ -3,6 +3,23 @@
   "last_updated": "2026-07-18",
   "sites": [
     {
+      "name": "au-medicines",
+      "repo": "ben-gy/au-medicines",
+      "date": "2026-07-18",
+      "description": "Every prescription medicine subsidised by the Australian Government, as actually dispensed — the PBS/RPBS date-of-supply reports (2,047,223 rows, 12,119 item codes, 69 months from Jul 2020 to Mar 2026) joined to the item–drug map and the WHO ATC classification, giving 1.88bn prescriptions of 1,013 medicines costing $68.27bn in Commonwealth subsidy and $18.28bn out of patients' pockets. Built around the fact that volume and cost are two different stories: only 5 of the 20 most-prescribed medicines are also in the 20 most expensive, and 31% of all prescriptions (582m) are dispensed under the co-payment so the government pays nothing at all. The costliest medicine on the scheme is aflibercept, an eye injection, at $2.69bn — ahead of every heart, cancer or diabetes drug; menopause hormone therapy is up 43.5x year on year after its 2025 listing; patients self-fund 85% of the combined oral contraceptive; one lanadelumab script costs $29,290. Eight views: rankings across five metrics, a searchable Explorer of all 1,013 medicines with 69-month sparklines, a click-to-zoom radial sunburst of the full ATC tree (body system → drug class → medicine), a log-log cost-vs-volume scatter with equal-spend diagonals plus zoom/pan, slope charts of the fastest risers and fallers with algorithmic label de-collision, 69 months stacked by body system annotated with the co-payment cuts and 60-day dispensing, a who-pays view with a body-system × patient-category heatmap, and auto-detected insights — plus a hash-linkable per-medicine drill-down with rank, monthly series, cost-per-script trend, patient/pharmacy mix and constituent PBS items. Data note: the department's PATIENT_CONTRIB column fills under-co-payment scripts with the maximum schedule price rather than what was paid (overstating patient spend ~$300m/yr), so PATIENT_NET_CONTRIB is used throughout. No map — the dataset has no geography.",
+      "category": "health",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "PBS and RPBS Section 85/100 Date of Supply supplementary reports, 6 financial-year CSVs (pbs.gov.au)",
+        "PBS item drug map — item code to generic name and ATC5 (pbs.gov.au)",
+        "WHO ATC classification level 1/2 nomenclature (embedded)"
+      ],
+      "status": "deployed",
+      "url": "https://au-medicines.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-medicines/pull/1"
+    },
+    {
       "name": "au-income",
       "repo": "ben-gy/au-income",
       "date": "2026-07-18",

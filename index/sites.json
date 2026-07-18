@@ -2,6 +2,25 @@
   "last_updated": "2026-07-18",
   "sites": [
     {
+      "name": "Prescription Medicines",
+      "slug": "au-medicines",
+      "icon": "pill",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every medicine Australia is prescribed on the PBS — what each one costs, how often it's dispensed, and how much the government pays versus you.",
+      "url": "https://au-medicines.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-medicines",
+      "tags": [
+        "health",
+        "medicines",
+        "pbs",
+        "pharmacy",
+        "spending"
+      ],
+      "type": "web",
+      "date": "2026-07-18"
+    },
+    {
       "name": "Income by Postcode",
       "slug": "au-income",
       "icon": "wallet",

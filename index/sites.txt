@@ -3,6 +3,12 @@ Last updated: 2026-07-18
 
 === Web Sites ===
 
+Prescription Medicines (AU)
+  https://au-medicines.benrichardson.dev
+  Every medicine Australia is prescribed on the PBS — what each one costs, how often it's dispensed, and how much the government pays versus you.
+  Tags: health, medicines, pbs, pharmacy, spending
+  Repo: https://github.com/ben-gy/au-medicines
+
 Income by Postcode (AU)
   https://au-income.benrichardson.dev
   What people actually earn in every Australian postcode — median vs average income, negative gearing and HELP debt, straight from ATO tax data.
