@@ -3,6 +3,25 @@
   "last_updated": "2026-07-19",
   "sites": [
     {
+      "name": "au-insolvency",
+      "repo": "ben-gy/au-insolvency",
+      "date": "2026-07-19",
+      "description": "Every personal insolvency in Australia — bankruptcies, debt agreements and personal insolvency agreements — for all 340 SA3 regions across 75 quarters (Sep 2007 to Mar 2026), joined to ABS resident population so regions are comparable and to real ABS ASGS 2021 boundaries so they are mappable. Headline finding is counter-intuitive: formal insolvency has COLLAPSED, 3,161 in the latest quarter against a peak of 9,863 in Sep 2009 (68% lower) during a cost-of-living crisis — driven not by households becoming solvent but by the June 2019 debt agreement reforms (debt agreements down 65%, never recovered) and pandemic-era support and forbearance. The dataset measures entry into a formal process, so when that process becomes harder to enter, distress leaves the statistics rather than the economy. Geographically concentrated in outer-suburban growth corridors: Caboolture tops the country at 16.0 per 10,000 adults (3.2x the national median of 5.0), with Beenleigh, Browns Plains and Jimboomba close behind; 26 of 331 ranked regions carry a quarter of the national total. Nine views: rankings across 3 metrics, SA3 choropleth with 4 measures and a skew-aware quantile ramp, the signature Trajectory scatter (current rate against four-year change, quadranted by the national medians with zoom/pan — the only form that separates a region that has always struggled from one deteriorating fast, which a league table cannot), searchable Explorer with 75-quarter sparklines, annotated 19-year timeline, administration-type mix plus creditor-forced vs voluntary bankruptcy and a state x type matrix, business-vs-consumer told at the level where it is reliable, a click-through distribution histogram, and auto-detected insights — plus hash-linkable per-region drill-downs (#v=map&r=31502). Built around FOUR traps that each produce confidently wrong numbers: (1) 16 GCCSA aggregate rows sit in the same ASGS Code column as the SA3s they contain, so ranking them together counts the country twice; (2) the type column carries two levels of subtotal (Total bankruptcies = debtor's petitions + sequestration orders; Total personal insolvencies = everything), and summing naively double-counts every bankruptcy — the pipeline asserts its leaf sum reproduces AFSA's own published total exactly (3,161 for Mar 2026) and fails the build on drift; (3) 'Data not available' is a string sentinel in a numeric column 18,908 times, where Number() gives NaN but parseInt/||0 give a convincing 0; (4) suppression is COMPLEMENTARY — both sides of the business/consumer split are withheld together so neither is recoverable by subtraction (8,259 paired vs 50 single), and region totals are withheld too (8.9% of cells). Because genuine zeros ARE published as 0, a withheld quarter is 1-2 cases, so affected 12-month totals are midpoint estimates with an explicit range; treating them as zero had reported populous Sydney regions (Hawkesbury, Manly) as having no insolvencies at all, and fixing it also changed the 'deteriorating fastest' finding from a noise artifact to Melton - Bacchus Marsh. A fifth quirk: ABS age code A59 means ages 5-9, not 55-59, and sorts between A55 and A60 — summing adult bands by name puts children in the per-capita denominator. The business/consumer split is only ~72% published nationally and usable in 112 of 340 regions, so it is reported at state level with the withheld share disclosed rather than made the headline SA3 metric.",
+      "category": "economy",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "AFSA regional quarterly personal insolvency time series (afsa.gov.au)",
+        "AFSA quarterly personal insolvencies by administration type and state (afsa.gov.au)",
+        "ABS Estimated Resident Population by SA3 and age, ERP_ASGS2021 (data.api.abs.gov.au)",
+        "ABS ASGS 2021 SA3 boundaries (geo.abs.gov.au)"
+      ],
+      "status": "verify_production_pending",
+      "url": "https://au-insolvency.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-insolvency/pull/1",
+      "notes": "Deployed and verified over http:// (live bundle hash matches local dist byte-for-byte; all data and SEO assets 200). Let's Encrypt cert was still issuing at hand-over after a ~15-minute poll and two CNAME cycles — normal for a freshly pointed domain. Re-check https_enforced and flip status to deployed."
+    },
+    {
       "name": "au-trade",
       "repo": "ben-gy/au-trade",
       "date": "2026-07-19",

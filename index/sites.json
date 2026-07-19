@@ -2,6 +2,19 @@
   "last_updated": "2026-07-19",
   "sites": [
     {
+      "name": "Personal Insolvency",
+      "slug": "au-insolvency",
+      "icon": "landmark",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Where Australians go broke — bankruptcies and debt agreements for every region since 2007.",
+      "url": "https://au-insolvency.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-insolvency",
+      "tags": ["economy", "bankruptcy", "debt"],
+      "type": "web",
+      "date": "2026-07-19"
+    },
+    {
       "name": "Trade Flows",
       "slug": "au-trade",
       "icon": "ship",
