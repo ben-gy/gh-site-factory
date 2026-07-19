@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-18
+Last updated: 2026-07-19
 
 === Web Sites ===
+
+Trade Flows (AU)
+  https://au-trade.benrichardson.dev
+  What Australia sells the world, what it buys back, and how much of it rests on one customer.
 
 Welfare Payments (AU)
   https://au-welfare.benrichardson.dev

@@ -1,6 +1,25 @@
 {
-  "last_updated": "2026-07-18",
+  "last_updated": "2026-07-19",
   "sites": [
+    {
+      "name": "Trade Flows",
+      "slug": "au-trade",
+      "icon": "ship",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "What Australia sells the world, what it buys back, and how much of it rests on one customer.",
+      "url": "https://au-trade.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-trade",
+      "tags": [
+        "economy",
+        "trade",
+        "exports",
+        "imports",
+        "china"
+      ],
+      "type": "web",
+      "date": "2026-07-19"
+    },
     {
       "name": "Welfare Payments",
       "slug": "au-welfare",

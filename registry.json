@@ -1,7 +1,26 @@
 {
   "version": 1,
-  "last_updated": "2026-07-18",
+  "last_updated": "2026-07-19",
   "sites": [
+    {
+      "name": "au-trade",
+      "repo": "ben-gy/au-trade",
+      "date": "2026-07-19",
+      "description": "Everything Australia sells the world and buys back — the ABS merchandise trade collection (224 partners, 342 SITC commodity codes, 359 months from July 1996) turned into nine views. Over the 12 months to May 2026: $530.2bn exported, $490.0bn imported, a $40.2bn goods surplus, with China taking 34.8% of exports — more than Japan, South Korea, the US, Hong Kong and India combined — and four commodity groups (ores, gold, coal, gas) making up 66% of everything sold. Built around the dataset's defining trap: ABS confidentialises destinations far more heavily at commodity level than at the national total, so while only 1.6% of exports nationally lack a country, 96.3% of the $57.4bn natural gas export has no published buyer. Every concentration figure is therefore computed over published destinations only and labelled with the withheld share; commodities whose destinations are mostly hidden are drawn hollow in the signature Exposure scatter (value against share-to-largest-buyer, the quadrant where magnitude meets concentration) instead of being plotted as though their position were known; and a dedicated Blind Spots view ranks the $71.2bn of withheld destinations and explains why SITC 98 'combined confidential items' ($4.44bn) is not a product. Nine views: partner leaderboard with 30-year sparklines, log-scaled Natural Earth world choropleth plus an AU state-of-origin mode (quantiles were rejected — they shade China and Canada identically and hide the concentration the map exists to show), the Exposure scatter with zoom/pan and greedy label de-collision, a section→partner Sankey with hover-to-isolate, a searchable commodity explorer with squarified treemap, a section×partner matrix separating broad buyers from single-commodity ones, 30 years of monthly trade annotated with the China boom/GFC/LNG ramp/COVID/2020 China restrictions, Blind Spots, and auto-detected insights — plus hash-linkable drill-downs per partner (#c=CHIN) and commodity (#s=28). Data notes: country aggregates (OECD, ASEAN) and pseudo-destinations (No Country Details, ship stores) are excluded from every ranking; the import series starts July 2000 against exports' July 1996, so it is nulled rather than zero-filled; commodity detail does not sum to country totals because suppression is level-dependent.",
+      "category": "economy",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "ABS Merchandise Exports by Commodity (SITC), Country and State — MERCH_EXP (data.api.abs.gov.au)",
+        "ABS Merchandise Imports by Commodity (SITC), Country and State — MERCH_IMP (data.api.abs.gov.au)",
+        "ABS SDMX codelists CL_MERCH_SITC / CL_MERCH_COUNTRY / CL_MERCH_STATE",
+        "Natural Earth 50m admin-0 map units (naturalearthdata.com)",
+        "ABS ASGS state boundaries (patterns/geo/au-states.geojson)"
+      ],
+      "status": "deployed",
+      "url": "https://au-trade.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-trade/pull/1"
+    },
     {
       "name": "au-welfare",
       "repo": "ben-gy/au-welfare",
