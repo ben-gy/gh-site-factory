@@ -13,6 +13,7 @@ exists because a hand-rolled variant shipped broken at least once.
 | `leafletMap.ts` | Annotated Leaflet template: CARTO basemap, real-GeoJSON layer, polygon + marker hover tooltips, attribution, zero-size defence | nsw-pokies `src/map.ts` + au-gov `src/views/map.ts` | Copy-adapt. Leaflet from npm (`leaflet@^1.9`), never CDN JS. |
 | `geo/au-states.geojson` | Real ABS-derived AU state boundaries, `{code, name}` props | 2026-07-12-au-contracts | Copy into `public/data/`. See `geo/README.md` for sourcing anything else — never hand-author coordinates. |
 | `tests/layout.test.ts` | Position-asserting layout test template: in-bounds, no-overlap, no-NaN, area conservation, degenerates | au-gov `tests/treemap.test.ts` | Copy next to any layout algorithm. Area-only tests pass on visually broken layouts. |
+| `feedback.ts` | Self-contained feedback dialog: footer trigger, bug/idea toggle, optional email, focus trap, honeypot + dwell anti-spam, scoped `fbw-` styles, light/dark | GENERATED from `gh-feedback/widget/feedback.ts` | Copy to `src/feedback.ts`, call `mountFeedback()` once after the footer exists. **MANDATORY on every site.** Submissions become labelled issues on the site's own repo, triaged daily by `feedback-triage`. If the site has a CSP meta tag, `connect-src` must include `https://feedback.benrichardson.dev`. Never edit the copy — edit the canonical file and re-run `gh-feedback/scripts/distribute.mjs`. |
 
 ## Hard rules these encode
 
