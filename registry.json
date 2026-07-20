@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "last_updated": "2026-07-19",
+  "last_updated": "2026-07-20",
   "sites": [
+    {
+      "name": "au-unis",
+      "repo": "ben-gy/au-unis",
+      "date": "2026-07-20",
+      "description": "Every Australian university joined into one interface from seven separate Department of Education workbooks — 42 institutions, 1,676,077 students, ten years of series, covering enrolments, international share, attrition, retention, subject success, completions, student-staff ratios and field mix. Two findings carry the site. First, the ATAR gradient: 93.7% of school leavers admitted with an ATAR of 95-100 complete a bachelor degree within nine years against 55.0% of those admitted at 30-49, a 38.7-point gap. Second, and the reason the signature view exists: the four-year completion rate everyone quotes (41.5%) is NOT the failure rate, because 35.5% of that cohort are still enrolled — plenty of degrees run longer than four years and part-time students longer again. Given nine years, 70.5% have completed. The 'Who finishes' view therefore defaults to nine years and teaches the caveat through its 4/6/9-year toggle: moving it visibly drains the grey 'still enrolled' band into the teal 'completed' band, so the user learns the trap by operating the control rather than reading a footnote. The other headline: 598,882 of 1,676,077 students (35.7%) have a permanent home residence outside Australia, a larger group than NSW and Victoria combined and the single largest origin in the country; Murdoch is 57.4% international, Sydney 50.8%, RMIT 50.0%. Eight views: rankings across 8 measures with the national median marked, the cohort-outcome decomposition sliced by ATAR/SES/disability/First Nations/regionality and 10 more attributes, a log-scaled exposure scatter quadranted by medians with zoom/pan and label de-collision that avoids both other labels and the dots themselves, the 9x10 origin-destination matrix as Sankey + choropleth + exact numbers, a squarified treemap plus institution x field heatmap, ten years annotated with the 2020 border closure and 2024 visa tightening, a sortable Explorer with sparklines, and auto-detected insights — plus a hash-linkable per-university drill-down (#i=3035). Built around EIGHT traps that each produce a confidently wrong number: (1) aggregate rows (National Total, Table A Providers, State Total, and a per-state Non-University Higher Education Institutions bucket) sit in the same column as real universities, so ranking them together counts the country several times; (2) np / '< 5' / '.' are string sentinels in numeric columns where Number(x)||0 gives a confident zero — a withheld cell is 1-4, never 0; (3) zeros in the historic rate series mean 'not a reporting provider yet' — Avondale reads 0 attrition for 2014-2022 then 12.65, and left alone ranks as the best-performing university in Australia; (4) sector attrition (domestic, transfers don't count as leaving) and provider attrition (overseas, transfers do) have different denominators and never share an axis; (5) the four-year completion trap above; (6) footnote markers and provider codes are welded into institution names inconsistently between workbooks, so the join key must be normalised or the same university appears twice; (7) the staff workbooks span headers over three merged rows with two metric blocks side by side; (8) footnote paragraphs are written into data columns in Section 17 and the time series. A ninth lives in the frontend: the interstate map excludes overseas students on purpose — include them and every state is an importer, so the map shades one uniform colour and the interstate story (Tasmania takes in domestic students at 1.47x, Queensland loses them at 0.87x) disappears entirely. The pipeline is dependency-free — its own minimal zip + xlsx reader, so CI never installs anything — and asserts its parsed national total reproduces the department's published 1,676,077 exactly, failing the build on drift. education.gov.au refuses bare fetch() clients and initially failed on CI with connect timeouts; fixed with full browser headers (incl. Sec-Fetch-*) plus dns ipv4first, since GitHub runners advertise IPv6 and the host only half-answers on it.",
+      "category": "education",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "Dept of Education Selected Higher Education Statistics — Student Data Sections 2, 7, 14, 15, 17 (education.gov.au)",
+        "Dept of Education Student Summary Time Series (education.gov.au)",
+        "Dept of Education Staff Data Appendix 2 — Student-Staff Ratios (education.gov.au)",
+        "ABS ASGS state boundaries (patterns/geo/au-states.geojson)"
+      ],
+      "status": "deployed",
+      "url": "https://au-unis.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-unis/pull/1"
+    },
     {
       "name": "au-insolvency",
       "repo": "ben-gy/au-insolvency",

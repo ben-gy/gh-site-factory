@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-19
+Last updated: 2026-07-20
 
 === Web Sites ===
+
+Universities (AU)
+  https://au-unis.benrichardson.dev
+  Every Australian university compared — drop-out rates, completion odds, international share and class sizes.
 
 Personal Insolvency (AU)
   https://au-insolvency.benrichardson.dev

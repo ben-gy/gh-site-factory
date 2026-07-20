@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-07-19",
+  "last_updated": "2026-07-20",
   "sites": [
+    {
+      "name": "Universities",
+      "slug": "au-unis",
+      "icon": "graduation-cap",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every Australian university compared — drop-out rates, completion odds, international share and class sizes.",
+      "url": "https://au-unis.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-unis",
+      "tags": ["education", "universities", "students", "atar"],
+      "type": "web",
+      "date": "2026-07-20"
+    },
     {
       "name": "Personal Insolvency",
       "slug": "au-insolvency",
