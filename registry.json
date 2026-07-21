@@ -3,6 +3,23 @@
   "last_updated": "2026-07-21",
   "sites": [
     {
+      "name": "au-threatened",
+      "repo": "ben-gy/au-threatened",
+      "date": "2026-07-21",
+      "description": "Every plant and animal on Australia's EPBC Act threatened-species list (2,208 species from the DCCEEW/SPRAT state lists, extract 2026-02-06) turned from a flat legal register into an explorable atlas — joined to real ABS ASGS 2021 state boundaries. Two findings carry the site. First, plants dominate the crisis: 1,514 of the 2,208 listed species (69%) are plants against 694 animals, more than two to one, and they skew harder to the critical end (306 CR plants) — the opposite of where public attention goes. Second, and the reason the signature Endemism view exists: 77% of listed species (1,710) occur in a single jurisdiction only, so they are endemic and would be lost from Earth if that one place changed — a fact a raw species count cannot show. Headline severity: 453 Critically Endangered, 860 Endangered, 785 Vulnerable, 102 Extinct + 1 Extinct in the Wild (mammals lead the extinctions, Australia's notorious record). Eight views: an Overview status pyramid with the plants-vs-animals split and a click-to-filter segmented bar; a Leaflet choropleth of the 8 states/territories (total / critically endangered / endemic-only, skew-aware quantile buckets) plus an off-map panel for the external territories that carry outsized endemic loads (Norfolk Is 97 species / 56 endemic, Christmas Is 36/16); a Rankings leaderboard across families/classes/genera/states with a status-metric toggle; a click-to-zoom squarified Tree-of-Life treemap (Kingdom→Class→Family, coloured by kingdom, svgZoom); the Endemism view (per-place endemic-vs-shared diverging bars + jurisdiction-span histogram); a Class×jurisdiction matrix heatmap; a searchable/filterable Explorer of all 2,208 species; and auto-detected Insights — plus hash-linkable per-species (#s=taxonId) and per-state (#state=WA) drill-down drawers. Dependency-free unit-tested pipeline (its own RFC-4180 CSV reader in pipeline/parse.mjs, shared with the test suite) that asserts the parsed status and kingdom sub-totals reconcile to the total and fails the build on drift. Parse traps handled: '-' is the empty sentinel (not a value), Common Name fields carry quoted embedded commas (multi-name), Class values like 'Streptophyta (no class)' need the suffix stripped, and endemism is computed as single-jurisdiction occurrence. Data note: occurrence is indicative (broad presence, not a range map) and a species with no jurisdiction flagged is still validly listed; the source is the legal schedule, amended a few times a year, so the pipeline crons quarterly.",
+      "category": "environment",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "EPBC Act Threatened Species State Lists — DCCEEW / SPRAT (data.gov.au dataset threatened-species-state-lists)",
+        "ABS ASGS 2021 state & territory boundaries (patterns/geo/au-states.geojson)"
+      ],
+      "status": "deployed",
+      "url": "https://au-threatened.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-threatened/pull/1",
+      "notes": "Deployed and fully verified over HTTPS (https_enforced=true; live bundle index-g8ORQ5ee.js matches local dist byte-for-byte; all SEO assets + data 200). Real-click verification done: treemap drill, Explorer row → species drawer, and map polygon → state drawer all fire; About modal and both drawers paint above Leaflet (z-index isolate + 2000+); zero 375px horizontal overflow across all 8 views; no console errors on production. The quarterly data-pipeline writes a `generated` ISO timestamp into species.json, so it commits a fresh file (and a deploy) each run even when the underlying data is unchanged — harmless at quarterly cadence."
+    },
+    {
       "name": "au-approvals",
       "repo": "ben-gy/au-approvals",
       "date": "2026-07-21",

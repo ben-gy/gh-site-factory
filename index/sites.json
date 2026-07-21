@@ -2,6 +2,19 @@
   "last_updated": "2026-07-21",
   "sites": [
     {
+      "name": "Threatened Species",
+      "slug": "au-threatened",
+      "icon": "leaf",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every plant and animal on Australia's EPBC Act threatened list — by status, family tree, and where each one lives.",
+      "url": "https://au-threatened.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-threatened",
+      "tags": ["environment", "biodiversity", "endangered-species", "conservation"],
+      "type": "web",
+      "date": "2026-07-21"
+    },
+    {
       "name": "Building Approvals",
       "slug": "au-approvals",
       "icon": "hammer",

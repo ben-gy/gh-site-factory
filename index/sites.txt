@@ -3,6 +3,10 @@ Last updated: 2026-07-21
 
 === Web Sites ===
 
+Threatened Species (AU)
+  https://au-threatened.benrichardson.dev
+  Every plant and animal on Australia's EPBC Act threatened list — by status, family tree, and where each one lives.
+
 Building Approvals (AU)
   https://au-approvals.benrichardson.dev
   Where Australia approves new homes — house vs apartment, region by region, against the 1.2-million target.
