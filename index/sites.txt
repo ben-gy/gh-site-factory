@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-20
+Last updated: 2026-07-21
 
 === Web Sites ===
+
+Building Approvals (AU)
+  https://au-approvals.benrichardson.dev
+  Where Australia approves new homes — house vs apartment, region by region, against the 1.2-million target.
 
 Universities (AU)
   https://au-unis.benrichardson.dev

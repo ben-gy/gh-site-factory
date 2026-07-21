@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-07-20",
+  "last_updated": "2026-07-21",
   "sites": [
+    {
+      "name": "Building Approvals",
+      "slug": "au-approvals",
+      "icon": "hammer",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Where Australia approves new homes — house vs apartment, region by region, against the 1.2-million target.",
+      "url": "https://au-approvals.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-approvals",
+      "tags": ["housing", "construction", "planning", "housing-accord"],
+      "type": "web",
+      "date": "2026-07-21"
+    },
     {
       "name": "Universities",
       "slug": "au-unis",

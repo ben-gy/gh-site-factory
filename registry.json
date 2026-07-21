@@ -1,7 +1,24 @@
 {
   "version": 1,
-  "last_updated": "2026-07-20",
+  "last_updated": "2026-07-21",
   "sites": [
+    {
+      "name": "au-approvals",
+      "repo": "ben-gy/au-approvals",
+      "date": "2026-07-21",
+      "description": "Every new home Australia approves to build, mapped to the SA3 region it will go in and measured against the National Housing Accord — the ABS Building Approvals series (new residential dwelling units, monthly from Jul 2021, ~337 SA3 regions) joined to ABS resident population and real ASGS 2021 boundaries. The hero view answers the question everyone asks: over the latest 12 months Australia approved 201,349 new homes, 84% of the ~240,000/yr (20,000/mo) completions pace the 1.2-million-in-five-years Accord implies — and because approvals LEAD completions and not every approval is built, running below that line is the earliest warning the target will be missed. The Accord tracker stacks houses/townhouses/apartments monthly with that benchmark and annotates the 2022 cash-rate liftoff, the Jul-2024 Accord start and the 2025 rate cuts: rolling-12 approvals fell from a ~201k peak (Jun 2022) to a ~160k trough in 2024 and have since climbed back to the peak, still ~16% short of the pace. The second story is density, and the national average (59% detached houses) hides two different countries: outer-suburban growth corridors approve almost only houses (Melton - Bacchus Marsh tops the country at 4,638 homes/yr, 84% houses; Wanneroo 95%) while inner cities are almost pure apartment (Melbourne City 3,471 homes at 0% houses, Sydney Inner City 99% non-house), and the states split the same way — ACT 18% houses / 68% apartments against Tasmania 93% houses. Supply intensity per resident reranks everything (Molonglo in the ACT tops at 447 dwellings approved per 10,000 residents against a national median of 54). Nine views: the Accord tracker (national + per-state, monthly/rolling toggle), an SA3 choropleth across five measures with a skew-aware quantile ramp, a rankings leaderboard across six metrics, the signature Trajectory scatter (current supply intensity against three-year change, quadranted by medians, zoom/pan — the only form that separates a region that has always built a lot from one accelerating or collapsing), a Houses-vs-apartments view (100%-stacked national mix over time plus where each form actually gets approved), a States view with per-state small multiples and a state x building-type matrix, a searchable Explorer with rolling-12 sparklines, a click-through distribution histogram, and auto-detected insights — plus a hash-linkable per-region drill-down (#v=map&r=21304) with monthly house/apartment bars, value approved and rank. Dependency-free, unit-tested pipeline (its own SDMX CSV parser) that asserts the SA3 house + non-house last-12 split reproduces the total exactly and fails the build on drift; the one data subtlety is honest framing rather than a trap — the Accord target counts completions, not approvals, and the site labels the benchmark accordingly and notes that small-area SA3 detail lags the headline release by a few business days.",
+      "category": "housing",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "ABS Building Approvals — BA_SA2 dataflow, new residential dwelling units by SA3/state/national and value (data.api.abs.gov.au)",
+        "ABS Estimated Resident Population by SA3, ERP_ASGS2021 (data.api.abs.gov.au)",
+        "ABS ASGS 2021 SA3 boundaries (geo.abs.gov.au ArcGIS)"
+      ],
+      "status": "deployed",
+      "url": "https://au-approvals.benrichardson.dev",
+      "pr_url": ""
+    },
     {
       "name": "au-unis",
       "repo": "ben-gy/au-unis",
