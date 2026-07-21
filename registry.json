@@ -17,7 +17,8 @@
       ],
       "status": "deployed",
       "url": "https://au-approvals.benrichardson.dev",
-      "pr_url": "https://github.com/ben-gy/au-approvals/pull/1"
+      "pr_url": "https://github.com/ben-gy/au-approvals/pull/1",
+      "notes": "Deploy workflow succeeded; site live and content-verified over http:// (live bundle index-qV8meOKC.js matches local dist byte-for-byte; DNS resolves to GitHub Pages). Let's Encrypt cert was still issuing at hand-over after two CNAME cycles and ~8 min of polling — normal for a freshly pointed domain. Re-check https_enforced and it should flip on its own."
     },
     {
       "name": "au-unis",
