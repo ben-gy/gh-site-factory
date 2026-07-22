@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-07-21",
+  "last_updated": "2026-07-22",
   "sites": [
+    {
+      "name": "Mortality Atlas",
+      "slug": "au-mortality",
+      "icon": "heart-pulse",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Where Australians die younger than they should — avoidable deaths, causes and the age effect, region by region.",
+      "url": "https://au-mortality.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-mortality",
+      "tags": ["health", "mortality", "causes-of-death", "health-inequality"],
+      "type": "web",
+      "date": "2026-07-22"
+    },
     {
       "name": "Threatened Species",
       "slug": "au-threatened",

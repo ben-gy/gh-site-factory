@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-21
+Last updated: 2026-07-22
 
 === Web Sites ===
+
+Mortality Atlas (AU)
+  https://au-mortality.benrichardson.dev
+  Where Australians die younger than they should — avoidable deaths, causes and the age effect, region by region.
 
 Threatened Species (AU)
   https://au-threatened.benrichardson.dev
