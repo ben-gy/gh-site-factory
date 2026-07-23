@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-22
+Last updated: 2026-07-23
 
 === Web Sites ===
+
+Bank Branches (AU)
+  https://au-branches.benrichardson.dev
+  Every bank branch, ATM and Bank@Post in Australia — and the 44% of branches that have vanished since 2017.
 
 Mortality Atlas (AU)
   https://au-mortality.benrichardson.dev

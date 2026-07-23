@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-07-22",
+  "last_updated": "2026-07-23",
   "sites": [
+    {
+      "name": "Bank Branches",
+      "slug": "au-branches",
+      "icon": "landmark",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every bank branch, ATM and Bank@Post in Australia — and the 44% of branches that have vanished since 2017.",
+      "url": "https://au-branches.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-branches",
+      "tags": ["finance", "bank-branches", "bank-closures", "regional-banking"],
+      "type": "web",
+      "date": "2026-07-23"
+    },
     {
       "name": "Mortality Atlas",
       "slug": "au-mortality",

@@ -1,7 +1,26 @@
 {
   "version": 1,
-  "last_updated": "2026-07-22",
+  "last_updated": "2026-07-23",
   "sites": [
+    {
+      "name": "au-branches",
+      "repo": "ben-gy/au-branches",
+      "date": "2026-07-23",
+      "description": "Every physical banking point in Australia — bank branch, Bank@Post, other face-to-face counter and bank-owned ATM — from APRA's annual ADI Points of Presence return, nine June snapshots 2017-2025 (137,000 raw rows), joined to ABS resident population and real ASGS 2021 SA3 boundaries. The one idea that makes the data readable: as branches collapsed, Australia Post's Bank@Post barely moved, so in hundreds of towns the post office counter has quietly become the last place to bank. Headline: branches fell 5,694 -> 3,205 (-44%) in eight years and bank-owned ATMs -63% (13,814 -> 5,143), but Bank@Post held at -6% (3,578 -> 3,365). At the town (SA2) grain, 366 towns lost their LAST branch since 2017 — home to ~4.4m residents — of which 298 keep a Bank@Post and 68 have no staffed banking of any kind. EFTPOS (the ~700k shop card terminals) is deliberately excluded as merchant payment, not banking access. Nine views: an Overview hero + 'great substitution' stacked-area (branch draining while Bank@Post holds) + remoteness loss bars; a real Leaflet POINT map of all ~10,460 service points in 2025 (canvas renderer, channel layer toggles, colour by channel) that switches to an SA3 per-capita access choropleth (branches per 10,000 residents, ratio-cut ramp); the signature Banking Deserts view (SA2 towns that lost their last branch, filterable by state/remoteness/safety-net, with a people-affected total and a Bank@Post-vs-nothing split bar); Who's Closing (per-institution closure leaderboard with rank-by toggle, a bank x year retreat matrix shaded against each bank's own peak, and a squarified institution treemap coloured by sector); Remoteness equity (branches per 100k by remoteness over time as a multi-line, a Bank@Post-reliance bar, and a remoteness x channel per-100k matrix); Rankings across four metrics with a click-to-filter distribution histogram; an annotated national + per-state Timeline; a searchable/sortable Explorer of all 340 SA3s with branch sparklines; and auto-detected Insights — plus hash-linkable per-region (#r=sa3) and per-institution (#b=abn) drill-down drawers. Data traps handled in a dependency-free, unit-tested pipeline (its own minimal zip+xlsx reader in pipeline/parse.mjs, shared with the tests): (1) Table 2's embedded 'Population by SA2' is actually at SUBURB grain so it repeats per suburb and only covers SA2s that HAVE a service — summing double-counts and it undercounts regional population, so per-capita denominators use full ABS ERP by SA3 (all 340 regions incl. zero-branch ones) not Table 2; SA2 population for the deserts 'people affected' figure dedupes Table 2 to one value per SA2; (2) EFTPOS excluded; (3) APRA SA3 names occasionally arrive truncated (a shared-string cut, e.g. 'Augusta - Margaret River - Busselto[n]') so the name->code join has a unique-prefix fallback (324/325 exact, 100% after fallback); (4) the pipeline asserts region branch totals reconcile to >=97% of the national branch total and fails the build on drift (matched 100%). Annual data pipeline (APRA publishes each October) — the slowest proportional cadence.",
+      "category": "finance",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "APRA Authorised deposit-taking institutions' points of presence (apra.gov.au — single xlsx, Table 1 raw + Table 2 SA2 population)",
+        "ABS Estimated Resident Population by SA3, ERP_ASGS2021 (data.api.abs.gov.au)",
+        "ABS ASGS 2021 SA3 boundaries (geo.abs.gov.au ArcGIS, via patterns geo sibling)",
+        "ABS Regional Population by Remoteness Area (embedded denominator)"
+      ],
+      "status": "verify_production_pending",
+      "url": "https://au-branches.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-branches/pull/1",
+      "notes": "Deployed; production live over HTTPS (https_enforced=true after one CNAME recycle; custom domain returns 200; live bundle index-ENW7Kaps.js matches local dist byte-for-byte; national/points/sa3.geojson/og.png all 200). Full in-browser verification was done against the byte-identical local production build (vite preview of dist): all 9 views render error-free with no NaN, the point map and per-capita choropleth both draw on real ABS geometry, a REAL trusted click on a map SA3 polygon opened the region drawer ABOVE Leaflet (z-index isolate + 2100, Lachlan Valley: 34->19 branches with Bank@Post steady ~20), the About modal opened FROM the map view paints above the map (elementFromPoint inside modal), and there is zero page-level horizontal overflow at 375px across all nine views plus an open drawer (tables scroll locally inside their overflow-x:auto containers). 36 vitest tests pass; build clean. Production-URL in-browser click-through (banks bar -> institution drawer, deserts/insights links) could NOT be run at hand-over because both browser surfaces were unavailable: the in-app Browser pane blocks the domain by policy and the Claude-in-Chrome extension was disconnected. Those remaining interactions reuse the same navigate()/openRegion/openInstitution mechanism already proven via the real map-polygon click. Re-run production real-click verification and flip status to deployed."
+    },
     {
       "name": "au-mortality",
       "repo": "ben-gy/au-mortality",
