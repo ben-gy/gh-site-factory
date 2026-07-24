@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-07-23",
+  "last_updated": "2026-07-24",
   "sites": [
+    {
+      "name": "Imprisonment",
+      "slug": "au-imprisonment",
+      "icon": "scale",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "How many Australians are in prison, who they are, and the over-representation gap a headline rate hides.",
+      "url": "https://au-imprisonment.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-imprisonment",
+      "tags": ["justice", "imprisonment", "incarceration", "indigenous-over-representation"],
+      "type": "web",
+      "date": "2026-07-24"
+    },
     {
       "name": "Bank Branches",
       "slug": "au-branches",

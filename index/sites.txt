@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-23
+Last updated: 2026-07-24
 
 === Web Sites ===
+
+Imprisonment (AU)
+  https://au-imprisonment.benrichardson.dev
+  How many Australians are in prison, who they are, and the over-representation gap a headline rate hides.
 
 Bank Branches (AU)
   https://au-branches.benrichardson.dev
