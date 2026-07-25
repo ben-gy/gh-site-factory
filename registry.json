@@ -1,7 +1,24 @@
 {
   "version": 1,
-  "last_updated": "2026-07-24",
+  "last_updated": "2026-07-25",
   "sites": [
+    {
+      "name": "au-election",
+      "repo": "ben-gy/au-election",
+      "date": "2026-07-25",
+      "description": "Australia's 2025 federal election (House of Representatives, all 150 seats) unified from the AEC's ~40 separate CSV exports (Tally Room event 31496) into one interface built around the two things a raw seat count hides: the swing and preferences. Headline: the Albanese Labor government returned decisively with 94 seats and 55.22% two-party-preferred (+3.09 swing), Coalition 43, Greens 1, ten independents, KAP + Centre Alliance 2. Nine views: an Overview (parliament horseshoe with the crossbench between the majors, TPP bar, record-low 66.4% major-party primary), a Leaflet choropleth of all 150 real electoral-division polygons in winner/TPP/swing modes with a per-seat drawer, the signature Mackerras pendulum (every seat ranked by margin, coloured by who ACTUALLY holds it so teal seats show as teal pips on the Coalition-notional side) with a live uniform-swing simulator that tallies notional seats and lists which seats flip, a preference-flow Sankey (Greens 88% -> Labor, One Nation 75% -> Coalition, all minors 60.7% -> Labor), first preferences with a party x state matrix, rankings across six metrics, a searchable/sortable explorer of all 150 seats, margin + swing distribution histograms with click-through, and auto-detected insights (Dutton lost Dickson; Bradfield decided by 26 votes; 20 seats changed hands) — plus a hash-linkable per-seat drill-down (#v=map&seat=Dickson) with every candidate's first preferences, the two-candidate pair, notional TPP, turnout and informal. Dependency-free unit-tested pipeline (its own RFC-4180 reader in pipeline/parse.mjs, shared with tests) that reconciles three independently-published AEC totals (150 seats by group == 150 by member == first-pref Elected column; national TPP ALP ~55.2%) and fails the build on drift. The signature data trap handled: three seats non-classic in 2022 (Brisbane, Bendigo, Nicholls) have no comparable prior two-party figure, so the AEC's raw Swing column equals the current ALP TPP percentage as a sentinel — taken at face value these become absurd +59/+51/-36 'swings' that skew the national average, the swing rankings and the map; detected (|swing - ALP%| < 0.05) and nulled, excluded from swing rankings/insights/histogram, drawn grey on the map, and the national swing taken as the correct aggregate (55.22 - the 52.13 2022 national result = +3.09) rather than the mean of divisional swings. Reuses the fleet's Digital Atlas electoral-division boundaries (150 real polygons). Yearly pipeline (a federal election is ~3-yearly and final results never change) that embeds the AEC Generated timestamp, not a run time, so re-runs are idempotent.",
+      "category": "government-transparency",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "AEC Tally Room 2025 (event 31496) — House CSV downloads: first preferences by candidate, two-party-preferred by division (+swing), two-candidate-preferred, members elected, national preference flows, turnout, informal, seats changed hands (results.aec.gov.au)",
+        "AEC / Digital Atlas of Australia — Federal Electoral Divisions boundaries (reused fleet electorates.geojson)"
+      ],
+      "status": "deployed",
+      "url": "https://au-election.benrichardson.dev",
+      "pr_url": "",
+      "notes": "Deployed and verified over HTTPS (https_enforced=true after one CNAME cycle; custom domain returns 200; live bundle index-B3OFwvRT.js matches local dist byte-for-byte; election.json + boundaries.geojson + og.png all 200). Production checks: 150 real map polygons render, the per-seat drawer opens ABOVE Leaflet (Dickson -> Ali France, TPP 56.0/44.0), zero console errors. Full real-click verification done against the byte-identical local production build: real map-polygon click -> Kennedy (Bob Katter) drawer painting above Leaflet (elementFromPoint inside drawer, z 2100), About modal opened FROM the map view paints above Leaflet (z 2200), histogram bar real-click -> 16-seat drill list, pendulum swing simulator (12 seats flip at -4 to Coalition), all 9 views render error-free with no NaN, and zero page-level horizontal overflow at a true 375px viewport across every view plus an open drawer (segmented controls scroll locally). 56 vitest tests pass (parser + reconciliation, positional layout tests, analysis incl. the swing-null trap); build clean; deploy workflow green. Fixed during verification: a display:inline bug that collapsed every .barrow bar fill to 0px (overview/first-prefs/rankings), and the +59-point degenerate-swing trap."
+    },
     {
       "name": "au-imprisonment",
       "repo": "ben-gy/au-imprisonment",

@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-07-24",
+  "last_updated": "2026-07-25",
   "sites": [
+    {
+      "name": "Federal Election Results",
+      "slug": "au-election",
+      "icon": "vote",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every seat, swing and preference flow from Australia's 2025 federal election — mapped, ranked and explained.",
+      "url": "https://au-election.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-election",
+      "tags": ["elections", "federal-election", "two-party-preferred", "preferences", "pendulum"],
+      "type": "web",
+      "date": "2026-07-25"
+    },
     {
       "name": "Imprisonment",
       "slug": "au-imprisonment",

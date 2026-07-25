@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-24
+Last updated: 2026-07-25
 
 === Web Sites ===
+
+Federal Election Results (AU)
+  https://au-election.benrichardson.dev
+  Every seat, swing and preference flow from Australia's 2025 federal election — mapped, ranked and explained.
 
 Imprisonment (AU)
   https://au-imprisonment.benrichardson.dev
