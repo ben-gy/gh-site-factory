@@ -16,7 +16,7 @@
       ],
       "status": "deployed",
       "url": "https://au-election.benrichardson.dev",
-      "pr_url": "",
+      "pr_url": "https://github.com/ben-gy/au-election/pull/1",
       "notes": "Deployed and verified over HTTPS (https_enforced=true after one CNAME cycle; custom domain returns 200; live bundle index-B3OFwvRT.js matches local dist byte-for-byte; election.json + boundaries.geojson + og.png all 200). Production checks: 150 real map polygons render, the per-seat drawer opens ABOVE Leaflet (Dickson -> Ali France, TPP 56.0/44.0), zero console errors. Full real-click verification done against the byte-identical local production build: real map-polygon click -> Kennedy (Bob Katter) drawer painting above Leaflet (elementFromPoint inside drawer, z 2100), About modal opened FROM the map view paints above Leaflet (z 2200), histogram bar real-click -> 16-seat drill list, pendulum swing simulator (12 seats flip at -4 to Coalition), all 9 views render error-free with no NaN, and zero page-level horizontal overflow at a true 375px viewport across every view plus an open drawer (segmented controls scroll locally). 56 vitest tests pass (parser + reconciliation, positional layout tests, analysis incl. the swing-null trap); build clean; deploy workflow green. Fixed during verification: a display:inline bug that collapsed every .barrow bar fill to 0px (overview/first-prefs/rankings), and the +59-point degenerate-swing trap."
     },
     {
