@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-07-25",
+  "last_updated": "2026-07-26",
   "sites": [
+    {
+      "name": "Foreign Ownership",
+      "slug": "au-foreign-owned",
+      "icon": "globe",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Who owns Australia — foreign ownership of the nation's farmland, water, homes, mines and businesses, by country and state.",
+      "url": "https://au-foreign-owned.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-foreign-owned",
+      "tags": ["data-explorers", "foreign investment", "land", "transparency"],
+      "type": "web",
+      "date": "2026-07-26"
+    },
     {
       "name": "Federal Election Results",
       "slug": "au-election",

@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-25
+Last updated: 2026-07-26
 
 === Web Sites ===
+
+Foreign Ownership (AU)
+  https://au-foreign-owned.benrichardson.dev
+  Who owns Australia — foreign ownership of the nation's farmland, water, homes, mines and businesses, by country and state.
 
 Federal Election Results (AU)
   https://au-election.benrichardson.dev
