@@ -3,6 +3,10 @@ Last updated: 2026-07-28
 
 === Web Sites ===
 
+Baby Names (AU)
+  https://au-baby-names.benrichardson.dev
+  Australia's most popular baby names since 1952 — search any name's rise and fall, and see how the #1 name isn't what it used to be.
+
 Safeguard Emitters (AU)
   https://au-safeguard.benrichardson.dev
   Australia's biggest industrial carbon emitters under the Safeguard Mechanism — their declining baselines, and who went over the line.
