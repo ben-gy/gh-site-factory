@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-26
+Last updated: 2026-07-27
 
 === Web Sites ===
+
+Population Change (AU)
+  https://au-population.benrichardson.dev
+  Where Australia is growing and shrinking — every council mapped and ranked, and the three engines behind it: births minus deaths, and migration in and out.
 
 Vehicle Fleet (AU)
   https://au-vehicles.benrichardson.dev

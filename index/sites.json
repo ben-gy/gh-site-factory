@@ -2,6 +2,19 @@
   "last_updated": "2026-07-27",
   "sites": [
     {
+      "name": "Population Change",
+      "slug": "au-population",
+      "icon": "trending-up",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Where Australia is growing and shrinking — every council mapped and ranked, and the three engines behind it: births minus deaths, and migration in and out.",
+      "url": "https://au-population.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-population",
+      "tags": ["data-explorers", "population", "migration", "demographics", "growth"],
+      "type": "web",
+      "date": "2026-07-27"
+    },
+    {
       "name": "Vehicle Fleet",
       "slug": "au-vehicles",
       "icon": "car",
