@@ -3,6 +3,10 @@ Last updated: 2026-07-26
 
 === Web Sites ===
 
+Vehicle Fleet (AU)
+  https://au-vehicles.benrichardson.dev
+  Every car, ute, truck and motorbike registered in Australia — by fuel type, age, make and postcode. See how much of the fleet is really electric.
+
 Foreign Ownership (AU)
   https://au-foreign-owned.benrichardson.dev
   Who owns Australia — foreign ownership of the nation's farmland, water, homes, mines and businesses, by country and state.

@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-07-26",
+  "last_updated": "2026-07-27",
   "sites": [
+    {
+      "name": "Vehicle Fleet",
+      "slug": "au-vehicles",
+      "icon": "car",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every car, ute, truck and motorbike registered in Australia — by fuel type, age, make and postcode. See how much of the fleet is really electric.",
+      "url": "https://au-vehicles.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-vehicles",
+      "tags": ["data-explorers", "electric vehicles", "fuel type", "cars", "transport"],
+      "type": "web",
+      "date": "2026-07-27"
+    },
     {
       "name": "Foreign Ownership",
       "slug": "au-foreign-owned",
