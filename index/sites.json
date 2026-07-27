@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-07-27",
+  "last_updated": "2026-07-28",
   "sites": [
+    {
+      "name": "Safeguard Emitters",
+      "slug": "au-safeguard",
+      "icon": "factory",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Australia's biggest industrial carbon emitters under the Safeguard Mechanism — their declining baselines, and who went over the line.",
+      "url": "https://au-safeguard.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-safeguard",
+      "tags": ["emissions", "climate", "carbon", "safeguard mechanism"],
+      "type": "web",
+      "date": "2026-07-28"
+    },
     {
       "name": "Population Change",
       "slug": "au-population",

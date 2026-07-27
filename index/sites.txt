@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-27
+Last updated: 2026-07-28
 
 === Web Sites ===
+
+Safeguard Emitters (AU)
+  https://au-safeguard.benrichardson.dev
+  Australia's biggest industrial carbon emitters under the Safeguard Mechanism — their declining baselines, and who went over the line.
 
 Population Change (AU)
   https://au-population.benrichardson.dev
