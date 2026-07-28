@@ -2,6 +2,19 @@
   "last_updated": "2026-07-28",
   "sites": [
     {
+      "name": "Cost of Living",
+      "slug": "au-inflation",
+      "icon": "shopping-basket",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "What actually got more expensive in Australia — every item in the CPI basket since 1948, city by city, and whether wages kept up.",
+      "url": "https://au-inflation.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-inflation",
+      "tags": ["inflation", "cost of living", "CPI", "prices", "wages", "economy"],
+      "type": "web",
+      "date": "2026-07-28"
+    },
+    {
       "name": "Baby Names",
       "slug": "au-baby-names",
       "icon": "baby",

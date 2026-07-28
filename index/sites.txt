@@ -3,6 +3,10 @@ Last updated: 2026-07-28
 
 === Web Sites ===
 
+Cost of Living (AU)
+  https://au-inflation.benrichardson.dev
+  What actually got more expensive in Australia — every item in the CPI basket since 1948, city by city, and whether wages kept up.
+
 Baby Names (AU)
   https://au-baby-names.benrichardson.dev
   Australia's most popular baby names since 1952 — search any name's rise and fall, and see how the #1 name isn't what it used to be.
