@@ -2,6 +2,19 @@
   "last_updated": "2026-07-28",
   "sites": [
     {
+      "name": "Overseas Arrivals",
+      "slug": "au-arrivals",
+      "icon": "plane-landing",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Who visits Australia, why they come, and how COVID erased the border — 50 years of monthly arrivals by country, reason and length of stay.",
+      "url": "https://au-arrivals.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-arrivals",
+      "tags": ["tourism", "travel", "arrivals", "migration", "visitors", "border", "ABS"],
+      "type": "web",
+      "date": "2026-07-28"
+    },
+    {
       "name": "Cost of Living",
       "slug": "au-inflation",
       "icon": "shopping-basket",

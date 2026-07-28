@@ -3,6 +3,10 @@ Last updated: 2026-07-28
 
 === Web Sites ===
 
+Overseas Arrivals (AU)
+  https://au-arrivals.benrichardson.dev
+  Who visits Australia, why they come, and how COVID erased the border — 50 years of monthly arrivals by country, reason and length of stay.
+
 Cost of Living (AU)
   https://au-inflation.benrichardson.dev
   What actually got more expensive in Australia — every item in the CPI basket since 1948, city by city, and whether wages kept up.
