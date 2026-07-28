@@ -2,6 +2,19 @@
   "last_updated": "2026-07-28",
   "sites": [
     {
+      "name": "Shark Incidents",
+      "slug": "au-sharks",
+      "icon": "waves",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every recorded shark–human encounter in Australia since 1791 — by place, species, activity and outcome, and why most people survive.",
+      "url": "https://au-sharks.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-sharks",
+      "tags": ["sharks", "safety", "beaches", "wildlife", "ocean", "conservation"],
+      "type": "web",
+      "date": "2026-07-28"
+    },
+    {
       "name": "Overseas Arrivals",
       "slug": "au-arrivals",
       "icon": "plane-landing",

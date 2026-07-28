@@ -3,6 +3,10 @@ Last updated: 2026-07-28
 
 === Web Sites ===
 
+Shark Incidents (AU)
+  https://au-sharks.benrichardson.dev
+  Every recorded shark–human encounter in Australia since 1791 — by place, species, activity and outcome, and why most people survive.
+
 Overseas Arrivals (AU)
   https://au-arrivals.benrichardson.dev
   Who visits Australia, why they come, and how COVID erased the border — 50 years of monthly arrivals by country, reason and length of stay.
