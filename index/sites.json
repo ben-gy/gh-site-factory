@@ -2,6 +2,19 @@
   "last_updated": "2026-07-29",
   "sites": [
     {
+      "name": "Waste & Recycling",
+      "slug": "au-waste",
+      "icon": "recycle",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every tonne of waste Australia throws out — where it goes, and how much comes back. Metals recycle at 87%; plastics at just 13%.",
+      "url": "https://au-waste.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-waste",
+      "tags": ["waste", "recycling", "environment", "circular economy", "landfill", "plastics"],
+      "type": "web",
+      "date": "2026-07-29"
+    },
+    {
       "name": "Victorian Rents",
       "slug": "vic-rents",
       "icon": "house",

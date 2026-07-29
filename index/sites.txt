@@ -3,6 +3,10 @@ Last updated: 2026-07-29
 
 === Web Sites ===
 
+Waste & Recycling (AU)
+  https://au-waste.benrichardson.dev
+  Every tonne of waste Australia throws out — where it goes, and how much comes back. Metals recycle at 87%; plastics at just 13%.
+
 Victorian Rents (AU)
   https://vic-rents.benrichardson.dev
   Median weekly rents for every Victorian suburb and council, 1999–2025 — how much it costs to rent, and how fast it climbed.
