@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-07-28",
+  "last_updated": "2026-07-29",
   "sites": [
+    {
+      "name": "Victorian Rents",
+      "slug": "vic-rents",
+      "icon": "house",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Median weekly rents for every Victorian suburb and council, 1999–2025 — how much it costs to rent, and how fast it climbed.",
+      "url": "https://vic-rents.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/vic-rents",
+      "tags": ["housing", "rent", "cost of living", "victoria", "property", "affordability"],
+      "type": "web",
+      "date": "2026-07-29"
+    },
     {
       "name": "Shark Incidents",
       "slug": "au-sharks",

@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-28
+Last updated: 2026-07-29
 
 === Web Sites ===
+
+Victorian Rents (AU)
+  https://vic-rents.benrichardson.dev
+  Median weekly rents for every Victorian suburb and council, 1999–2025 — how much it costs to rent, and how fast it climbed.
 
 Shark Incidents (AU)
   https://au-sharks.benrichardson.dev
