@@ -3,6 +3,10 @@ Last updated: 2026-07-29
 
 === Web Sites ===
 
+Births & Fertility (AU)
+  https://au-births.benrichardson.dev
+  Fifty years of Australia's birth rate — a record-low fertility rate, mothers a decade older, and where and when babies are born.
+
 Aurora Australis (AU)
   https://aurora-australis.benrichardson.dev
   Live Southern Lights forecast — can you see the aurora tonight? Real-time Kp, solar wind and the aurora oval, with a chance for every southern city.

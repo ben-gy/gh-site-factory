@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-07-29",
+  "last_updated": "2026-07-30",
   "sites": [
+    {
+      "name": "Births & Fertility",
+      "slug": "au-births",
+      "icon": "baby",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Fifty years of Australia's birth rate — a record-low fertility rate, mothers a decade older, and where and when babies are born.",
+      "url": "https://au-births.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-births",
+      "tags": ["births", "fertility", "demographics", "birth rate", "population", "family"],
+      "type": "web",
+      "date": "2026-07-30"
+    },
     {
       "name": "Aurora Australis",
       "slug": "aurora-australis",
