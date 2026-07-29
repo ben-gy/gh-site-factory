@@ -2,6 +2,19 @@
   "last_updated": "2026-07-29",
   "sites": [
     {
+      "name": "Aurora Australis",
+      "slug": "aurora-australis",
+      "icon": "sparkles",
+      "category": "live-dashboards",
+      "country": "AU",
+      "description": "Live Southern Lights forecast — can you see the aurora tonight? Real-time Kp, solar wind and the aurora oval, with a chance for every southern city.",
+      "url": "https://aurora-australis.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/aurora-australis",
+      "tags": ["aurora", "space weather", "southern lights", "kp index", "astronomy", "solar wind"],
+      "type": "web",
+      "date": "2026-07-29"
+    },
+    {
       "name": "Waste & Recycling",
       "slug": "au-waste",
       "icon": "recycle",

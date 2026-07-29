@@ -3,6 +3,10 @@ Last updated: 2026-07-29
 
 === Web Sites ===
 
+Aurora Australis (AU)
+  https://aurora-australis.benrichardson.dev
+  Live Southern Lights forecast — can you see the aurora tonight? Real-time Kp, solar wind and the aurora oval, with a chance for every southern city.
+
 Waste & Recycling (AU)
   https://au-waste.benrichardson.dev
   Every tonne of waste Australia throws out — where it goes, and how much comes back. Metals recycle at 87%; plastics at just 13%.
