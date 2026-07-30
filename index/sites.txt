@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-29
+Last updated: 2026-07-30
 
 === Web Sites ===
+
+Retail Spending (AU)
+  https://au-retail.benrichardson.dev
+  What Australia spends at the shops — by category, state and month since 1982, and how much of the growth is just inflation.
 
 Births & Fertility (AU)
   https://au-births.benrichardson.dev

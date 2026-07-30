@@ -2,6 +2,19 @@
   "last_updated": "2026-07-30",
   "sites": [
     {
+      "name": "Retail Spending",
+      "slug": "au-retail",
+      "icon": "shopping-bag",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "What Australia spends at the shops — by category, state and month since 1982, and how much of the growth is just inflation.",
+      "url": "https://au-retail.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-retail",
+      "tags": ["retail", "spending", "consumer", "cost of living", "inflation", "economy"],
+      "type": "web",
+      "date": "2026-07-30"
+    },
+    {
       "name": "Births & Fertility",
       "slug": "au-births",
       "icon": "baby",
