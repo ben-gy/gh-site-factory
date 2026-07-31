@@ -1,6 +1,18 @@
 {
-  "last_updated": "2026-07-30",
+  "last_updated": "2026-07-31",
   "sites": [
+    {
+      "name": "QuakeWatch",
+      "slug": "quakewatch",
+      "icon": "activity",
+      "category": "live-dashboards",
+      "description": "Every earthquake on Earth right now, in plain language — magnitude, depth, energy, tsunami risk and the tectonic plate it sits on.",
+      "url": "https://quakewatch.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/quakewatch",
+      "tags": ["earthquakes", "seismology", "live", "usgs", "tectonic plates", "hazards"],
+      "type": "web",
+      "date": "2026-07-31"
+    },
     {
       "name": "Retail Spending",
       "slug": "au-retail",

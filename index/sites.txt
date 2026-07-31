@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-30
+Last updated: 2026-07-31
 
 === Web Sites ===
+
+QuakeWatch
+  https://quakewatch.benrichardson.dev
+  Every earthquake on Earth right now, in plain language — magnitude, depth, energy, tsunami risk and the tectonic plate it sits on.
 
 Retail Spending (AU)
   https://au-retail.benrichardson.dev
