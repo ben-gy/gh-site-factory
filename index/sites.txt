@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-07-31
+Last updated: 2026-08-01
 
 === Web Sites ===
+
+Warming (AU)
+  https://au-warming.benrichardson.dev
+  How much hotter Australia has become — the Bureau of Meteorology's official temperature record for 112 stations since 1910, as warming stripes, a map and rankings.
 
 QuakeWatch
   https://quakewatch.benrichardson.dev

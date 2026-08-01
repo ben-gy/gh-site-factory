@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-07-31",
+  "last_updated": "2026-08-01",
   "sites": [
+    {
+      "name": "Warming",
+      "slug": "au-warming",
+      "icon": "thermometer-sun",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "How much hotter Australia has become — the Bureau of Meteorology's official temperature record for 112 stations since 1910, as warming stripes, a map and rankings.",
+      "url": "https://au-warming.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-warming",
+      "tags": ["climate", "temperature", "warming", "bom", "acorn-sat"],
+      "type": "web",
+      "date": "2026-08-01"
+    },
     {
       "name": "QuakeWatch",
       "slug": "quakewatch",
