@@ -532,7 +532,7 @@
       "stack": "vanilla-js",
       "data_strategy": "static",
       "status": "deployed",
-      "url": "https://ndis-watch.benrichardson.dev"
+      "url": "https://au-ndis-watch.benrichardson.dev"
     },
     {
       "name": "au-visas",
@@ -543,7 +543,7 @@
       "stack": "vanilla-js",
       "data_strategy": "static",
       "status": "deployed",
-      "url": "https://visas.benrichardson.dev"
+      "url": "https://au-visas.benrichardson.dev"
     },
     {
       "name": "pipboy",
@@ -1005,7 +1005,7 @@
         "DSN Now"
       ],
       "status": "deployed",
-      "url": "https://artemis.benrichardson.dev"
+      "url": "https://artemistracker.benrichardson.dev"
     },
     {
       "name": "tariff-check",
