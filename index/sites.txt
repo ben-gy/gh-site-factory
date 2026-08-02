@@ -3,6 +3,10 @@ Last updated: 2026-08-02
 
 === Web Sites ===
 
+Intellectual Property (AU)
+  https://au-ip.benrichardson.dev
+  Every patent, trade mark, design and plant breeder's right ever filed in Australia — 4.3 million applications, 122 years, and who actually files them.
+
 Mobile Towers (AU)
   https://au-towers.benrichardson.dev
   Every mobile tower in Australia — which networks can actually reach where you live, what spectrum they use, and which towers the public paid for.

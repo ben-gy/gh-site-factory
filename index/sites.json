@@ -2,6 +2,24 @@
   "last_updated": "2026-08-02",
   "sites": [
     {
+      "name": "Intellectual Property",
+      "slug": "au-ip",
+      "icon": "lightbulb",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every patent, trade mark, design and plant breeder's right ever filed in Australia — 4.3 million applications, 122 years, and who actually files them.",
+      "url": "https://au-ip.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-ip",
+      "tags": [
+        "patents",
+        "trade-marks",
+        "innovation",
+        "ip-australia"
+      ],
+      "type": "web",
+      "date": "2026-08-02"
+    },
+    {
       "name": "Mobile Towers",
       "slug": "au-towers",
       "icon": "radio-tower",
