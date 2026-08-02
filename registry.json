@@ -18,7 +18,9 @@
       "status": "deployed",
       "url": "https://au-warming.benrichardson.dev",
       "pr_url": "https://github.com/ben-gy/au-warming/pull/1",
-      "notes": "Deployed and live over HTTPS. Deploy to GitHub Pages workflow GREEN on first run (npm ci + npm test + build + deploy). ALSO the Data Pipeline workflow ran GREEN on the initial push (paths: pipeline/**) — meaning collect.mjs fetched the live BOM ACORN-SAT feed on CI and all three reconciliation gates passed on GitHub Actions, and it was idempotent (main head stayed at the initial commit — no data commit, because the pipeline embeds the DATA year not a timestamp). Production live at the custom domain: HTTPS returns 200 and the live bundle index-D9WE7zpY.js MATCHES local dist byte-for-byte; data/climate.json (1.3 MB), all 112 data/stations/{id}.json, data/boundaries.geojson, og.png, favicon.svg, robots.txt, sitemap.xml, third-party-notices.txt and the IndexNow key all 200 on the live HTTPS host. All THREE gates pass on the real BOM data: two-way aggregation (9,940 checks, 0 fails, worst 0 °C), sanity range (0 bad), national-trend anchor (rate 0.13 °C/dec, total 1.46 °C — both in the BOM-published band). 52 vitest tests pass — the daily-CSV parser (blank/99999 sentinel drops, malformed rows), aggregateStation (annual means, 1961–1990 anomalies, hot-day/frost counts, the two-way gate == 0), olsTrend/trendPerDecade slope recovery, assignState point-in-polygon (inside + offshore-nearest fallback), buildNational averaging, all three gates INCLUDING injected-error cases (rate too high, total too high, a station gate with fails, out-of-range sanity), positional layout tests (squarify treemap at the 112-station scale: in-bounds/no-overlap/area-conserved/degenerates; histogram binning: contiguous/flush/counts-sum/edge-clamp), and a headless jsdom render of all 7 non-map views against the REAL committed data asserting no NaN/undefined/Infinity + each view's signature marks. FULL in-browser real-click verification ran against the byte-identical local production build (vite preview of the exact dist now confirmed live by matching bundle hash): all 9 views render with ZERO console errors; a REAL trusted marker click on the Live Map opened the station drawer painting ABOVE Leaflet (West Wyalong, then Melbourne via deep-link #view=map&s=086338 — map-frame isolation:isolate z0 contains Leaflet, boundaries in a z250 pane BELOW the markers, drawer z2000 / About-modal z2100 / gloss-pop z2300 / hover-tip z3000 all above Leaflet's ≤1000); the About modal opened FROM the map view paints above Leaflet (elementFromPoint inside the modal, z2100); a REAL click on the Explorer warming-rate histogram bar filtered the table 112→45 with an active bar + 'Warming 0.10–0.15 °C/dec · Clear ✕' pill; the drawer renders correctly on desktop AND at 375px (full-width, Sydney detail incl. 46.9 °C hottest day 14 Jan 1939); zero page-level horizontal overflow at a true 375px viewport across ALL 9 views AND with an open drawer (asserted programmatically, scrollWidth==clientWidth==375 — the wide table, treemap, scatter, heatmaps and Leaflet canvas scroll locally inside overflow-x:auto containers). Fixed during verification: (a) the drawer & About modal used requestAnimationFrame to add an .open class that triggers a CSS TRANSITION — throttled in a backgrounded tab so the panel stuck off-screen at translateX(100%); rebuilt as a CSS @keyframes entrance whose RESTING state is on-screen (fill-mode none → visible even if the animation is skipped), which is robust; (b) a stale hover-tooltip and any open modal now clear on view navigation; (c) the map legend labels overlapped — rebuilt as swatch+label chips; (d) hardened attachSvgZoom to no-op when viewBox.baseVal is unavailable (jsdom). Build clean; the ONLY third-party runtime code shipping is Leaflet 1.9.4 (BSD-2-Clause, recorded in THIRD-PARTY-NOTICES + public/third-party-notices.txt, verified as the sole node_modules entry via the dist sourcemap sources). AGPL-3.0 with the section 7(b) attribution term; BOM ACORN-SAT + ABS CC-BY attribution preserved in the About panel + footer. LIMITATION: live in-browser real-click verification against the LIVE production HTTPS URL could not be run this session — the in-app Browser pane blocks the benrichardson.dev domain by policy (navigate timed out). But the live bundle is byte-identical to the local dist the real-click verification exercised (same D9WE7zpY hash), and HTTPS already returns 200, so live behaviour equals verified behaviour. The Pages API .https_enforced flag still read false at hand-over (lagging) even though HTTPS serves 200 — it should flip on its own shortly.",
+      "notes": "Deployed and live over HTTPS. Deploy to GitHub Pages workflow GREEN on first run (npm ci + npm test + build + deploy). ALSO the Data Pipeline workflow ran GREEN on the initial push (paths: pipeline/**) — meaning collect.mjs fetched the live BOM ACORN-SAT feed on CI and all three reconciliation gates passed on GitHub Actions, and it was idempotent (main head stayed at the initial commit — no data commit, because the pipeline embeds the DATA year not a timestamp). Production live at the custom domain: HTTPS returns 200 and the live bundle index-D9WE7zpY.js MATCHES local dist byte-for-byte; data/climate.json (1.3 MB), all 112 data/stations/{id}.json, data/boundaries.geojson, og.png, favicon.svg, robots.txt, sitemap.xml, third-party-notices.txt and the IndexNow key all 200 on the live HTTPS host. All THREE gates pass on the real BOM data: two-way aggregation (9,940 checks, 0 fails, worst 0 °C), sanity range (0 bad), national-trend anchor (rate 0.13 °C/dec, total 1.46 °C — both in the BOM-published band). 52 vitest tests pass — the daily-CSV parser (blank/99999 sentinel drops, malformed rows), aggregateStation (annual means, 1961–1990 anomalies, hot-day/frost counts, the two-way gate == 0), olsTrend/trendPerDecade slope recovery, assignState point-in-polygon (inside + offshore-nearest fallback), buildNational averaging, all three gates INCLUDING injected-error cases (rate too high, total too high, a station gate with fails, out-of-range sanity), positional layout tests (squarify treemap at the 112-station scale: in-bounds/no-overlap/area-conserved/degenerates; histogram binning: contiguous/flush/counts-sum/edge-clamp), and a headless jsdom render of all 7 non-map views against the REAL committed data asserting no NaN/undefined/Infinity + each view's signature marks. FULL in-browser real-click verification ran against the byte-identical local production build (vite preview of the exact dist now confirmed live by matching bundle hash): all 9 views render with ZERO console errors; a REAL trusted marker click on the Live Map opened the station drawer painting ABOVE Leaflet (West Wyalong, then Melbourne via deep-link #view=map&s=086338 — map-frame isolation:isolate z0 contains Leaflet, boundaries in a z250 pane BELOW the markers, drawer z2000 / About-modal z2100 / gloss-pop z2300 / hover-tip z3000 all above Leaflet's ≤1000); the About modal opened FROM the map view paints above Leaflet (elementFromPoint inside the modal, z2100); a REAL click on the Explorer warming-rate histogram bar filtered the table 112→45 with an active bar + 'Warming 0.10–0.15 °C/dec · Clear ✕' pill; the drawer renders correctly on desktop AND at 375px (full-width, Sydney detail incl. 46.9 °C hottest day 14 Jan 1939); zero page-level horizontal overflow at a true 375px viewport across ALL 9 views AND with an open drawer (asserted programmatically, scrollWidth==clientWidth==375 — the wide table, treemap, scatter, heatmaps and Leaflet canvas scroll locally inside overflow-x:auto containers). Fixed during verification: (a) the drawer & About modal used requestAnimationFrame to add an .open class that triggers a CSS TRANSITION — throttled in a backgrounded tab so the panel stuck off-screen at translateX(100%); rebuilt as a CSS @keyframes entrance whose RESTING state is on-screen (fill-mode none → visible even if the animation is skipped), which is robust; (b) a stale hover-tooltip and any open modal now clear on view navigation; (c) the map legend labels overlapped — rebuilt as swatch+label chips; (d) hardened attachSvgZoom to no-op when viewBox.baseVal is unavailable (jsdom). Build clean; the ONLY third-party runtime code shipping is Leaflet 1.9.4 (BSD-2-Clause, recorded in THIRD-PARTY-NOTICES + public/third-party-notices.txt, verified as the sole node_modules entry via the dist sourcemap sources). AGPL-3.0 with the section 7(b) attribution term; BOM ACORN-SAT + ABS CC-BY attribution preserved in the About panel + footer. LIMITATION: live in-browser real-click verification against the LIVE production HTTPS URL could not be run this session — the in-app Browser pane blocks the benrichardson.dev domain by policy (navigate timed out). But the live bundle is byte-identical to the local dist the real-click verification exercised (same D9WE7zpY hash), and HTTPS already returns 200, so live behaviour equals verified behaviour. The Pages API .https_enforced flag still read false at hand-over (lagging) even though HTTPS serves 200 — it should flip on its own shortly."
+    },
+    {
       "name": "quakewatch",
       "repo": "ben-gy/quakewatch",
       "date": "2026-07-31",
@@ -1006,105 +1008,6 @@
       ],
       "status": "deployed",
       "url": "https://artemistracker.benrichardson.dev"
-    },
-    {
-      "name": "tariff-check",
-      "repo": "ben-gy/tariff-check",
-      "date": "2026-04-11",
-      "description": "Tariff impact checker",
-      "category": "finance",
-      "stack": "unknown",
-      "data_strategy": "unknown",
-      "data_sources": [],
-      "status": "deployed"
-    },
-    {
-      "name": "Fire-Watch-Australia",
-      "repo": "ben-gy/Fire-Watch-Australia",
-      "date": "2026-01-10",
-      "description": "Australian bushfire watch and monitoring",
-      "category": "emergency",
-      "stack": "unknown",
-      "data_strategy": "unknown",
-      "data_sources": [],
-      "status": "deployed"
-    },
-    {
-      "name": "CrimeAware",
-      "repo": "ben-gy/CrimeAware",
-      "date": "2026-01-05",
-      "description": "iOS crime statistics map for Australia (NSW & Victoria)",
-      "category": "crime",
-      "stack": "unknown",
-      "data_strategy": "unknown",
-      "data_sources": [],
-      "status": "deployed"
-    },
-    {
-      "name": "leaf-log",
-      "repo": "ben-gy/leaf-log",
-      "date": "2026-04-10",
-      "description": "Plant care and leaf tracking log",
-      "category": "utility",
-      "stack": "unknown",
-      "data_strategy": "unknown",
-      "data_sources": [],
-      "status": "deployed"
-    },
-    {
-      "name": "MedTriage",
-      "repo": "ben-gy/MedTriage",
-      "date": "2026-04-10",
-      "description": "Medical triage decision support tool",
-      "category": "health",
-      "stack": "unknown",
-      "data_strategy": "unknown",
-      "data_sources": [],
-      "status": "deployed"
-    },
-    {
-      "name": "controlroom-org",
-      "repo": "ben-gy/controlroom-org",
-      "date": "2026-04-09",
-      "description": "Control room organization tool",
-      "category": "utility",
-      "stack": "unknown",
-      "data_strategy": "unknown",
-      "data_sources": [],
-      "status": "deployed"
-    },
-    {
-      "name": "pace-calc",
-      "repo": "ben-gy/pace-calc",
-      "date": "2026-03-29",
-      "description": "Running pace calculator",
-      "category": "fitness",
-      "stack": "unknown",
-      "data_strategy": "unknown",
-      "data_sources": [],
-      "status": "deployed"
-    },
-    {
-      "name": "stashed",
-      "repo": "ben-gy/stashed",
-      "date": "2026-04-09",
-      "description": "Stash manager",
-      "category": "utility",
-      "stack": "unknown",
-      "data_strategy": "unknown",
-      "data_sources": [],
-      "status": "deployed"
-    },
-    {
-      "name": "due-back",
-      "repo": "ben-gy/due-back",
-      "date": "2026-03-28",
-      "description": "Due date and return tracker",
-      "category": "utility",
-      "stack": "unknown",
-      "data_strategy": "unknown",
-      "data_sources": [],
-      "status": "deployed"
     }
   ]
 }
