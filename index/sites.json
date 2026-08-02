@@ -1,6 +1,25 @@
 {
-  "last_updated": "2026-08-01",
+  "last_updated": "2026-08-02",
   "sites": [
+    {
+      "name": "Mobile Towers",
+      "slug": "au-towers",
+      "icon": "radio-tower",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every mobile tower in Australia — which networks can actually reach where you live, what spectrum they use, and which towers the public paid for.",
+      "url": "https://au-towers.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-towers",
+      "tags": [
+        "telecommunications",
+        "mobile",
+        "coverage",
+        "spectrum",
+        "accc"
+      ],
+      "type": "web",
+      "date": "2026-08-02"
+    },
     {
       "name": "Warming",
       "slug": "au-warming",
@@ -10,7 +29,13 @@
       "description": "How much hotter Australia has become — the Bureau of Meteorology's official temperature record for 112 stations since 1910, as warming stripes, a map and rankings.",
       "url": "https://au-warming.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-warming",
-      "tags": ["climate", "temperature", "warming", "bom", "acorn-sat"],
+      "tags": [
+        "climate",
+        "temperature",
+        "warming",
+        "bom",
+        "acorn-sat"
+      ],
       "type": "web",
       "date": "2026-08-01"
     },
@@ -22,7 +47,14 @@
       "description": "Every earthquake on Earth right now, in plain language — magnitude, depth, energy, tsunami risk and the tectonic plate it sits on.",
       "url": "https://quakewatch.benrichardson.dev",
       "repo": "https://github.com/ben-gy/quakewatch",
-      "tags": ["earthquakes", "seismology", "live", "usgs", "tectonic plates", "hazards"],
+      "tags": [
+        "earthquakes",
+        "seismology",
+        "live",
+        "usgs",
+        "tectonic plates",
+        "hazards"
+      ],
       "type": "web",
       "date": "2026-07-31"
     },
@@ -35,7 +67,14 @@
       "description": "What Australia spends at the shops — by category, state and month since 1982, and how much of the growth is just inflation.",
       "url": "https://au-retail.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-retail",
-      "tags": ["retail", "spending", "consumer", "cost of living", "inflation", "economy"],
+      "tags": [
+        "retail",
+        "spending",
+        "consumer",
+        "cost of living",
+        "inflation",
+        "economy"
+      ],
       "type": "web",
       "date": "2026-07-30"
     },
@@ -48,7 +87,14 @@
       "description": "Fifty years of Australia's birth rate — a record-low fertility rate, mothers a decade older, and where and when babies are born.",
       "url": "https://au-births.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-births",
-      "tags": ["births", "fertility", "demographics", "birth rate", "population", "family"],
+      "tags": [
+        "births",
+        "fertility",
+        "demographics",
+        "birth rate",
+        "population",
+        "family"
+      ],
       "type": "web",
       "date": "2026-07-30"
     },
@@ -61,7 +107,14 @@
       "description": "Live Southern Lights forecast — can you see the aurora tonight? Real-time Kp, solar wind and the aurora oval, with a chance for every southern city.",
       "url": "https://aurora-australis.benrichardson.dev",
       "repo": "https://github.com/ben-gy/aurora-australis",
-      "tags": ["aurora", "space weather", "southern lights", "kp index", "astronomy", "solar wind"],
+      "tags": [
+        "aurora",
+        "space weather",
+        "southern lights",
+        "kp index",
+        "astronomy",
+        "solar wind"
+      ],
       "type": "web",
       "date": "2026-07-29"
     },
@@ -74,7 +127,14 @@
       "description": "Every tonne of waste Australia throws out — where it goes, and how much comes back. Metals recycle at 87%; plastics at just 13%.",
       "url": "https://au-waste.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-waste",
-      "tags": ["waste", "recycling", "environment", "circular economy", "landfill", "plastics"],
+      "tags": [
+        "waste",
+        "recycling",
+        "environment",
+        "circular economy",
+        "landfill",
+        "plastics"
+      ],
       "type": "web",
       "date": "2026-07-29"
     },
@@ -87,7 +147,14 @@
       "description": "Median weekly rents for every Victorian suburb and council, 1999–2025 — how much it costs to rent, and how fast it climbed.",
       "url": "https://vic-rents.benrichardson.dev",
       "repo": "https://github.com/ben-gy/vic-rents",
-      "tags": ["housing", "rent", "cost of living", "victoria", "property", "affordability"],
+      "tags": [
+        "housing",
+        "rent",
+        "cost of living",
+        "victoria",
+        "property",
+        "affordability"
+      ],
       "type": "web",
       "date": "2026-07-29"
     },
@@ -100,7 +167,14 @@
       "description": "Every recorded shark–human encounter in Australia since 1791 — by place, species, activity and outcome, and why most people survive.",
       "url": "https://au-sharks.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-sharks",
-      "tags": ["sharks", "safety", "beaches", "wildlife", "ocean", "conservation"],
+      "tags": [
+        "sharks",
+        "safety",
+        "beaches",
+        "wildlife",
+        "ocean",
+        "conservation"
+      ],
       "type": "web",
       "date": "2026-07-28"
     },
@@ -113,7 +187,15 @@
       "description": "Who visits Australia, why they come, and how COVID erased the border — 50 years of monthly arrivals by country, reason and length of stay.",
       "url": "https://au-arrivals.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-arrivals",
-      "tags": ["tourism", "travel", "arrivals", "migration", "visitors", "border", "ABS"],
+      "tags": [
+        "tourism",
+        "travel",
+        "arrivals",
+        "migration",
+        "visitors",
+        "border",
+        "ABS"
+      ],
       "type": "web",
       "date": "2026-07-28"
     },
@@ -126,7 +208,14 @@
       "description": "What actually got more expensive in Australia — every item in the CPI basket since 1948, city by city, and whether wages kept up.",
       "url": "https://au-inflation.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-inflation",
-      "tags": ["inflation", "cost of living", "CPI", "prices", "wages", "economy"],
+      "tags": [
+        "inflation",
+        "cost of living",
+        "CPI",
+        "prices",
+        "wages",
+        "economy"
+      ],
       "type": "web",
       "date": "2026-07-28"
     },
@@ -139,7 +228,13 @@
       "description": "Australia's most popular baby names since 1952 — search any name's rise and fall, and see how the #1 name isn't what it used to be.",
       "url": "https://au-baby-names.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-baby-names",
-      "tags": ["baby names", "names", "births", "demographics", "trends"],
+      "tags": [
+        "baby names",
+        "names",
+        "births",
+        "demographics",
+        "trends"
+      ],
       "type": "web",
       "date": "2026-07-28"
     },
@@ -152,7 +247,12 @@
       "description": "Australia's biggest industrial carbon emitters under the Safeguard Mechanism — their declining baselines, and who went over the line.",
       "url": "https://au-safeguard.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-safeguard",
-      "tags": ["emissions", "climate", "carbon", "safeguard mechanism"],
+      "tags": [
+        "emissions",
+        "climate",
+        "carbon",
+        "safeguard mechanism"
+      ],
       "type": "web",
       "date": "2026-07-28"
     },
@@ -165,7 +265,13 @@
       "description": "Where Australia is growing and shrinking — every council mapped and ranked, and the three engines behind it: births minus deaths, and migration in and out.",
       "url": "https://au-population.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-population",
-      "tags": ["data-explorers", "population", "migration", "demographics", "growth"],
+      "tags": [
+        "data-explorers",
+        "population",
+        "migration",
+        "demographics",
+        "growth"
+      ],
       "type": "web",
       "date": "2026-07-27"
     },
@@ -178,7 +284,13 @@
       "description": "Every car, ute, truck and motorbike registered in Australia — by fuel type, age, make and postcode. See how much of the fleet is really electric.",
       "url": "https://au-vehicles.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-vehicles",
-      "tags": ["data-explorers", "electric vehicles", "fuel type", "cars", "transport"],
+      "tags": [
+        "data-explorers",
+        "electric vehicles",
+        "fuel type",
+        "cars",
+        "transport"
+      ],
       "type": "web",
       "date": "2026-07-27"
     },
@@ -191,7 +303,12 @@
       "description": "Who owns Australia — foreign ownership of the nation's farmland, water, homes, mines and businesses, by country and state.",
       "url": "https://au-foreign-owned.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-foreign-owned",
-      "tags": ["data-explorers", "foreign investment", "land", "transparency"],
+      "tags": [
+        "data-explorers",
+        "foreign investment",
+        "land",
+        "transparency"
+      ],
       "type": "web",
       "date": "2026-07-26"
     },
@@ -204,7 +321,13 @@
       "description": "Every seat, swing and preference flow from Australia's 2025 federal election — mapped, ranked and explained.",
       "url": "https://au-election.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-election",
-      "tags": ["elections", "federal-election", "two-party-preferred", "preferences", "pendulum"],
+      "tags": [
+        "elections",
+        "federal-election",
+        "two-party-preferred",
+        "preferences",
+        "pendulum"
+      ],
       "type": "web",
       "date": "2026-07-25"
     },
@@ -217,7 +340,12 @@
       "description": "How many Australians are in prison, who they are, and the over-representation gap a headline rate hides.",
       "url": "https://au-imprisonment.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-imprisonment",
-      "tags": ["justice", "imprisonment", "incarceration", "indigenous-over-representation"],
+      "tags": [
+        "justice",
+        "imprisonment",
+        "incarceration",
+        "indigenous-over-representation"
+      ],
       "type": "web",
       "date": "2026-07-24"
     },
@@ -230,7 +358,12 @@
       "description": "Every bank branch, ATM and Bank@Post in Australia — and the 44% of branches that have vanished since 2017.",
       "url": "https://au-branches.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-branches",
-      "tags": ["finance", "bank-branches", "bank-closures", "regional-banking"],
+      "tags": [
+        "finance",
+        "bank-branches",
+        "bank-closures",
+        "regional-banking"
+      ],
       "type": "web",
       "date": "2026-07-23"
     },
@@ -243,7 +376,12 @@
       "description": "Where Australians die younger than they should — avoidable deaths, causes and the age effect, region by region.",
       "url": "https://au-mortality.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-mortality",
-      "tags": ["health", "mortality", "causes-of-death", "health-inequality"],
+      "tags": [
+        "health",
+        "mortality",
+        "causes-of-death",
+        "health-inequality"
+      ],
       "type": "web",
       "date": "2026-07-22"
     },
@@ -256,7 +394,12 @@
       "description": "Every plant and animal on Australia's EPBC Act threatened list — by status, family tree, and where each one lives.",
       "url": "https://au-threatened.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-threatened",
-      "tags": ["environment", "biodiversity", "endangered-species", "conservation"],
+      "tags": [
+        "environment",
+        "biodiversity",
+        "endangered-species",
+        "conservation"
+      ],
       "type": "web",
       "date": "2026-07-21"
     },
@@ -269,7 +412,12 @@
       "description": "Where Australia approves new homes — house vs apartment, region by region, against the 1.2-million target.",
       "url": "https://au-approvals.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-approvals",
-      "tags": ["housing", "construction", "planning", "housing-accord"],
+      "tags": [
+        "housing",
+        "construction",
+        "planning",
+        "housing-accord"
+      ],
       "type": "web",
       "date": "2026-07-21"
     },
@@ -282,7 +430,12 @@
       "description": "Every Australian university compared — drop-out rates, completion odds, international share and class sizes.",
       "url": "https://au-unis.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-unis",
-      "tags": ["education", "universities", "students", "atar"],
+      "tags": [
+        "education",
+        "universities",
+        "students",
+        "atar"
+      ],
       "type": "web",
       "date": "2026-07-20"
     },
@@ -295,7 +448,11 @@
       "description": "Where Australians go broke — bankruptcies and debt agreements for every region since 2007.",
       "url": "https://au-insolvency.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-insolvency",
-      "tags": ["economy", "bankruptcy", "debt"],
+      "tags": [
+        "economy",
+        "bankruptcy",
+        "debt"
+      ],
       "type": "web",
       "date": "2026-07-19"
     },
