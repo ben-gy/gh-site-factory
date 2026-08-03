@@ -6,7 +6,7 @@
       "name": "au-bushfires",
       "repo": "ben-gy/au-bushfires",
       "date": "2026-08-03",
-      "description": "Every mapped bushfire in Australia since 1899 — 187,685 fires corrected for the multi-part double-counting that inflates most published totals by nearly half, plus a per-council 'has my area burnt' lookup and a live extents view.",
+      "description": "Every mapped bushfire in Australia since 1899 — 186,870 fires corrected for a double-counting problem that inflates most published totals by nearly half, plus a per-council 'has my area burnt' lookup and a live extents view.",
       "category": "environment",
       "stack": "vanilla-ts",
       "data_strategy": "pipeline",

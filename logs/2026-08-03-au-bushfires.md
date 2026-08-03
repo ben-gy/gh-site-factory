@@ -78,8 +78,30 @@ Naive 2019-20 total: **31.8 Mha**. Corrected: **16.5 Mha** (1.93×).
 
 **Dedupe key:** `(state, fire_id, ignition_date, area_ha, perim_km)`. `fire_id` alone is not
 a key — there are nulls, literal `'0'`s, and placeholder values like `999` reused across
-unrelated fires. Rows with no usable `fire_id` are **never** merged; the measured cost of
-that conservatism across Black Summer is **46 ha**, which is free.
+unrelated fires.
+
+**THE BIG ONE — and it shipped before it was caught.** The first version *never* merged rows
+with a null or `'0'` fire_id, reasoning that two anonymous rows cannot be *proven* to be the
+same fire. That rule was validated against the 2019-20 season, where it cost **46 ha**, and
+looked obviously safe. It was not. The 2019-20 season simply has almost no id-less
+duplicates, so the test was **unrepresentative of the archive**.
+
+Across the whole file it left standing six South Australian records (OBJECTID 310689–310694)
+that are byte-identical on state, ignition date (31 Dec 1980), area (**5,763,897 ha**) and
+perimeter (7,118 km), differing only in geometry. Keeping all six added **28.8 million
+hectares of fire that never happened** — 93.6% of a season — and put 1980-81 at the top of
+the chart as *"the largest fire season on record, 36.9 Mha"*. That claim was published.
+Corrected, 1980-81 burnt **8.12 Mha** and ranks fifteenth; the largest mapped season is
+**2012-13 at 24.3 Mha**, and Black Summer ranks **4th**, not 5th.
+
+Found by the adversarial verification pass, which was told to *refute* the site's headline
+rather than confirm it. No test I had written could have caught it: every gate I built
+measured the season totals the bug produced.
+
+The rule now: id-less rows are still de-duplicated on the remaining four fields, because two
+distinct fires cannot share an area to the hectare **and** a perimeter **and** a date. Only
+zero-area rows stay unmerged — they cannot double-count area, and collapsing them would
+destroy fire counts for no benefit.
 
 **The layer-overlap trap.** The historic layer runs to 2023-10-15 and the 2020–25 layer
 starts 2020-07-01 — they overlap for three seasons and hold the *same* fires (VIC 2021-22:
@@ -97,11 +119,22 @@ silently lost 45,000 of the newest records. Now advances by the count actually r
 trusts `exceededTransferLimit`. **Caught by the anchor gate, not by inspection.**
 
 ### Anchor gates (external, falsifiable, enforced twice)
-1. Deduped NSW 2019-20 ∈ [5.30, 5.65] Mha vs the published ~5.5 Mha → **5,492,279 ha** ✓
+1. Deduped NSW 2019-20 ∈ [5.30, 5.65] Mha vs the NSW Bushfire Inquiry's 5,520,000 ha →
+   **5,492,279 ha** ✓
 2. Largest ACT fire 2019-20 ∈ [84k, 92k] ha vs Orroral Valley's published ~87,000 →
    **Orroral Rocks Wildfire, 87,926 ha** ✓
 3. Naive/corrected ratio ≥ 1.9 → **1.93×** ✓
 4. No historic-layer record at or after the 2020-07-01 cutover ✓
+5. **No duplicate (state, date, area, perimeter) group above 1,000 ha may survive the merge**
+   implying more than 0.1% phantom area — added after the failure above ✓ (1 group tolerated,
+   3,766 ha against a 341,879 ha cap; the tolerance is logged, never silent)
+6. **No single fire may exceed 85% of its own season** — the SA record was 97.4%, which no
+   chart would ever have made obvious ✓
+
+Gates 1 and 2 check **accuracy**; only 3, 5 and 6 check the **correction**. That distinction
+is not pedantry: de-duplicating NSW moves it by 337 ha (0.006%), so the NSW anchor would have
+passed happily while the archive carried 28.8 Mha of phantom fire. The site now says so
+explicitly rather than implying the anchors prove more than they do.
 
 Enforced in `pipeline/collect.mjs` at harvest time **and** re-asserted against the committed
 JSON in `tests/data.test.ts`, so a bad file cannot ship even if committed by hand.
@@ -180,6 +213,47 @@ no pointer affordance.
    `access-control-allow-origin` at all and cannot be used from a browser. It was dropped
    and its absence is explained in the About panel. Conversely the NSW RFS feed emits
    `ACAO: *` **only** when `Origin` is present — a bare curl makes it look unusable.
+
+## Adversarial verification (the phase that earned its keep)
+
+Six skeptics, each pinned to Opus 5 and each told to **refute** one of the site's central
+claims against primary sources, plus a judge. Results:
+
+| Claim | Verdict |
+|---|---|
+| NSW Black Summer = 5.49 Mha vs published ~5.5 Mha | **survived** — reproduced independently from the service; the published figure confirmed as NSW-specific from the NSW Bushfire Inquiry Final Report, Table 2-2 (5,520,000 ha) |
+| The 1.93× overcount and the 23-copy WA fire | **survived** — every figure reproduced from the primary service |
+| The NT is absent from the historical layer | **survived** — attacked on every axis; seven state values summing to the full row count, `LIKE '%NT%'` returns 0 |
+| CC BY 4.0 licensing and attribution | **survived**, but surfaced four real compliance gaps |
+| 10.9% cause coverage; lightning bigger than deliberate | **survived**, but surfaced a **factually false caption** |
+| **Black Summer ranks 5th; 1980-81 largest at 36.9 Mha** | **REFUTED** — see above. The single most valuable finding of the run. |
+
+Two of these would have shipped as published falsehoods without this phase:
+
+1. **The 1980-81 record season was an artefact of my own under-merging.** Detailed above.
+2. **A false caption on the Causes view**: *"prescribed burns should almost all be recorded
+   as prescribed burning, and they are."* Zero of 83,621 prescribed-type fires carry that
+   cause; 99% carry none at all. The caption stated the exact opposite of the chart beneath
+   it. It now states the real — and more interesting — finding: the cause field records what
+   agencies **investigate**, not what happens.
+
+Three further corrections came out of it:
+
+3. **An overstated methodological claim.** The site said the NSW and Orroral anchors meant
+   "if a change breaks the correction, the build fails". False: de-duplicating NSW moves it
+   by 337 ha, so a broken dedupe sails straight past both. The copy now separates accuracy
+   checks from correction checks and names the gate that actually guards the dedupe.
+4. **"Largest season on record" was never defensible**, even after the fix — the NT is absent
+   before 2020 and 1974-75 (~117 Mha nationally, ~15% of the continent) appears as 2.3 Mha.
+   Every ranking now says "in this data", and the Seasons view carries a standing warning
+   against reading the pre-satellite era as history.
+5. **CC BY 4.0 compliance**: the licence requires a statement of changes, which was missing.
+   Added, along with the ABS and NSW RFS copyright notices, the RFS's requested pointer to
+   rfs.nsw.gov.au for current information, and a no-endorsement line.
+
+The mean-vs-median problem was also caught: 31% of "deliberate" records carry zero area and
+one 1.7 Mha fire dominates the average, so the site now quotes the **median** (13×) instead
+of the mean (4×).
 
 ## Things worth remembering
 - The `[hidden] { display: none !important; }` guard was **missing** from the au-ip
