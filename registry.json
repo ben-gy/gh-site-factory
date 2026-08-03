@@ -1,7 +1,26 @@
 {
   "version": 1,
-  "last_updated": "2026-08-02",
+  "last_updated": "2026-08-03",
   "sites": [
+    {
+      "name": "au-bushfires",
+      "repo": "ben-gy/au-bushfires",
+      "date": "2026-08-03",
+      "description": "Every mapped bushfire in Australia since 1899 — 187,685 fires corrected for the multi-part double-counting that inflates most published totals by nearly half, plus a per-council 'has my area burnt' lookup and a live extents view.",
+      "category": "environment",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "Digital Atlas of Australia — Historical Bushfire Boundaries v2.0 (CC BY 4.0)",
+        "Digital Atlas of Australia — Historical Bushfire Extents 2020-25 (CC BY 4.0)",
+        "Digital Atlas of Australia — Near Real-Time Bushfire Extents (CC BY 4.0, client-side)",
+        "NSW Rural Fire Service major incidents feed (client-side)",
+        "ABS ASGS 2021 LGA and state boundaries (CC BY 4.0)"
+      ],
+      "status": "deployed",
+      "url": "https://au-bushfires.benrichardson.dev",
+      "pr_url": "https://github.com/ben-gy/au-bushfires/pull/1"
+    },
     {
       "name": "au-ip",
       "repo": "ben-gy/au-ip",

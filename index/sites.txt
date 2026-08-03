@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-08-02
+Last updated: 2026-08-03
 
 === Web Sites ===
+
+Bushfires (AU)
+  https://au-bushfires.benrichardson.dev
+  Every mapped bushfire in Australia since 1899 — 187,685 fires, 124 years of scars, corrected for the double-counting that inflates most published totals by nearly half.
 
 Intellectual Property (AU)
   https://au-ip.benrichardson.dev

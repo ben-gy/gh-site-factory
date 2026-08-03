@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-08-02",
+  "last_updated": "2026-08-03",
   "sites": [
+    {
+      "name": "Bushfires",
+      "slug": "au-bushfires",
+      "icon": "flame",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every mapped bushfire in Australia since 1899, corrected for the double-counting that inflates most published totals.",
+      "url": "https://au-bushfires.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-bushfires",
+      "tags": ["environment", "bushfire", "emergency", "mapping"],
+      "type": "web",
+      "date": "2026-08-03"
+    },
     {
       "name": "Intellectual Property",
       "slug": "au-ip",
