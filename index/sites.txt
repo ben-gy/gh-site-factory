@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-08-03
+Last updated: 2026-08-04
 
 === Web Sites ===
+
+Work Injuries (AU)
+  https://ben-gy.github.io/au-worksafe/
+  Who gets hurt at work in Australia, what it costs them, and whether anyone is enforcing the law — 22 years of work deaths against a decade of workers' compensation claims, from Safe Work Australia's five separate annual workbooks.
 
 Bushfires (AU)
   https://au-bushfires.benrichardson.dev

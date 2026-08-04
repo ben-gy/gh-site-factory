@@ -1,6 +1,24 @@
 {
-  "last_updated": "2026-08-03",
+  "last_updated": "2026-08-04",
   "sites": [
+    {
+      "name": "Work Injuries",
+      "slug": "au-worksafe",
+      "icon": "hard-hat",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Who gets hurt at work in Australia, what it costs them, and whether anyone is enforcing the law.",
+      "url": "https://ben-gy.github.io/au-worksafe/",
+      "repo": "https://github.com/ben-gy/au-worksafe",
+      "tags": [
+        "safety",
+        "work",
+        "health",
+        "compensation"
+      ],
+      "type": "web",
+      "date": "2026-08-04"
+    },
     {
       "name": "Bushfires",
       "slug": "au-bushfires",
@@ -10,7 +28,12 @@
       "description": "Every mapped bushfire in Australia since 1899, corrected for the double-counting that inflates most published totals.",
       "url": "https://au-bushfires.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-bushfires",
-      "tags": ["environment", "bushfire", "emergency", "mapping"],
+      "tags": [
+        "environment",
+        "bushfire",
+        "emergency",
+        "mapping"
+      ],
       "type": "web",
       "date": "2026-08-03"
     },
