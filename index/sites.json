@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-08-04",
+  "last_updated": "2026-08-05",
   "sites": [
+    {
+      "name": "Financial Advisers",
+      "slug": "au-advisers",
+      "icon": "user-search",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every person who has ever advised Australians on money — who they worked for, who owned that firm, and where they went when the banks walked away.",
+      "url": "https://au-advisers.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-advisers",
+      "tags": [
+        "finance",
+        "regulation",
+        "advisers"
+      ],
+      "type": "web",
+      "date": "2026-08-05"
+    },
     {
       "name": "Work Injuries",
       "slug": "au-worksafe",
