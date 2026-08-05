@@ -58,7 +58,8 @@ contain people, so none could produce a career timeline or an ownership chain.
 no adviser number, so the only possible join key is a person's *name*, and one
 collision would publish somebody else's banning next to a real named individual.
 The Financial Advisers Register already carries ASIC's own disciplinary linkage
-(`ADV_DA_TYPE`: 859 actions against 277 people), which is both safer and more
+(`ADV_DA_TYPE`: 285 distinct actions against 277 people, spread across 859 appointment
+rows — see the review section), which is both safer and more
 accurate. This narrowing is stated in the plan, the README, the About panel and
 the Conduct view itself — it is a correctness decision, not a shortcut.
 
@@ -103,23 +104,24 @@ where they matter — in SVG coordinate attributes.
 
 ## Build Status
 - npm install: pass
-- npm test: pass (212/212)
+- npm test: pass (232/232)
 - npm run build: pass
 - Local preview: pass
-- Cold-start pipeline (`FORCE_DOWNLOAD=1`): pass, 9.4 s, all 8 gates green
+- Cold-start pipeline (`FORCE_DOWNLOAD=1`): pass, 9.4 s, all 9 gates green
 
-## The eight gates
+## The nine gates
 
 Every gate has a test proving it **fails on the exact fault it claims to catch**.
 
 | Gate | Result |
 |---|---|
-| row-conservation | 89,060 = 89,060 accepted + 0 rejected |
-| status-coherence | Current ⟺ blank end date across 89,060 rows |
+| row-conservation | 89,060 = 89,051 accepted + 9 rejected (stray-tab rows) |
+| status-coherence | Current ⟺ blank end date across 89,051 appointments |
 | **dating-rule** | 530 phantom advisers; CBA 3575→3238, NAB 3500→3500, Westpac 2414→2414, ANZ 3050→2668, AMP 6518→6339 |
-| movement-conservation | 41,991 transitions + 27,204 exits = 69,195 edge weight |
-| geography-scope | current 99.8% have a postcode, ceased 35.2% |
-| **survivorship** | 12 pre-2015 exits vs 27,192 after; 12 cohorts, earliest 2015 |
+| movement-conservation | 41,988 transitions + 27,201 exits = 69,189 edge weight, anchored on raw appointments and forward-in-time |
+| geography-scope | current 99.8% (15,501/15,531) have a postcode, ceased 35.2% |
+| **survivorship** | 13 pre-2015 exits vs 27,188 after; 12 cohorts, earliest 2015 |
+| **series-era** | 12 years, 2015–2026 — no headcount the register could not observe |
 | census-anchor | 25,422,756 across 2,643 postcodes = 100.000% of ABS's published 25,422,788 |
 | boundary-coverage | 2,644 polygons, 116,711 vertices; 911 mapped, 25 PO-box, 5 malformed |
 
