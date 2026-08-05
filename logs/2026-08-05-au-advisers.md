@@ -1,6 +1,6 @@
 # Build Log: Financial Advisers
 **Date:** 2026-08-05
-**Status:** deployed
+**Status:** deployed (two adversarial review rounds applied post-deploy)
 
 ## Idea Source
 
@@ -78,11 +78,11 @@ the Conduct view itself — it is a correctness decision, not a shortcut.
   install step for the data job.
 
 ## Test Results
-- Tests written: **212**
-- Tests passed: **212**
+- Tests written: **232**
+- Tests passed: **232**
 - Tests failed: 0
 
-Breakdown: 45 parser, 30 gate, 48 positional layout, 15 overlay-contract, 74
+Breakdown: 45 parser, 38 gate, 48 positional layout, 15 overlay-contract, 86
 view-integration against the real committed data.
 
 Two failures during development were **real bugs, not test bugs**:
@@ -257,3 +257,99 @@ Also fixed during verification:
 - Bands in the retreat view count a dual-appointed adviser once per owner while
   the total counts them once, so bands do not sum to the total. Stated in the
   view's own subtitle.
+
+
+---
+
+# Post-deploy adversarial review
+
+A 45-agent review ran across four lenses (data accuracy, misleading
+presentation, code correctness, accessibility + fairness to named individuals),
+with **every** finding handed to an independent agent whose brief was to
+*refute* it. **41 raised, 10 refuted, 31 confirmed.** All confirmed findings
+were fixed and redeployed; the site was verified again on the live URL after
+each round.
+
+The refutations were as valuable as the confirmations. Three of them killed
+plausible-sounding findings that were wrong: a claim that the movement gate
+passes on a reversed graph (the sabotage was caught by three existing tests), a
+claim quoting UI copy that does not exist anywhere in the repo, and a WCAG
+claim that applied the AAA 44×44 criterion as though it were the AA minimum
+(24×24, with an explicit exemption for inline targets).
+
+## The two that mattered most
+
+**1. Disciplinary actions were counted as appointment ROWS.** ASIC stamps the
+four `ADV_DA_*` fields onto *every* appointment row belonging to a disciplined
+adviser, so one person with 16 appointments contributed 16 "actions". The site
+published **859** where the register records **285** distinct actions against
+277 people — a threefold overstatement of regulatory enforcement, on a page that
+names those individuals. Worse, the inflation is not uniform over time (2.24× in
+2018, 4.62× in 2026, because recent bans land on advisers with more accumulated
+appointment history), so the "enforcement surged after Hayne" bar chart was
+substantially an artefact of how many jobs each banned adviser happened to hold.
+Now deduplicated on (adviser, type, start, end), with a test asserting the
+per-type breakdown sums to the distinct total.
+
+**2. The headline headcount chart carried the same survivorship artefact I had
+already fixed in the cohort view.** The series ran from 1999 and climbed 382 →
+21,340 by 2014 — not because the profession quadrupled, but because the register
+commenced in 2015 and cannot see anyone who left before it existed. Fixed by a
+`series-era` gate that refuses to write a series predating the register, and the
+Overview now explains the 2015 floor in its own subtitle.
+
+Missing this in the first pass is the lesson: I found and gated the bias in one
+view and did not go looking for the same bias in the other view built on the
+same data.
+
+## Everything else confirmed and fixed
+
+Fairness to named individuals — the "ASIC action" badge was undated and
+present-tense though 142 of 277 have no action still in force; a CPD shortfall
+was painted in the amber reserved for regulatory action, putting 459 people who
+missed training behind the same bar as a banning; the dossier listed one action
+once per appointment row it touched.
+
+Correctness — 351 of 859 action markers on the career ribbon fell outside the
+SVG viewBox and were invisible; the ownership icicle coloured leaves by historic
+owner, painting 1,512 current advisers at 9 licensees in bank colours the site's
+own dated rule calls ceased; a choropleth off-by-one mapped 7 quantile bands
+onto 6 ramp steps so the top two painted identically; the dossier's "last
+appointment ended" indexed a start-sorted array; the explorer escaped then
+truncated, which can cut an HTML entity in half; nine rows carry a stray tab
+that shifts every later column, one of which published a named adviser's
+professional memberships as a regulatory restriction (now rejected into a named
+bucket, with row conservation still holding at 89,051 + 9 = 89,060); the
+movement gate was anchored on the same derived map it checked and is now
+anchored on raw appointments plus a forward-in-time assertion; and map coverage
+summed per-postcode counts, double-counting dual-appointed advisers.
+
+Accessibility — `role="img"` made every chart an accessibility leaf, pruning its
+focusable marks from the tree while leaving them in the tab order (now
+`role="group"`, pinned by a test); the skip link's `href` was a route, so it
+navigated to the Overview instead of moving focus; charts were scaled to ~39% at
+375px, rendering axis text at ~4 CSS pixels (now ~71% with a floor width and
+local scroll); nav tabs 28→42px, zoom controls 30→36px, dialog close 44px; and
+an open drawer survived view navigation, leaving a phone reader browsing behind
+a full-width panel.
+
+One further defect was found by *watching* the deploy rather than by any agent:
+the JS bundle is content-hashed but the data files are not, so for the length of
+GitHub Pages' 10-minute cache a returning visitor ran the new bundle against the
+old numbers — the corrected copy beside the superseded figures. `meta.json` is
+now always revalidated and every other data URL is versioned by the as-at date.
+
+## Honest limits after both rounds
+
+- The **glossary buttons remain 20×20 visually.** A transparent 44×44
+  pseudo-element overlays them, but `elementFromPoint` would not attribute a hit
+  outside the 20px box back to the button, so I have not verified the enlarged
+  area actually receives taps and the CSS comment says so rather than claiming
+  otherwise. These targets are inline in sentences, which WCAG 2.2 SC 2.5.8
+  explicitly exempts; every non-exempt target was fixed and measured.
+- **Diaspora reports `scrollWidth` 376 against `clientWidth` 375** at 375px.
+  No element escapes its scroller and the page **cannot** actually scroll
+  sideways (verified by attempting `window.scrollTo(400, y)` and reading
+  `scrollX` back as 0) — it is sub-pixel rounding, not a real overflow.
+- The **map view is still not covered by the jsdom view tests** (Leaflet needs a
+  real layout engine); it is covered by live browser verification instead.
