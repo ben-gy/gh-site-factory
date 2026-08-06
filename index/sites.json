@@ -1,6 +1,24 @@
 {
-  "last_updated": "2026-08-05",
+  "last_updated": "2026-08-06",
   "sites": [
+    {
+      "name": "Water Market",
+      "slug": "au-water-market",
+      "icon": "droplets",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every registered water trade in Australia — what a megalitre costs, which way it flows, and what a bottleneck in a river is worth.",
+      "url": "https://au-water-market.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-water-market",
+      "tags": [
+        "water",
+        "irrigation",
+        "murray-darling",
+        "markets"
+      ],
+      "type": "web",
+      "date": "2026-08-06"
+    },
     {
       "name": "Financial Advisers",
       "slug": "au-advisers",

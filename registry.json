@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "last_updated": "2026-08-05",
+  "last_updated": "2026-08-06",
   "sites": [
+    {
+      "name": "au-water-market",
+      "repo": "ben-gy/au-water-market",
+      "date": "2026-08-06",
+      "description": "Every registered water trade in Australia — 482,376 allocation trades and 156,679 permanent entitlement trades from the Bureau of Meteorology, turned into prices, flows and the measurable cost of the Barmah Choke.",
+      "category": "economy",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "BOM Water Markets allocation trades",
+        "BOM Water Markets entitlement trades",
+        "BOM Water Markets entitlements on issue",
+        "ABS ASGS state boundaries"
+      ],
+      "status": "deployed",
+      "url": "https://au-water-market.benrichardson.dev",
+      "repo_url": "https://github.com/ben-gy/au-water-market"
+    },
     {
       "name": "au-advisers",
       "repo": "ben-gy/au-advisers",

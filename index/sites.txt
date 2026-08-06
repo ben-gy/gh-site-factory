@@ -3,6 +3,10 @@ Last updated: 2026-08-05
 
 === Web Sites ===
 
+Water Market (AU)
+  https://au-water-market.benrichardson.dev
+  Every registered water trade in Australia — what a megalitre costs, which way it flows, and what a bottleneck in a river is worth.
+
 Financial Advisers (AU)
   https://au-advisers.benrichardson.dev
   Every person who has ever advised Australians on money — who they worked for, who owned that firm, and where they went when the banks walked away.
