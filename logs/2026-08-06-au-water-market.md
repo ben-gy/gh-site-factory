@@ -159,8 +159,46 @@ agent's own read; both workflows exist and were verified.
 - Repo created: yes — https://github.com/ben-gy/au-water-market
 - GitHub Pages enabled: yes (build_type=workflow)
 - Cloudflare DNS CNAME created: yes (au-water-market → ben-gy.github.io)
-- Directory entry live on main: yes
+- TLS certificate: approved
+- Directory entry live on main AND served: yes (67 sites, au-water-market first)
 - Workflow triggered: yes
+- Data Pipeline on CI: **success on the first run** — proves the 292 MB
+  plain-HTTP fetch and the config-service.php discovery work on a clean runner.
+
+### GitHub Pages platform failure — three attempts needed
+The `build` job passed every time (npm ci, 148 tests, vite build, artifact
+upload). The `deploy` job failed **twice** with `actions/deploy-pages@v4` sitting
+at `Current status: deployment_in_progress` for its full 10-minute timeout and
+then `##[error]Timeout reached, aborting!`. Nothing in this repo caused it: the
+gh-site-factory repo's own unrelated Pages build errored in the same two-minute
+window and also only recovered after a manual rebuild request, so this was a
+transient GitHub Pages incident. The third attempt succeeded. Recorded here
+because a reader of the Actions history would otherwise see two red runs and
+assume a defect in the site.
+
+## Production verification (live URL, not localhost)
+- `https://au-water-market.benrichardson.dev/` → **200**
+- The served bundle is byte-identical to the locally verified one (`index-CxKzbe-l.js`)
+- All shipped assets 200: 9 data JSONs, the ABS GeoJSON, og.png, robots.txt,
+  sitemap.xml, favicon.svg, third-party-notices.txt, the IndexNow key file
+- All 9 views render on production: no blank view, no NaN/undefined/Infinity in
+  any view's text, 2,551 hover-tooltip marks on the densest view
+- `read_console_messages(onlyErrors)` → **zero errors**
+- **Real click** (Chrome MCP, genuine pointer events — not `element.click()`) on
+  a zones table row opened the drill-down for "1A Greater Goulburn" with correct
+  figures (14.76 million ML, $144.76/ML, 90,898 trades of which 57,642 priced,
+  net −383.8 GL) and a rendered price history
+- **Modal dismissal contract, all four exits, asserted by computed style AND
+  DOM detachment**: ✕ ✓, scrim pointerdown ✓, Escape ✓, real touch sequence ✓
+  (no reopen), zero leftovers, scroll lock released, no `[hidden]` leaks,
+  `elementFromPoint` at viewport centre returns page content again
+- **The Leaflet z-index test**: About modal opened *from the map view*, screenshot
+  confirms it paints fully above the map. Modal z-index 2100 vs Leaflet's 1000,
+  contained by `isolation: isolate` on `.map-frame`. 8 tiles loaded, 8 real ABS
+  polygons rendered
+- Mobile at 375px: **no page-level horizontal overflow on any of the 9 views**;
+  smallest chart label now 9.5–16 CSS px (was 3.3px before the fix)
+- IndexNow ping: HTTP 202 (site) / 200 (hub). lab.benrichardson.dev redeploy triggered.
 
 ## Errors & Resolutions
 - **`gh repo create` name check** — verified free against 300 repos first.
