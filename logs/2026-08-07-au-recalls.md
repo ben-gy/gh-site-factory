@@ -219,8 +219,15 @@ Escape. Selecting a network node dims 537 unrelated elements.
   conservative merge rule that refuses prefix matches.
 - **Two recalls are unreachable** in both registers and are named, counted and
   excluded rather than silently dropped.
-- The **Data Pipeline** workflow run triggered by the initial push had not
-  finished at hand-over; the deploy workflow is green and the site is live. The
-  pipeline is incremental, so a monthly run fetches only new recalls — but its
-  first CI execution is unverified, and `productsafety.gov.au` rate-limits, so it
-  may need `workflow_dispatch` and a lower concurrency if it fails.
+- **The Data Pipeline's first CI run is unverified.** It was still in its crawl
+  step at hand-over, ~70 minutes in, against a 90-minute timeout. The cause was
+  identified and fixed rather than left: the vehicle register has no item counter
+  and no date filter, so every run re-walked all ~280 listing pages. It now stops
+  after three pages' worth of consecutive already-known campaigns and unions the
+  result with the committed store — verified locally at **3 pages instead of 280**
+  with all 5,529 campaigns intact and all gates green. A second run is queued
+  behind the first with that fix in place. If it still fails, the likely cause is
+  `productsafety.gov.au` rate-limiting a GitHub runner; the crawl already backs
+  off 5s/15s/45s/135s on 403, and `RECALLS_CONCURRENCY` can be lowered further.
+  Nothing is broken in the meantime: the committed parsed store is what the site
+  serves, and the deploy workflow regenerates and re-gates it on every push.
