@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-08-05
+Last updated: 2026-08-08
 
 === Web Sites ===
+
+Product Recalls (AU)
+  https://au-recalls.benrichardson.dev
+  Every consumer product and vehicle recalled in Australia — what was wrong with it, what to do, and how what we recall has changed.
 
 Water Market (AU)
   https://au-water-market.benrichardson.dev

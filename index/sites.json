@@ -1,6 +1,24 @@
 {
-  "last_updated": "2026-08-06",
+  "last_updated": "2026-08-08",
   "sites": [
+    {
+      "name": "Product Recalls",
+      "slug": "au-recalls",
+      "icon": "package-x",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every consumer product and vehicle recalled in Australia — what was wrong with it, what to do, and how what we recall has changed.",
+      "url": "https://au-recalls.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-recalls",
+      "tags": [
+        "consumer-safety",
+        "recalls",
+        "accc",
+        "product-safety"
+      ],
+      "type": "web",
+      "date": "2026-08-07"
+    },
     {
       "name": "Water Market",
       "slug": "au-water-market",
