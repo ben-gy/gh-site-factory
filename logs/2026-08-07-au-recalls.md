@@ -86,7 +86,7 @@ appending "Identifying product features" to 2,880 traders values.
 
 ## Gates
 
-Fourteen, all passing. Two are anchored on numbers this pipeline did not
+Fifteen, all passing. Two are anchored on numbers this pipeline did not
 compute — the register's own per-year totals and the ACCC's own per-category
 facet counts — and one on the cross-register REC join. The year and category
 gates account for *named* unreachable records exactly rather than tolerating a
@@ -219,15 +219,30 @@ Escape. Selecting a network node dims 537 unrelated elements.
   conservative merge rule that refuses prefix matches.
 - **Two recalls are unreachable** in both registers and are named, counted and
   excluded rather than silently dropped.
-- **The Data Pipeline's first CI run is unverified.** It was still in its crawl
-  step at hand-over, ~70 minutes in, against a 90-minute timeout. The cause was
-  identified and fixed rather than left: the vehicle register has no item counter
-  and no date filter, so every run re-walked all ~280 listing pages. It now stops
-  after three pages' worth of consecutive already-known campaigns and unions the
-  result with the committed store — verified locally at **3 pages instead of 280**
-  with all 5,529 campaigns intact and all gates green. A second run is queued
-  behind the first with that fix in place. If it still fails, the likely cause is
-  `productsafety.gov.au` rate-limiting a GitHub runner; the crawl already backs
-  off 5s/15s/45s/135s on 403, and `RECALLS_CONCURRENCY` can be lowered further.
-  Nothing is broken in the meantime: the committed parsed store is what the site
-  serves, and the deploy workflow regenerates and re-gates it on every push.
+- **`vehiclerecalls.gov.au` is unreachable from a GitHub runner.** This is the
+  au-worksafe pattern again. The first CI pipeline run failed after eighteen
+  minutes with every request to that host — including page 0 of the listing —
+  aborting on the request timeout, while the same URLs load fine from a laptop.
+
+  Two things were done about it. First, the diagnosis mattered: the ACCC half of
+  that run had **completely succeeded**, passing its listing gate (8,218 ==
+  8,218) and demonstrating that the committed parsed store makes a refresh cheap
+  exactly as designed — `detail pages: 8216 cached, 2 to fetch`. Losing that to a
+  failure on the *other* register was the actual bug. The vehicle crawl now fails
+  **soft**: it reports loudly and the run continues with the committed vehicle
+  store untouched. Verified against a simulated outage — the store survives
+  intact at 5,529 campaigns and all 15 gates stay green. A crawl returning
+  *fewer* rows than we hold is still caught by the vehicle coverage gate, so this
+  trades a hard failure for a stale half, never a silent one.
+
+  Second, the vehicle listing was made incremental anyway (it re-walked all ~280
+  pages every run; it now stops after three pages' worth of consecutive
+  already-known campaigns — verified at 3 pages instead of 280). That does not
+  help on CI, where page 0 itself is unreachable, but it makes the local refresh
+  fast.
+
+  **Net effect:** the monthly cron refreshes the ACCC register, which is the half
+  that actually changes weekly. The vehicle register must be refreshed locally
+  with `node pipeline/collect.mjs --vehicles-only`, which takes about a minute.
+  Nothing is broken in the meantime: the committed store is what the site serves,
+  and the deploy workflow regenerates and re-gates it on every push.
