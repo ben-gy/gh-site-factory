@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-08-08
+Last updated: 2026-08-09
 
 === Web Sites ===
+
+Farm Economics (AU)
+  https://au-farms.benrichardson.dev
+  Thirty-six years of the ABARES broadacre farm survey: what the farming earned, what the land underneath it earned, and how far apart those two numbers have grown.
 
 Product Recalls (AU)
   https://au-recalls.benrichardson.dev

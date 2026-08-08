@@ -1,6 +1,24 @@
 {
-  "last_updated": "2026-08-08",
+  "last_updated": "2026-08-09",
   "sites": [
+    {
+      "name": "Farm Economics",
+      "slug": "au-farms",
+      "icon": "tractor",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Thirty-six years of the ABARES broadacre farm survey: what the farming earned, what the land underneath it earned, and how far apart those two numbers have grown.",
+      "url": "https://au-farms.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-farms",
+      "tags": [
+        "agriculture",
+        "farming",
+        "land-values",
+        "abares"
+      ],
+      "type": "web",
+      "date": "2026-08-08"
+    },
     {
       "name": "Product Recalls",
       "slug": "au-recalls",
