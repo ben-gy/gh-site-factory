@@ -60,7 +60,7 @@ Waste & Recycling (AU)
   Every tonne of waste Australia throws out — where it goes, and how much comes back. Metals recycle at 87%; plastics at just 13%.
 
 Victorian Rents (AU)
-  https://vic-rents.benrichardson.dev
+  https://vic-rent-atlas.benrichardson.dev
   Median weekly rents for every Victorian suburb and council, 1999–2025 — how much it costs to rent, and how fast it climbed.
 
 Shark Incidents (AU)
@@ -72,11 +72,11 @@ Overseas Arrivals (AU)
   Who visits Australia, why they come, and how COVID erased the border — 50 years of monthly arrivals by country, reason and length of stay.
 
 Cost of Living (AU)
-  https://au-inflation.benrichardson.dev
+  https://au-cpi-explorer.benrichardson.dev
   What actually got more expensive in Australia — every item in the CPI basket since 1948, city by city, and whether wages kept up.
 
 Baby Names (AU)
-  https://au-baby-names.benrichardson.dev
+  https://au-name-trends.benrichardson.dev
   Australia's most popular baby names since 1952 — search any name's rise and fall, and see how the #1 name isn't what it used to be.
 
 Safeguard Emitters (AU)
@@ -116,7 +116,7 @@ Threatened Species (AU)
   Every plant and animal on Australia's EPBC Act threatened list — by status, family tree, and where each one lives.
 
 Building Approvals (AU)
-  https://au-approvals.benrichardson.dev
+  https://au-build-approvals.benrichardson.dev
   Where Australia approves new homes — house vs apartment, region by region, against the 1.2-million target.
 
 Universities (AU)
@@ -124,7 +124,7 @@ Universities (AU)
   Every Australian university compared — drop-out rates, completion odds, international share and class sizes.
 
 Personal Insolvency (AU)
-  https://au-insolvency.benrichardson.dev
+  https://au-insolvency-tracker.benrichardson.dev
   Where Australians go broke — bankruptcies and debt agreements for every region since 2007.
 
 Trade Flows (AU)
@@ -236,7 +236,7 @@ Flight Delays (AU)
   Date: 2026-06-26
 
 NDIS Watch (AU)
-  https://au-ndis-watch.benrichardson.dev
+  https://au-ndis-register.benrichardson.dev
   Search every NDIS Commission compliance action — banning orders, registration revocations, suspensions, and notices against Australian disability providers and workers — by name, state, and severity.
   Tags: government-transparency, ndis, disability, enforcement, family
   Repo: https://github.com/ben-gy/au-ndis-watch

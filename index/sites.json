@@ -270,7 +270,7 @@
       "category": "data-explorers",
       "country": "AU",
       "description": "Median weekly rents for every Victorian suburb and council, 1999–2025 — how much it costs to rent, and how fast it climbed.",
-      "url": "https://vic-rents.benrichardson.dev",
+      "url": "https://vic-rent-atlas.benrichardson.dev",
       "repo": "https://github.com/ben-gy/vic-rents",
       "tags": [
         "housing",
@@ -331,7 +331,7 @@
       "category": "data-explorers",
       "country": "AU",
       "description": "What actually got more expensive in Australia — every item in the CPI basket since 1948, city by city, and whether wages kept up.",
-      "url": "https://au-inflation.benrichardson.dev",
+      "url": "https://au-cpi-explorer.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-inflation",
       "tags": [
         "inflation",
@@ -351,7 +351,7 @@
       "category": "data-explorers",
       "country": "AU",
       "description": "Australia's most popular baby names since 1952 — search any name's rise and fall, and see how the #1 name isn't what it used to be.",
-      "url": "https://au-baby-names.benrichardson.dev",
+      "url": "https://au-name-trends.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-baby-names",
       "tags": [
         "baby names",
@@ -535,7 +535,7 @@
       "category": "data-explorers",
       "country": "AU",
       "description": "Where Australia approves new homes — house vs apartment, region by region, against the 1.2-million target.",
-      "url": "https://au-approvals.benrichardson.dev",
+      "url": "https://au-build-approvals.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-approvals",
       "tags": [
         "housing",
@@ -571,7 +571,7 @@
       "category": "data-explorers",
       "country": "AU",
       "description": "Where Australians go broke — bankruptcies and debt agreements for every region since 2007.",
-      "url": "https://au-insolvency.benrichardson.dev",
+      "url": "https://au-insolvency-tracker.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-insolvency",
       "tags": [
         "economy",
@@ -701,7 +701,7 @@
       "icon": "accessibility",
       "category": "data-explorers",
       "description": "Search every NDIS Commission compliance action — banning orders, registration revocations, suspensions, and notices against Australian disability providers and workers — by name, state, and severity.",
-      "url": "https://ndis-watch.benrichardson.dev",
+      "url": "https://au-ndis-register.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-ndis-watch",
       "tags": [
         "ndis",
@@ -719,7 +719,7 @@
       "icon": "plane",
       "category": "data-explorers",
       "description": "How many people live in Australia on each temporary visa — 2.9 million holders by nationality, visa type and over 14 years, from the official Home Affairs data, mapped, ranked and charted.",
-      "url": "https://visas.benrichardson.dev",
+      "url": "https://au-visas.benrichardson.dev",
       "repo": "https://github.com/ben-gy/au-visas",
       "tags": [
         "visas",
