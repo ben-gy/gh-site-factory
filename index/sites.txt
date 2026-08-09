@@ -3,6 +3,10 @@ Last updated: 2026-08-09
 
 === Web Sites ===
 
+Honours (AU)
+  https://au-honours.benrichardson.dev
+  Every Australian honour on the public record — who gets recognised, what for, and where they live.
+
 Farm Economics (AU)
   https://au-farms.benrichardson.dev
   Thirty-six years of the ABARES broadacre farm survey: what the farming earned, what the land underneath it earned, and how far apart those two numbers have grown.
