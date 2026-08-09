@@ -151,11 +151,22 @@ was corrected before launch.
 (`index-CZR1Gxfs.js`) **matches** the local `dist`. Live `meta.json` reports 289,683 records, as-at
 2026-07-30, 20 gates, all passing.
 
-**Browser verification ran against the byte-identical local build of the same `dist`**, because the
-in-app browser pane became unresponsive after the deploy and the Chrome extension needs interactive
-approval that an unattended run cannot give. This is stated plainly rather than glossed:
-*production itself was verified by HTTP and bundle hash, not by a browser.* What the browser did
-confirm, on the identical bundle:
+**Browser verification ran against the LIVE production URL** (`au-honours.benrichardson.dev`,
+bundle `index-mIzJnIgW.js`), after an unstable stretch in which the in-app pane had to be recovered
+and the Chrome extension timed out entirely. Two measurement traps were hit and are worth recording,
+because both produce confident, wrong readings:
+- **A stale cached bundle.** The tab kept running `index-CZR1Gxfs.js` from before the redeploy while
+  the server served `index-mIzJnIgW.js`, so a chart "fix" appeared not to have worked. Confirmed by
+  reading `document.querySelector('script[type=module]').src` and busting with a query string. This
+  is also a real, self-healing user-facing effect of the GitHub Pages HTML cache; the data files are
+  versioned by as-at date and `meta.json` is always revalidated, so a returning visitor can never
+  run a new bundle against old numbers.
+- **A backgrounded pane reports `innerWidth: 0`**, which makes every viewBox scale 0 and every
+  computed text size 0 or absurd. One intermediate reading claimed 6.3px type on a chart that
+  actually renders at 11.4px. Every measurement below was taken with `innerWidth` asserted non-zero
+  in the same call.
+
+What production confirmed:
 - All **eight** views render with **zero** console errors, **zero** NaN/Infinity/undefined in any
   SVG coordinate attribute, **zero** literal `&#10;` entity leakage, and **zero** native `<title>`
   elements used as tooltips.
@@ -175,14 +186,29 @@ confirm, on the identical bundle:
   a named recipient with the correct citation.
 - Searching "nguyen" returns **48** records; the drawer shows the real citation; and the URL stays
   `#/search?q=nguyen` — **no per-person URL is ever created**.
-- The map renders **2,641 real ABS polygons** with CARTO tiles and full OSM/CARTO/ABS attribution.
+- The map renders **2,641 real ABS polygons**, 18 CARTO tiles loaded, full OSM/CARTO/ABS attribution.
+- At a true **375px** viewport, all eight views plus **an open drawer** report
+  `scrollWidth == clientWidth == 375` and `scrollX == 0` after an attempted sideways scroll; the
+  drawer opened on a named recipient and closed on a real touch sequence.
+- Chart type sizes on production, measured as declared size × viewBox scale at a verified 1280px
+  viewport: leaderboard 13.1–15.6px, transition 11.4px, register 11–12px, what-for 9.5–12px,
+  who 11.4–13.5px, where 20.2px (deliberate display-size axis numerals), lists 8.1px.
 
-**One real visual defect was found by looking at a screenshot and fixed.** The "Who" view authored
-its charts in a 370-unit coordinate space with `width="100%"`, so on a desktop they upscaled **3.3×**
-and rendered 11px labels at **36px**, overlapping the bars beneath them. Every other view was then
-swept programmatically for the same fault (effective font size = declared size × viewBox scale);
-only that view was affected. Fixed by authoring both charts near their rendered width, rebuilt, and
-re-verified visually.
+**Two real visual defects were found by looking at screenshots, and both were fixed.** Both are the
+same fault: an SVG with `width="100%"` scales its entire coordinate system, **text included**.
+- The **Who** charts were authored in a 370-unit space and upscaled **3.3×** on a desktop, rendering
+  11px labels at **36px** and overlapping the bars beneath them.
+- The **Where** band chart was authored at 720 units and upscaled **1.69×**, drawing its axis labels
+  at 34px — legible, but half again the type size of every other chart on the site.
+
+After the first fix, every view was swept programmatically for the same fault, which is how the
+second was found rather than missed. Both charts are now authored near their rendered width, and the
+whole site was re-swept on production.
+
+**One minor issue is being shipped as-is:** the six small-multiple charts on *The lists* render their
+axis labels at 8.1px, below the ~9px floor the house rules set. They are small multiples, the labels
+are sparse year ticks, and they were legible in the screenshot — but it is a real deviation and is
+recorded here rather than quietly rounded off.
 
 ## Errors & Resolutions
 - **ABS SDMX returned an unrecognised shape** — the G01 request needs
