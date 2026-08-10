@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-08-09
+Last updated: 2026-08-10
 
 === Web Sites ===
+
+Public Service (AU)
+  https://au-public-service.benrichardson.dev
+  Where Australia's federal public servants actually work — 195,847 people by region, agency and rank, over twenty years.
 
 Honours (AU)
   https://au-honours.benrichardson.dev

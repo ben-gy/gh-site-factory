@@ -1,6 +1,24 @@
 {
-  "last_updated": "2026-08-09",
+  "last_updated": "2026-08-10",
   "sites": [
+    {
+      "name": "Public Service",
+      "slug": "au-public-service",
+      "icon": "building-2",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Where Australia's federal public servants actually work — 195,847 people by region, agency and rank, over twenty years.",
+      "url": "https://au-public-service.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-public-service",
+      "tags": [
+        "government",
+        "public-service",
+        "workforce",
+        "employment"
+      ],
+      "type": "web",
+      "date": "2026-08-10"
+    },
     {
       "name": "Honours",
       "slug": "au-honours",
