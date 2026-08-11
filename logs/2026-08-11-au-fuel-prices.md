@@ -291,6 +291,15 @@ diagnoses were plausible, partially effective, and **wrong**.
   too, every generated JSON file conflicted. Replaced with `git fetch` + `git reset --soft
   origin/main` + commit, which is the correct shape for artefacts that are rebuilt rather than
   edited.
+- **Run 9 succeeded — and revealed that the whole job had been pointless.** The pipeline collected,
+  gated 20/20, committed `a652454` and pushed. Then I checked what had actually deployed: **nothing
+  had.** Repo HEAD was a data commit with no corresponding deployment, and the live site was still
+  serving the build a human had last pushed. **A push made with `GITHUB_TOKEN` does not trigger other
+  workflows** — GitHub's loop prevention — so every monthly data commit would have landed in the
+  repository and never reached production, with no failure reported anywhere. The pipeline now
+  dispatches `deploy.yml` itself when, and only when, the data changed (`actions: write` plus a
+  `changed` output), and three hygiene tests pin it. This is the defect I am most glad to have
+  caught: a green tick on a job that quietly did nothing is worse than a red one.
 - **The honest position on those three 2023 months.** They fetch fine locally and are genuinely
   unavailable *from GitHub's runners specifically* — the attachment returns a 2 KB HTML page and the
   dump route 404s because `datastore_active` is false for exactly those three resources. So both of
@@ -312,7 +321,10 @@ want to remember: **a fallback is a second code path, and a second code path is 
 Every failure from run 4 onwards was caused by the redundancy I added to fix run 3 — the dump route
 worked perfectly at the transport layer and was wrong at the parsing layer, which is exactly the
 kind of failure redundancy is supposed to prevent and instead created. The byte count was the clue
-that broke it open, and I had been staring at it for two runs.
+that broke it open, and I had been staring at it for two runs. And fifth: **a green tick is not a
+verified outcome.** Run 9 passed every gate, committed, and pushed — and delivered nothing to the
+site, because the deploy it depended on was never triggered. The only way to find that was to stop
+reading workflow statuses and go and look at what the repository and the live URL actually held.
 
 ### Other errors
 - `/api/sites` returns `product` as a single object, not an array — the first run crashed on it.
