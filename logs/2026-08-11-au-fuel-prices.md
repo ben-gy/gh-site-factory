@@ -282,10 +282,22 @@ diagnoses were plausible, partially effective, and **wrong**.
   timestamps* (`2018-12-06T05:19:00`) where the CKAN attachment writes `06/12/2018 03:14`.
   `qldLocalDate` accepted only the second, so every row of every dump-sourced file was silently
   rejected. **The fallback I added to make the pipeline more robust is what broke it.**
-- **With both formats accepted, all 91 months parse and the gap is gone entirely** — no missing
-  months, no nulls, and the event total rises **5,408,858 → 5,530,302**. So the "three permanently
-  broken months" never existed: they were dump-served and silently discarded, in CI *and* locally,
-  from the moment the fallback landed. Tests now pin the dump shape end to end.
+- **With both formats accepted, all 91 months parse locally and the gap closes entirely** — no
+  missing months, no nulls, and the event total rises **5,408,858 → 5,530,302**. Tests now pin the
+  dump shape end to end.
+- **Run 8: the pipeline passed in CI — 20/20 gates, both states, 197.9 c/L across 1,599 Queensland
+  stations — and then failed on the `git push` step alone.** `git pull --rebase` cannot merge
+  `public/data`, which is *wholly regenerated* every run; the moment I regenerated it on my laptop
+  too, every generated JSON file conflicted. Replaced with `git fetch` + `git reset --soft
+  origin/main` + commit, which is the correct shape for artefacts that are rebuilt rather than
+  edited.
+- **The honest position on those three 2023 months.** They fetch fine locally and are genuinely
+  unavailable *from GitHub's runners specifically* — the attachment returns a 2 KB HTML page and the
+  dump route 404s because `datastore_active` is false for exactly those three resources. So both of
+  my earlier readings were partly right: locally they were dump-served and silently rejected (my
+  bug, fixed), and from CI they really are unreachable (not my bug, and handled by gate 20). The
+  shipped data is the complete 91-month build; a CI-refreshed build would be 88 months with the gap
+  disclosed on the site.
 
 Three lessons worth keeping. **A status code proves nothing, and neither does a fix that only changes
 the error message** — runs 1 and 2 both "improved" things without touching the cause, and only the
