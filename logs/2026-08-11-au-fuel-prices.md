@@ -269,19 +269,23 @@ diagnoses were plausible, partially effective, and **wrong**.
   they must not be; and treat a month that parses to zero rows as a **failed download**, not a
   success.
 
-- **Run 6 exposed a data gap that had been invisible from the very first build.** With the
-  empty-parse guard in place, three Queensland months — **January, February and March 2023** — now
-  report as unavailable **locally as well as in CI**. Their event total is *identical* to every
-  earlier run (5,408,858), which is the proof: those three files were always parsing to nothing and
-  always being counted as successes. The data never changed; the hole simply became visible.
-  Two consequences, both fixed:
-  - **The chart was drawing a straight line across a three-month hole.** Because the date axis was
-    built from the days that *had* data, those 90 dates were absent entirely, so the points either
-    side became adjacent — a gap rendered as continuity, which is worse than showing nothing. The
-    axis is now the full calendar range with nulls, and the Brisbane path verifiably contains two
-    `M` commands where it used to contain one.
-  - **The gap is now named in the About panel**, alongside `qldMissingMonths` in `meta.json` and
-    gate 20 bounding it.
+- **Run 6 exposed a data gap that had been invisible from the very first build** — three Queensland
+  months (Jan–Mar 2023) parsing to nothing while counted as successes. I fixed the *presentation* of
+  that gap (continuous date axis with nulls, so the chart breaks the line rather than drawing a
+  straight line across a three-month hole; disclosure in the About panel; `qldMissingMonths` in
+  `meta.json`; gate 20 bounding it). **Those changes were right and are kept.** My diagnosis of the
+  *cause* was wrong.
+- **Run 7 found the real cause, and it was mine.** The CI log showed files downloading at **full
+  size** and still parsing to zero — and the give-away was a byte count: CI's 2018-12 was
+  **9,408,752 B against 8,833,820 locally**. Different size means a different file. CI was being
+  served the **datastore dump** — my own fallback route — which adds an `_id` column *and writes ISO
+  timestamps* (`2018-12-06T05:19:00`) where the CKAN attachment writes `06/12/2018 03:14`.
+  `qldLocalDate` accepted only the second, so every row of every dump-sourced file was silently
+  rejected. **The fallback I added to make the pipeline more robust is what broke it.**
+- **With both formats accepted, all 91 months parse and the gap is gone entirely** — no missing
+  months, no nulls, and the event total rises **5,408,858 → 5,530,302**. So the "three permanently
+  broken months" never existed: they were dump-served and silently discarded, in CI *and* locally,
+  from the moment the fallback landed. Tests now pin the dump shape end to end.
 
 Three lessons worth keeping. **A status code proves nothing, and neither does a fix that only changes
 the error message** — runs 1 and 2 both "improved" things without touching the cause, and only the
@@ -289,9 +293,14 @@ error that named itself (429) identified it. And **a negative shape test is not 
 was written to exclude the failure I had already seen (an HTML page) and was therefore blind to the
 one I had not. The positive version — name the columns you need — would have caught both. The gates
 caught what the guard missed, which is the whole argument for having gates that check the artefact
-rather than the process. And third: **"it worked" is not the same as "it produced something"** —
-counting a file as parsed without checking it yielded rows hid a real three-month hole in the
-shipped data through every local build, every gate run, and the entire production verification.
+rather than the process. Third: **"it worked" is not the same as "it produced something"** —
+counting a file as parsed without checking it yielded rows hid a three-month hole through every
+local build, every gate run, and the entire production verification. And fourth, the one I'd most
+want to remember: **a fallback is a second code path, and a second code path is a second format.**
+Every failure from run 4 onwards was caused by the redundancy I added to fix run 3 — the dump route
+worked perfectly at the transport layer and was wrong at the parsing layer, which is exactly the
+kind of failure redundancy is supposed to prevent and instead created. The byte count was the clue
+that broke it open, and I had been staring at it for two runs.
 
 ### Other errors
 - `/api/sites` returns `product` as a single object, not an array — the first run crashed on it.
