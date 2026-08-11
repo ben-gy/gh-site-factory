@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-08-10
+Last updated: 2026-08-11
 
 === Web Sites ===
+
+Fuel Prices (AU)
+  https://au-fuel-prices.benrichardson.dev
+  Twenty-five years of Western Australian and Queensland petrol prices — the weekly cycle, and the cheapest day to fill up.
 
 Public Service (AU)
   https://au-public-service.benrichardson.dev

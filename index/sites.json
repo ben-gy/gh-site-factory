@@ -1,6 +1,24 @@
 {
-  "last_updated": "2026-08-10",
+  "last_updated": "2026-08-11",
   "sites": [
+    {
+      "name": "Fuel Prices",
+      "slug": "au-fuel-prices",
+      "icon": "fuel",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Twenty-five years of Western Australian and Queensland petrol prices — the weekly cycle, and the cheapest day to fill up.",
+      "url": "https://au-fuel-prices.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-fuel-prices",
+      "tags": [
+        "fuel",
+        "petrol",
+        "prices",
+        "cost-of-living"
+      ],
+      "type": "web",
+      "date": "2026-08-11"
+    },
     {
       "name": "Public Service",
       "slug": "au-public-service",
