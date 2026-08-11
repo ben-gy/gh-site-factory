@@ -131,7 +131,7 @@ and labelling the year rather than quoting a bigger historical number keeps it h
 - Tests written: **163** (25 parser, 19 cycle mathematics, 36 positional layout, 24 against the real
   committed data, 59 source hygiene)
 - Tests passed: **163**; failed: 0
-- **19 pipeline gates**, all passing, run against the artefacts that ship.
+- **20 pipeline gates**, all passing, run against the artefacts that ship.
 - Failures during development, all real: the two method gates (my own demonstration was wrong, not
   the code — see below); a `DAY_NAMES` short-vs-long mismatch inside a gate; a fixture whose drift
   was applied weekly instead of daily; and **my own explanatory comment tripping my own regex** — the
@@ -212,14 +212,54 @@ the wrong place unless it is converted — the first two attempts to click a sta
 for exactly this reason, and the marker was fine.
 
 ## Errors & Resolutions
-- **The Data Pipeline failed in CI on its first run** — and this is the most valuable thing the run
-  found. `data.qld.gov.au` served the GitHub runner an **HTML interstitial with HTTP 200**, so
-  nothing retried and the failure surfaced much later as a confusing "QLD CSV missing required
-  columns". Two fixes: request files as a **navigation** (`Sec-Fetch-Dest: document`,
-  `Mode: navigate`, `Site: none`) rather than as a cross-origin XHR, which is a combination no real
-  browser sends; and **validate the body, never the status code** — `fetchText` now takes an
-  `expect` predicate and retries when a CSV request returns something starting with `<`.
-  `dns.setDefaultResultOrder('ipv4first')` added for the same class of CI-only failure.
+
+### The CI pipeline failure, and three wrong diagnoses before the right one
+This was the most instructive part of the run, and it took three passes because the first two
+diagnoses were plausible, partially effective, and **wrong**.
+
+- **Run 1 failed with "QLD CSV missing required columns".** `data.qld.gov.au` had served the runner
+  an HTML page with **HTTP 200**, so nothing retried and the error surfaced far downstream in the
+  parser. *Diagnosis: the headers look like a cross-origin XHR.* Fix applied: request files as a
+  **navigation** (`Sec-Fetch-Dest: document`, `Mode: navigate`, `Site: none`), plus
+  `dns.setDefaultResultOrder('ipv4first')`, plus — the genuinely valuable part — **validate the
+  body, never the status code**. `fetchText` gained an `expect` predicate that retries when a CSV
+  request returns something starting with `<`.
+- **Run 2 failed the same way, but now said so honestly**: `unexpected body (2027 B, starts
+  "<!DOCTYPE html>…")`. The guard worked; the diagnosis had not. *Second diagnosis: the runner's IP
+  is blocked on the attachment path the CKAN download 302s to.* Fix applied: a fallback chain to the
+  CKAN **datastore dump** route, which serves the same resource through different machinery.
+- **Run 3 got 49 months further and failed with plain `HTTP 429`** — which is what the first two
+  failures had been all along. The interstitial was the throttle wearing a different hat. The cause
+  was **request rate**, not headers, not IPv6, and not the runner's location. Ninety-one files once
+  a month is trivial traffic; it only ever failed because it arrived at once.
+- **The actual fix**: serialise data.qld.gov.au through a **900 ms-gap queue**, drop the prefetch
+  depth from 4 to 2 (parsing is the bottleneck, not the download), and treat 429/503 as an
+  *instruction* — honour `Retry-After`, otherwise back off exponentially from 5 s. Run 3 also
+  exposed that `datastore_active` is not reliably present in `package_search` results, so some
+  months had been left with a single route and nothing to fall back to; the dump URL is now always
+  offered.
+
+- **Run 4, after pacing, got all the way to the end and failed on one file**: `2023-01` returned the
+  2 KB HTML page from CI on the download route and **HTTP 404** on the dump route — the latter
+  correctly, because that resource has `datastore_active: false`. The same file downloads fine
+  locally (7,576,075 bytes). So one file of ninety-one is genuinely flaky from CI, and no further
+  retry logic will change that.
+- **Final resolution — bounded, published degradation.** Failing an unattended monthly job over one
+  file of 91 means the data simply stops refreshing, which is the worse outcome. Queensland is a
+  forward-filled change log, so an absent month degrades rather than breaks. But it *does* degrade,
+  so it is never silent: missing months are logged, written to `meta.json` as `qldMissingMonths`,
+  and **gated** — more than three missing, or **any** in the most recent quarter, still fails the
+  run. That is gate 20.
+
+The lesson worth keeping: **a status code proves nothing, and neither does a fix that makes the
+error message change.** Runs 1 and 2 both "improved" things without touching the cause. Only the
+error that named itself — 429 — identified it. And once the cause was genuinely fixed, the residue
+was a real, irreducible flake, which needed a policy decision rather than another patch.
+
+### Other errors
+- `/api/sites` returns `product` as a single object, not an array — the first run crashed on it.
+- The `regionSlug` used by the frontend must match the pipeline's byte for byte, or every series
+  file 404s; a test asserts every indexed region has a file whose arrays match the date axis.
 - `/api/sites` returns `product` as a single object, not an array — the first run crashed on it.
 - The `regionSlug` used by the frontend must match the pipeline's byte for byte, or every series
   file 404s; a test asserts every indexed region has a file whose arrays match the date axis.
