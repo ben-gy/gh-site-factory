@@ -155,13 +155,19 @@ and a stronger guard.
 - Directory entry live on main: yes
 - Pull request: none, per the routine
 
-### DNS — the zone is still at its cap
-`benrichardson.dev` remains at **200/200 records**, the free-plan limit. Rather than fail, I
-repointed one of the four confirmed-dead records left by the 2026-08-04 batch:
-`au-build-approvals` → `au-fuel-prices` (record `df431b2e8197f6dea1fc3167964b798e`). It was verified
-dead first — no matching repo, no TLS certificate ever issued, `https=000`.
-**Three dead records remain, so the next three runs are covered, then this blocks again.** The
-durable fix is a paid Cloudflare plan or a deliberate prune, which is the user's call.
+### DNS — and a correction to the previous run's finding
+`benrichardson.dev` read **200/200 records** when this run started, which the previous run recorded
+as the free-plan hard cap. Rather than risk a blocked deploy I reused one of the four confirmed-dead
+records left by the 2026-08-04 batch: `au-build-approvals` → `au-fuel-prices` (record
+`df431b2e8197f6dea1fc3167964b798e`), verified dead first — no matching repo, no TLS certificate ever
+issued, `https=000`.
+
+**The 200 figure appears not to be a hard limit after all.** Checked again at the end of this run,
+the zone holds **203 records**, so it has grown past the number the previous run treated as a
+ceiling. Reusing a dead record was still the tidier choice, but the next run should test the cap
+directly (create a throwaway record and look for error `81045`) rather than assuming it is blocked.
+Three dead records remain available: `au-insolvency-tracker`, `castwell-cast`, `facet-dice` — all
+re-confirmed `https=000` today.
 
 ## Verification
 **Live production URL, by HTTP:** `/`, `data/meta.json`, `data/cycle.json`, `data/sites.json`,
