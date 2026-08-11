@@ -257,10 +257,41 @@ diagnoses were plausible, partially effective, and **wrong**.
   and **gated** — more than three missing, or **any** in the most recent quarter, still fails the
   run. That is gate 20.
 
-The lesson worth keeping: **a status code proves nothing, and neither does a fix that makes the
-error message change.** Runs 1 and 2 both "improved" things without touching the cause. Only the
-error that named itself — 429 — identified it. And once the cause was genuinely fixed, the residue
-was a real, irreducible flake, which needed a policy decision rather than another patch.
+- **Run 5 completed, and failed the gates — which is the system working.** It downloaded all 88
+  reachable Queensland files, "parsed" every one, and produced **zero change events**. Four gates
+  refused to publish: QLD median price across **0 stations**, 0 sentinel rows, no Brisbane cycle.
+  The cause was mine and it had been sitting there since run 1: **I set `Accept-Encoding` by hand**
+  in the "navigation headers" fix, and undici only decompresses a response when it negotiated the
+  encoding itself — so `res.text()` decoded raw gzip as mojibake. **That garbage passed my own
+  `looksLikeCsv` check**, which only asserted the body did not start with `<` and contained a comma.
+  Both are true of compressed bytes. Three fixes: drop the manual header; check CSVs by what they
+  must **contain** (first line printable ASCII carrying the required columns) rather than by what
+  they must not be; and treat a month that parses to zero rows as a **failed download**, not a
+  success.
+
+- **Run 6 exposed a data gap that had been invisible from the very first build.** With the
+  empty-parse guard in place, three Queensland months — **January, February and March 2023** — now
+  report as unavailable **locally as well as in CI**. Their event total is *identical* to every
+  earlier run (5,408,858), which is the proof: those three files were always parsing to nothing and
+  always being counted as successes. The data never changed; the hole simply became visible.
+  Two consequences, both fixed:
+  - **The chart was drawing a straight line across a three-month hole.** Because the date axis was
+    built from the days that *had* data, those 90 dates were absent entirely, so the points either
+    side became adjacent — a gap rendered as continuity, which is worse than showing nothing. The
+    axis is now the full calendar range with nulls, and the Brisbane path verifiably contains two
+    `M` commands where it used to contain one.
+  - **The gap is now named in the About panel**, alongside `qldMissingMonths` in `meta.json` and
+    gate 20 bounding it.
+
+Three lessons worth keeping. **A status code proves nothing, and neither does a fix that only changes
+the error message** — runs 1 and 2 both "improved" things without touching the cause, and only the
+error that named itself (429) identified it. And **a negative shape test is not a validation**: mine
+was written to exclude the failure I had already seen (an HTML page) and was therefore blind to the
+one I had not. The positive version — name the columns you need — would have caught both. The gates
+caught what the guard missed, which is the whole argument for having gates that check the artefact
+rather than the process. And third: **"it worked" is not the same as "it produced something"** —
+counting a file as parsed without checking it yielded rows hid a real three-month hole in the
+shipped data through every local build, every gate run, and the entire production verification.
 
 ### Other errors
 - `/api/sites` returns `product` as a single object, not an array — the first run crashed on it.
