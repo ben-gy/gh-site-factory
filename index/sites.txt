@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-08-11
+Last updated: 2026-08-12
 
 === Web Sites ===
+
+Corporate Tax Transparency (AU)
+  https://au-corporate-tax.benrichardson.dev
+  Every large company's income and tax bill in Australia — 6,158 named entities, eleven years of ATO transparency data, searchable.
 
 Fuel Prices (AU)
   https://au-fuel-prices.benrichardson.dev
