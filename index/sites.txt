@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-08-12
+Last updated: 2026-08-13
 
 === Web Sites ===
+
+International Student Courses (AU)
+  https://au-intl-courses.benrichardson.dev
+  Compare what every CRICOS course costs per teaching week — including the hundreds of qualifications that are legally identical whoever you buy them from.
 
 Corporate Tax Transparency (AU)
   https://au-corporate-tax.benrichardson.dev
