@@ -1,6 +1,24 @@
 {
-  "last_updated": "2026-08-13",
+  "last_updated": "2026-08-15",
   "sites": [
+    {
+      "name": "Radio Spectrum",
+      "slug": "au-spectrum",
+      "icon": "radio-tower",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Who holds Australia's radio spectrum — 164,105 licences read as a whole, band by band and place by place.",
+      "url": "https://au-spectrum.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-spectrum",
+      "tags": [
+        "spectrum",
+        "radio licences",
+        "ACMA",
+        "telecommunications"
+      ],
+      "type": "web",
+      "date": "2026-08-15"
+    },
     {
       "name": "International Student Courses",
       "slug": "au-intl-courses",
