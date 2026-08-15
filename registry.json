@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-08-13",
+  "last_updated": "2026-08-15",
   "sites": [
     {
       "name": "au-fuel-prices",
@@ -1244,6 +1244,23 @@
       "status": "deployed",
       "url": "https://au-intl-courses.benrichardson.dev",
       "repo_url": "https://github.com/ben-gy/au-intl-courses"
+    },
+    {
+      "name": "au-spectrum",
+      "repo": "ben-gy/au-spectrum",
+      "date": "2026-08-15",
+      "description": "Who holds Australia's radio spectrum — the ACMA's Register of Radiocommunications Licences read as a whole rather than one record at a time: 164,105 licences, 14,373 licensee records merged into 12,919 organisations, 2,149,290 device assignments and 129,334 site records, rebuilt monthly from the 60 MB daily bulk extract. Positioned against the existing tools rather than duplicating them — the ACMA's own search, its in-browser Offline RRL, SpectAura and maprad.io all do per-record lookup, and the site links to all four; none of them answers questions about the register itself. Headline findings, every one recomputed from source by an independent adversarial pass before publication: (1) Australia's largest radio licensee is a fixed-broadband company — NBN Co 10,140 licences, ahead of Telstra 9,299 and Optus 6,504 — and nobody is big: the top ten hold 30.41% and the HHI is 137 on a 0–10,000 scale, unconcentrated by any competition-policy reading; (2) 7,511 organisations hold licences in the 450–520 MHz land-mobile band against 45 in the 3.5 GHz 5G band, and the sparser band is the bigger one — on device ROWS 5G looks 2.7× larger, but a three-sector mobile site registers one assignment three times, so on distinct assignments land mobile is 113,192 against 5G's 57,445 (a gate asserts the inversion so the headline cannot be reworded back to rows); (3) counting licences and counting hardware give opposite answers — 398 spectrum licences, 0.24% of the register, carry 78.5% of all device rows; (4) 43% of the register's site records have no equipment on them at all; (5) a resident of WA – Outback (North) lives under 552.2 registered radio sites per 10,000 people against 14.7 in Perth – North West, a 37× spread that inverts the raw-count map. Nine views, deliberately not the house stack: Holders (sector-laned log beeswarm of every named organisation + Lorenz + a slope chart of licence-share against hardware-share), Bands (the signature — 10 kHz to 300 GHz on one log spine in constant-ratio 1/24-decade bins, three lanes: occupancy, composition, and how many separate organisations), Channels (a needle per distinct assigned frequency, 20,003 of them, so the band plan appears as literal teeth, plus an arc diagram built from the REAL transmit/receive pairs behind Australia's 77 duplex spacings — 490 MHz carries 24,218 links), Where (ABS SA4 choropleth with per-capita / dominant-holder / concentration switch and a hand-rolled canvas layer for 71,361 sites past zoom 9, position accuracy drawn as mark shape rather than shade), Sharing (class-to-class co-tenancy chord + the 400 most crowded sites as tenant stacks; Mount Dandenong carries 30 separate organisations), Exclusive (the 398 spectrum licences quarantined, with the megahertz-summing fallacy printed as a worked correction: Viasat's 1,949,900 MHz across 859 areas is 2,500 MHz held), On air (broadcast service licences by first-issued year back to 1925, with the undated 78% drawn at equal weight), Limits (what the file cannot say, including the ACMA's own documented conditions join that returns zero rows and reaches 74 licences via device registration identifiers), Method (every rule, including the ones that cost something). Compliance is load-bearing and not incidental: the register is NOT open data and NOT Creative Commons, the required attribution string is exactly 'Based on Australian Communications and Media Authority information', and clause 8 forbids reproducing a natural person's information — so 3,473 licensees are suppressed along with 1,588 sites whose every device belongs to an individual, because the register's site names are frequently street addresses recorded to ten-metre accuracy. Two adversarial review passes found and closed five real defects the build's own gates were structurally blind to, including site suppression keyed on the client-level person flag while the roster keyed on the entity-level one (3 sites published, one a residential address), a name-shape test that missed joined partnerships ('GW & DJ Lewis' is two people — 110 couples published, 19 with sole-held address-named sites), an Array.every index leaking in as a minimum-word-count (7 more families), and band tables crediting each holder's whole-register device count to every band its licence touched (30% of cells wrong, three above 100% of the band). 34 correctness and plausibility gates, each recomputing a figure from the source CSVs rather than comparing a payload with itself; 88 unit tests; a dependency-free RFC4180 parser and ZIP reader so the pipeline has no binary prerequisite and the parser under test is the parser that runs. Monthly cron against a daily-rebuilt source, with the deploy dispatched explicitly because a GITHUB_TOKEN push does not trigger a workflow. Genuinely new domain: the fleet's au-towers covers three mobile carriers' physical towers; this covers the other 99.75% of the register — Defence, police, fire, ambulance, mining, utilities, rail, broadcasters, volunteers — and links to au-towers rather than re-rendering it.",
+      "category": "government-transparency",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "ACMA Register of Radiocommunications Licences (spectra_rrl.zip)",
+        "ABS ASGS 2021 SA4 boundaries",
+        "ABS Estimated Resident Population by SA4"
+      ],
+      "status": "deployed",
+      "url": "https://au-spectrum.benrichardson.dev",
+      "repo_url": "https://github.com/ben-gy/au-spectrum"
     }
   ]
 }

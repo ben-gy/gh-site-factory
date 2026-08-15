@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-08-13
+Last updated: 2026-08-15
 
 === Web Sites ===
+
+Radio Spectrum (AU)
+  https://au-spectrum.benrichardson.dev
+  Who holds Australia's radio spectrum — 164,105 licences read as a whole, band by band and place by place.
 
 International Student Courses (AU)
   https://au-intl-courses.benrichardson.dev
