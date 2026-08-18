@@ -1,6 +1,24 @@
 {
-  "last_updated": "2026-08-15",
+  "last_updated": "2026-08-19",
   "sites": [
+    {
+      "name": "Native Title",
+      "slug": "au-native-title",
+      "icon": "land-plot",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Every native title determination, agreement and live claim in Australia, mapped and explained.",
+      "url": "https://au-native-title.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-native-title",
+      "tags": [
+        "native title",
+        "land rights",
+        "Federal Court",
+        "Indigenous"
+      ],
+      "type": "web",
+      "date": "2026-08-19"
+    },
     {
       "name": "Radio Spectrum",
       "slug": "au-spectrum",

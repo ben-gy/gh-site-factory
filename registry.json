@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-08-15",
+  "last_updated": "2026-08-19",
   "sites": [
     {
       "name": "au-fuel-prices",
@@ -1261,6 +1261,29 @@
       "status": "deployed",
       "url": "https://au-spectrum.benrichardson.dev",
       "repo_url": "https://github.com/ben-gy/au-spectrum"
+    },
+    {
+      "name": "au-native-title",
+      "repo": "ben-gy/au-native-title",
+      "date": "2026-08-19",
+      "description": "Australia's native title registers read together for the first time — all seven of the National Native Title Tribunal's public registers (683 determinations 1992→, 1,162 outcome polygons, 1,539 Indigenous Land Use Agreements, 96 registered claims + 189 live applications, 296 bodies corporate, 18 representative-body regions), CC BY 4.0 via data.gov.au and refreshed daily at source. The Tribunal's own Native Title Vision and the Digital Atlas already publish these polygons on a map; none of them does the analytical work, and none of them explains the law to a reader who has never met it. HEADLINE, computed not quoted: native title has been recognised over 3,254,573 km² of land — 42.3% of the continent — but only 1,218,898 km² of that (37.5% of the recognised area, 15.9% of Australia) is EXCLUSIVE possession; the rest coexists with somebody else's interest. Recognition is profoundly uneven: 67.4% of Western Australia, 51.0% of South Australia, 38.1% of Queensland, 27.7% of the Northern Territory, 1.9% of Victoria, 1.4% of New South Wales, and a real zero in Tasmania and the ACT. 538 of the 683 determinations (78.8%) were reached by CONSENT rather than argued out — only 59 were litigated — and 130 (19.0%) found native title does NOT exist in the area the court considered, so a determination is not automatically a recognition. EVERY AREA IS A DISSOLVED GEOMETRIC UNION in an Australian Albers equal-area projection, never a sum of the register's own area column. That distinction is the site's worked example: the agreements register's area column sums to 5,163,512 km² while the ground those agreements actually cover is 2,434,646 km² — 52.8% of the column is the same country counted more than once. Two false headlines were caught by the gates during the build, both the same mistake: comparing a land-only union against an all-rows sum (a fabricated '46% overlap' on the outcome polygons, which on land barely overlap at all, max 3.4%; and a '74% more than the continent' claim that was 556,903 km² of sea agreements). Eleven reconciliation gates, all fatal: the projection must reproduce Geoscience Australia's published state areas (it does, to 0.09%); no union may exceed the sum of its parts; the dissolve must demonstrably have run (asserted on topology, because on this register area cannot tell a no-op from a genuine near-partition); the two outcome vocabularies must not contradict each other; the outcome register must partition the determination register except for the two compensation matters; and 35 year-filtered cumulative dissolves must land on the same total as one unfiltered dissolve. 126 tests, including gate tests that feed each guard the exact failure it exists to catch. Eight views, none of them the house stack: a 1,000-square proportional grid of the continent re-partitioned across six steps before any table appears; a Leaflet map of the real 1,162-polygon partition where clicking one polygon lights every sibling of the same determination (307 determinations recognised native title only in PARTS, so the one-colour mental model is wrong); eight area-true small multiples where WA and Victoria are deliberately not comparable; one mark per determination across 35 years, diverging above and below a baseline so the 19% is structural; the 285 live matters on a real calendar axis banded by statutory stage; the agreement subject vocabulary as a two-level icicle coupled to three-state flag ribbons where 'not recorded' (353–369 rows) is never folded into 'no'; a radial hierarchical edge bundle of 296 corporations against 683 determinations, anchored by closed-form trigonometry with no simulation; and the searchable record with holder descriptions verbatim and a direct link to the Federal Court judgment. CULTURAL AND LEGAL FRAMING IS ENFORCED AS TESTS, not intentions: no ranking of Aboriginal and Torres Strait Islander groups or their country; no win/loss/success-rate language; native title is RECOGNISED, never granted or awarded; NTHOLD holder descriptions render with no clamp, ellipsis or title-casing at any breakpoint; boundaries are stated as indicative and not legal advice on the map, in every record card and in the About panel; the Northern Territory's 27.7% carries the Aboriginal Land Rights (NT) Act 1976 caveat at the same visual weight as the number it corrects; and the agreements register's APPLICANT column, which names private individuals, is never downloaded at all. The Tribunal's four future-act layers are deliberately NOT republished — they have no CC BY dataset record on data.gov.au, only third-party mirrors marked 'notspecified', so their licence could not be established to the same standard.",
+      "category": "government-transparency",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "NNTT National Native Title Register (determinations)",
+        "NNTT Native Title Determination Outcomes",
+        "NNTT Register of Native Title Claims",
+        "NNTT Schedule of Native Title Determination Applications",
+        "NNTT Indigenous Land Use Agreements",
+        "NNTT Registered Native Title Body Corporate areas",
+        "NNTT RATSIB boundaries",
+        "Geoscience Australia published land areas",
+        "ABS ASGS state boundaries"
+      ],
+      "status": "deployed",
+      "url": "https://au-native-title.benrichardson.dev",
+      "repo_url": "https://github.com/ben-gy/au-native-title"
     }
   ]
 }
