@@ -3,6 +3,10 @@ Last updated: 2026-08-19
 
 === Web Sites ===
 
+Training Register (AU)
+  https://au-training.benrichardson.dev
+  Which nationally recognised qualifications can nobody in Australia teach, and who is allowed to teach the rest.
+
 Native Title (AU)
   https://au-native-title.benrichardson.dev
   Every native title determination, agreement and live claim in Australia, mapped and explained.
