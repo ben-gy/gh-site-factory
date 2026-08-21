@@ -1,5 +1,5 @@
 gh-site-factory — Project Index
-Last updated: 2026-08-19
+Last updated: 2026-08-21
 
 === Web Sites ===
 
@@ -294,6 +294,13 @@ Charity Watch (AU)
   Tags: government-transparency, charity, acnc, donations, finance
   Repo: https://github.com/ben-gy/au-charities
   Date: 2026-06-24
+
+Pollution Watch (AU)
+  https://au-pollution.benrichardson.dev
+  Every industrial facility in Australia and the toxic substances it reports releasing — 8,140 sites, 93 pollutants, mapped and searchable.
+  Tags: environment, pollution, npi, health, industry
+  Repo: https://github.com/ben-gy/au-pollution
+  Date: 2026-06-23
 
 DSN Watch
   https://dsnwatch.benrichardson.dev
