@@ -1,7 +1,12 @@
 gh-site-factory — Project Index
-Last updated: 2026-08-21
+Last updated: 2026-08-24
 
 === Web Sites ===
+
+Cyclone Tracks (AU)
+  https://au-cyclones.benrichardson.dev
+  Every tropical cyclone tracked in the Australian region since 1880 — where they formed,
+  where they crossed the coast, and how the record itself has changed.
 
 Training Register (AU)
   https://au-training.benrichardson.dev
