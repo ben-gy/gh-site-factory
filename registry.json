@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-08-24",
+  "last_updated": "2026-08-25",
   "sites": [
     {
       "name": "au-fuel-prices",
@@ -1316,6 +1316,24 @@
       "status": "deployed",
       "url": "https://au-cyclones.benrichardson.dev",
       "repo_url": "https://github.com/ben-gy/au-cyclones"
+    },
+    {
+      "name": "au-air-episodes",
+      "repo": "ben-gy/au-air-episodes",
+      "date": "2026-08-25",
+      "description": "Every hour of ambient air quality measured by government monitors in NSW, Queensland and the ACT since 2009 — 20,033,621 readings at 98 station clusters, 4,173 detected smoke, dust and inversion episodes, and the finding that Australia has no single air quality index.",
+      "category": "environment",
+      "stack": "vanilla-ts",
+      "data_strategy": "pipeline",
+      "data_sources": [
+        "NSW Air Quality Data Services API (CC BY 4.0)",
+        "Queensland Air Quality Monitoring, grouped-by-pollutant CSVs + live API (CC BY 4.0)",
+        "ACT Air Quality Monitoring, Socrata (CC BY 4.0)",
+        "ABS ASGS state boundaries (CC BY 4.0)"
+      ],
+      "status": "deployed",
+      "url": "https://au-air-episodes.benrichardson.dev",
+      "repo_url": "https://github.com/ben-gy/au-air-episodes"
     }
   ]
 }

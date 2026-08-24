@@ -4,6 +4,70 @@ Ideas for improving existing sites with new data, views, or features. These are 
 
 Review periodically and fold the best ones into the existing repos.
 
+- **BUILT 2026-08-25 — the ambient air quality entry below is now `au-air-episodes`.** Live at
+  https://au-air-episodes.benrichardson.dev. NSW + QLD + ACT, 20,033,621 hourly readings, 98
+  station clusters, 2009→now. The entry further down remains useful for its trap list, all of
+  which was confirmed, but treat the site as shipped rather than as an idea.
+
+- **au-air-episodes — SOUTH AUSTRALIA is the highest-value v2 addition, and the "SA stops in
+  2020" claim was WRONG (established 2026-08-25).** The earlier assessment rested on a wrong CKAN
+  base path: it is `https://data.sa.gov.au/data/api/3/action/...`, and the bare
+  `data.sa.gov.au/api/3/...` 404s, which is almost certainly how "SA is dead" was concluded.
+  Verified: `package_search?q=air+quality+monitoring+station&rows=50` returns 46 datasets, all
+  "Creative Commons Attribution", ~20 named stations, many with resources modified 2026-08-18.
+  One file was downloaded and opened in full — Cowandilla 2026 gaseous, a 41,084-byte zip
+  containing seven monthly CSVs `COW01g_1hr202601.csv` … `202607.csv`, i.e. **hourly data through
+  July 2026**, header `"Date/Time","O3 UVA ppm","O3 8hr UVA ppm","NO Chemiluminescence ppm",…`,
+  rows hourly at `dd/mm/yyyy HH:MM`. Cowandilla, Elizabeth, Christie Downs, Adelaide CBD, Le
+  Fevre, Whyalla and Port Pirie all carry 2026 resources; Kensington and Port Augusta genuinely
+  ended years ago. **It was excluded from the build only because exactly one of the ~20 station
+  archives was actually opened** — not enough to assert the rest. Adding Adelaide would take the
+  site from three jurisdictions to four and from ~14M to ~17M people covered. Note the file
+  layout differs from every other source (per-station yearly ZIPs of monthly CSVs, gases in ppm)
+  so the ingest needs its own reader.
+
+- **DO-NOT-BUILD-WITH — Victoria's EPA AirWatch hourly data is licence-conflicted (established
+  2026-08-25, and this CORRECTS the earlier "Victoria is a HARD REJECT" reasoning).** The earlier
+  note said Victoria was unusable because `gateway.api.epa.vic.gov.au` returns HTTP 401 with
+  `WWW-Authenticate: AzureApiManagementKey`. That is true of the *realtime* API and irrelevant to
+  the archive. The archive is **open and keyless**: `discover.data.vic.gov.au` package
+  `epa-air-watch-all-sites-air-quality-hourly-averages-yearly`, `license_id: cc-by`,
+  `license_url: https://creativecommons.org/licenses/by/4.0/`, 47 XLSX resources. The 2025 file
+  (`https://apps.epa.vic.gov.au/datavic/Data_Vic/AirWatch/2025_All_sites_air_quality_hourly_avg_AIR-I-F-V-VH-O-S1-DB-M2-4-0.xlsx`)
+  downloads without auth at 86,939,644 bytes and its `AllData` sheet is A1:Q884555 — **884,554
+  hourly rows for 2025 alone**, 16 stations including Melbourne CBD, Footscray, Alphington,
+  Brooklyn, Geelong South, Traralgon and Morwell.
+  **The blocker is a licence conflict, not availability.** The workbook itself embeds an *EPA
+  Victoria Terms of Use* cell reading: *"You acknowledge that rights to the Data are granted by
+  the EPA on a non-exclusive, NON-COMMERCIAL basis…"*. CC BY 4.0 expressly permits commercial
+  use, so the catalogue tag and the artefact contradict each other, and the conservative reading
+  — the one embedded in the file the user actually downloads — governs. Exactly the ACARA shape.
+  **Only route is written confirmation from EPA Victoria.** Two further traps if it is ever
+  unblocked: the CKAN record advertises 1979–2025 but the eleven resources for **1979–1989 all
+  404** (real coverage is 1990–2025, range-test every year); and the workbook carries THREE
+  disagreeing timestamp columns — `datetime_AEST`, `datetime_local` (one hour apart at row 1 of
+  2025) and `datetime_UTC` — so mixing them duplicates or drops an hour at every DST boundary.
+  There is also no open current-year path, so Melbourne would sit ~8 months stale beside a live
+  Brisbane.
+
+- **DO-NOT-BUILD-WITH — Tasmania's BLANkET feed is CC BY-SA (established 2026-08-25).**
+  `https://epa.tas.gov.au/air/live/epa_tas_latest_particle_data.txt` is real, keyless, and
+  genuinely live (35 stations with PM2.5, PM10, lat, lon, elevation), but its own header states
+  **CC BY-SA 4.0**. ShareAlike is viral, so merging it into a combined redistributed store risks
+  forcing ShareAlike onto everything else. It is also a latest-value snapshot with no retrievable
+  archive (sibling `.csv` and `epa_tas_archive.txt` paths 404, directory listing 403), and EPA
+  Tasmania states the measurements are not quality controlled and cannot be used to determine
+  whether a standard has been breached — so ranking them against reference monitors would be
+  invalid. Usable only in a physically separate file with its own attribution, and only as a
+  live garnish.
+
+- **au-pollution ↔ au-air-episodes cross-link.** The two are genuinely disjoint and should say so
+  on each other: `au-pollution` is the National Pollutant Inventory (annual, self-reported
+  *estimates of emissions* from industrial facilities); `au-air-episodes` is hourly *measured
+  ambient concentrations*. `au-air-episodes` already carries the distinction on its Record view.
+  Adding the reciprocal sentence to `au-pollution` is a one-line change and stops a reader
+  treating the two sites' numbers as comparable.
+
 <!-- Format:
 - **repo-name**: Description of the enhancement, new data source, or additional view. Include URLs for any new data sources.
 -->

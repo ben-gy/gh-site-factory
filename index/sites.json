@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-08-24",
+  "last_updated": "2026-08-25",
   "sites": [
+    {
+      "name": "Air Episodes",
+      "slug": "au-air-episodes",
+      "icon": "wind",
+      "category": "data-explorers",
+      "country": "AU",
+      "description": "Australia's air is clean on average and dangerous in bursts — every measured hour in NSW, Queensland and the ACT since 2009, and a catalogue of the bursts.",
+      "url": "https://au-air-episodes.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/au-air-episodes",
+      "tags": [
+        "environment",
+        "health",
+        "air-quality"
+      ],
+      "type": "web",
+      "date": "2026-08-25"
+    },
     {
       "name": "Cyclone Tracks",
       "slug": "au-cyclones",

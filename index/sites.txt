@@ -1,7 +1,12 @@
 gh-site-factory — Project Index
-Last updated: 2026-08-24
+Last updated: 2026-08-25
 
 === Web Sites ===
+
+Air Episodes (AU)
+  https://au-air-episodes.benrichardson.dev
+  Australia's air is clean on average and dangerous in bursts — every measured hour in
+  NSW, Queensland and the ACT since 2009, and a catalogue of the bursts.
 
 Cyclone Tracks (AU)
   https://au-cyclones.benrichardson.dev
