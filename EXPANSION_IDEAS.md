@@ -144,3 +144,144 @@ Review periodically and fold the best ones into the existing repos.
 - **CORRECTION to a standing note — BOM's anti-scrape clause is site-wide, not Water Data Online-specific (established 2026-08-24, three independent lenses).** `reference_au_dams` / the `au-dams` entry attribute the "no automated extraction, we may block your IP" language to the Water Data Online terms. That is wrong: `http://www.bom.gov.au/water/about/copyright.shtml` now **404s**, and that language currently sits on BOM's **general** copyright page at `https://www.bom.gov.au/copyright`, applying to the whole of bom.gov.au. The note understated its scope rather than overstating it. More importantly, the same page carries the redistribution bar that is independently dispositive for any public site: *"Unless we state otherwise, you can download, copy and use our content for personal use, or use within your organisation. **You must not supply it to any other person** or use it for any commercial purpose."* Free and non-commercial does **not** cure this — the two prohibitions are separate. Practical rule for the fleet: **a BOM page with no explicit CC BY badge cannot be republished at all**, and the correct route for anything BOM contributes to an international archive is that archive (IBTrACS for cyclones, as `au-cyclones` now does).
 
 - **FLAGGED FOR REVIEW — `au-warming` may rest on a narrower CC BY grant than assumed (noticed 2026-08-24, not acted on).** The ACORN-SAT page *does* carry CC BY markup, which is why that site is on firmer ground than the cyclone database was. But the sentence is scoped: *"Unless otherwise noted, all maps, graphs and diagrams in this page are licensed under the Creative Commons Attribution 4.0 International Licence"* — **maps, graphs and diagrams in this page**, which is arguably narrower than the underlying station data files the pipeline actually downloads. This is a flag, not a finding: someone should read the ACORN-SAT data-file terms directly and either confirm the grant reaches the files or move the site onto a redistributor. Do not panic-unpublish on the strength of this note alone.
+
+---
+
+## 2026-08-27 research round — eight candidates verified, three killed on licence
+
+The GrantConnect brief above **was built this round** and is sitting unpublished at
+`sites/2026-08-26-au-grants/` with `status: blocked_licence`. See
+`sites/2026-08-26-au-grants/DEPLOYMENT-HOLD.md` and `logs/2026-08-27-au-grants.md`.
+**Do not rebuild it.** Its acquisition problem is fully solved (the 50,001-row silent
+truncation, the monthly-slice gate, the in-workbook `Count` anchor, a hand-rolled
+zero-dependency XLSX reader); the only open question is whether the data may be
+republished at all. If Finance says yes, `npm run collect && npm run aggregate &&
+npm run build` and ship what is already written.
+
+- **BUILD THIS NEXT — Lobbyist registers (`au-lobbyists`).** The strongest candidate of the round
+  and cheap to ingest: the **entire federal Register of Lobbyists comes out in 4 POSTs and 6 GETs**
+  from a keyless, undocumented-but-public JSON API at `https://api.lobbyists.ag.gov.au/` (base URL
+  confirmed from `https://lobbyists.ag.gov.au/api/configuration`). **CC BY 4.0, clean** — verified at
+  `https://www.ag.gov.au/copyright`. Verified counts, all fetched not estimated: **358 active firms +
+  337 deregistered (zero ID overlap, so the real universe is 695), 716 registered lobbyists, 2,618
+  firm→client edges over 2,479 distinct clients, ~434 named owners/stakeholders.**
+  The headline is published per-person with dates: `GET statistics/formerReps` (200, 181,532 bytes)
+  flags **295 of 716 lobbyists (41.2%) as former government representatives**, with cessation dates
+  spanning 1986→2026 and previous roles broken down as **150 MOP(S) Act ministerial staffers, 46 APS
+  employees, 15 former Ministers**, 8 agency contractors, 5 ADF — plus a free-text tail including a
+  former NSW Premier, a Chief of Air Force and a former Senator. Structure is real, not a hairball:
+  118 clients retain more than one firm (Rio Tinto uses 4); top firms are DPG Advisory Solutions (104
+  clients), TG Public Affairs (103), Hawker Britton (93), SEC Newgate (76). **NSW is a verified second
+  jurisdiction** — its whole register is server-rendered at
+  `https://lobbyists.elections.nsw.gov.au/whoisontheregister` (1.31 MB, 424 entities, plus an
+  On-Watchlist sanctions flag the federal register lacks); normalised-ABN cross-matching gives **170
+  firms in both, 183 federal-only, 254 NSW-only**.
+  **TRAPS, all verified:** (a) nested `organisation.registeredOn` is the **request timestamp** — every
+  one of the 2,618 client rows carries today's date to the microsecond; the real dates (2008-05-14 →
+  2026-08-24) exist only on the top-level org records. (b) The register's own official bulk export,
+  `search/download`, **returns HTTP 500** — use the `search/*` POSTs with `count: 1000`, which return
+  complete sets with `hasMoreRecords: false`. (c) `previousPosition` and `previousPositionOther`
+  disagree between endpoints — populated identically in `search/lobbyists`, but in `/profile` the
+  same person has one filled and the other null; coalesce and pick one endpoint. (d)
+  `statistics/formerReps` pipe-joins three fields into one string **containing embedded newlines (3
+  records) and the literal string `null` (5 records)** — prefer `search/lobbyists`, which returns them
+  structurally. (e) Position free-text is filthy: `Adviser`/`Advisor`/`Advisor ` (trailing space)/
+  `Senior Adviser`/`Chief of Staff/Senior Adviser` are all distinct strings. (f) ABNs are inconsistent
+  three ways (1,338 spaced, 704 unspaced, 576 blank, some trailing whitespace) — strip non-digits
+  before any join or the cross-jurisdiction match silently halves. (g) **Client records have
+  `id: null`** — there is no stable client key; dedupe on normalised name + ABN, and note 223 client
+  names carry leading/trailing whitespace. (h) `statistics/orgsByYear` returns the all-zeros GUID for
+  every organisationId, so it cannot be joined — derive cohorts from `registeredOn`.
+  **THE ONE REAL WEAKNESS:** there is **no geography anywhere** in the payloads — no address, suburb,
+  state or postcode on any org, lobbyist or client. The fleet's mandatory real-boundary map cannot be
+  built from this data alone. Either accept an ABR join on the 1,841 normalised client ABNs as a
+  deliberate scoped cost, or get the map standard explicitly waived for a network-shaped site. Decide
+  that **before** starting, not halfway through. PII is inherent and lawful here — it is a statutory
+  transparency register whose purpose is naming individuals — but handle it deliberately.
+
+- **DEFERRED, verified, high quality — Immigration detention (`au-detention`).** The round's judge
+  picked this as winner on licence-and-novelty grounds; it is deferred only because it is a large
+  parsing job. **CC BY 3.0 AU**, verified at the Home Affairs copyright page. **All 162 monthly PDFs
+  HEAD-checked 200/200, zero gaps, Jan 2013 → Jun 2026 — an unbroken 13.5-year monthly panel**, text-
+  native (`pdftotext -layout` gives clean aligned tables), ~75 MB total. Zero overlap with `au-visas`
+  (lawful visa holders), `au-imprisonment` (ABS criminal justice) or `au-arrivals` — different
+  populations under different legal regimes, and nothing in the fleet carries facility, detention
+  group, s501 character cancellation or length of detention. **TRAPS:** (a) **PDF-only** — no CSV,
+  XLSX, JSON or API at any layer; data.gov.au has nothing. Budget for a scraper, not a download.
+  (b) **Table numbers drift — parse by table TITLE, never by number.** Nationality is Table 5 in
+  2017–2021 and Table 6 from 2022; length-of-time is Table 8 then Table 9; Dec-2017 skips Table 4
+  entirely. A number-anchored parser reads the wrong table for whole multi-year eras and produces
+  plausible, wrong numbers. (c) **Suppression is interval masking, not a `<5` flag** — observed
+  `<5, <10, <15, <30, <40, <50, <55, <70, <85, <100` and even `<210`. `<85` means roughly 80–85.
+  Treating any `<N` as 0 or as N corrupts every aggregate; the Total row is published **exact** even
+  when components are masked, which gives a free reconciliation anchor.
+
+- **DEFERRED, verified — APRA Monthly ADI Statistics (`au-banks`).** Genuinely distinct from
+  `au-branches` (which maps physical locations): this is the **balance sheet per bank per month**.
+  **CC BY 3.0**, stated in the workbook's own Notes sheet. Downloaded and parsed, not merely HEADed:
+  sheet "Table 1" is a tidy long table, **11,003 rows × 30 cols = 297,081 data points, 88 monthly
+  periods (2019-03 → 2026-06), 144 distinct ABNs, 27 balance-sheet measures** — household deposits,
+  owner-occupied vs investment housing loans, credit cards, business lending. A legacy MBS file adds
+  12,424 × 38 back to 2002. **TRAPS:** (a) **The back-series URL carries the period in both the
+  directory and the filename and changes every month — and old editions keep returning 200**, so a
+  hardcoded URL never 404s loudly, it silently serves stale data forever. Scrape the landing page for
+  the `back-series` href and **fail hard on zero or more than one match**. (b) **Row 1 is a units row
+  (`($million)`), not the header** — the real header is row 2, data starts row 3; a naive `header=0`
+  read yields one column named `($million)` and 29 unnamed ones. (c) Blank ≠ zero, and the blanks are
+  concentrated — the Notes sheet says so explicitly.
+
+- **DEFERRED, verified — Fisheries and aquaculture (`au-fisheries`).** Stronger than it looked;
+  **CC BY 4.0** on all pillars, read from the workbook's own Index sheet (DOI 10.25814/9vwb-nc60).
+  Four independent verified sources: ABARES AFAS statistical tables (818 KB XLSX, 20 sheets, 27 year
+  columns 1998-99 → 2024-25p, Table 17 back to 1989-90, ~124 species/commodity labels with **both**
+  value and quantity), AFMA catch & effort on data.gov.au (18,232-row annual logbook CSV, 19 fisheries
+  × 8 gears), and the Fishery Status Reports stock classifications, which turned out to be machine-
+  extractable rather than dashboard-only. **TRAPS:** (a) **A verified column transposition in the
+  source** — 79 of 529 effort rows (15%) have BOATS and YEAR swapped, all in the HMI and MID fisheries
+  (Heard & McDonald, Macquarie Island). It is present in the source XLSX too, so re-downloading the
+  other format does not fix it. Guard by asserting every YEAR is a 4-digit in-range value; do **not**
+  hardcode the two fishery codes, the swap could move. Unhandled, those two fisheries vanish from
+  every time series and phantom "year 1" rows appear. (b) Vocabulary split by case — `Pots and traps`
+  (19 rows) and `Pots and Traps` (11 rows) in the same column; a GROUP BY renders one gear as two.
+
+- **DEFERRED with a licence decision to make first — AMSA vessel traffic (`au-vessel-traffic`).**
+  Outstanding data, but **CC BY-NC (Non-Commercial)** — a first for this fleet, so it needs a
+  conscious call, not a default. Verified end to end: 327 downloadable items 1999 → Jul 2026, AUSREP
+  ship positions 1999–2011 then **CTS monthly AIS shapefiles from Sep 2012, at ~2.6–2.9 million
+  position reports per month** (Jul 2026 = 2,926,742, measured). The other three AMSA strands the
+  original candidate proposed are **dead as bulk data**: marine incident reports are PDF-only (the
+  landing URL 404s), SAR incidents stop at 2019-20 as one HTML table per year, and port State control
+  is ~40 HTML pages with no CSV or API. **TRAPS:** (a) **Schema drift between consecutive months** —
+  June 2026 has 11 DBF fields including a leading OBJECTID with `craft_id` as `N(11,0)` and record
+  length 261; July 2026 has 10 fields, no OBJECTID, `craft_id` as `F(19,11)` written in **scientific
+  notation** (`3.29125750230e+10`), record length 228. Same dataset, adjacent months. Parse by DBF
+  field descriptor name every time; never cache a layout. (b) That typing bug means **83.54% of June
+  2026 rows have a blank `craft_id`** (2,452,941 of 2,936,215) against 0 of 2,926,742 in July.
+
+- **DO-NOT-BUILD — NSW land values and property sales, killed on licence (2026-08-27).** Property
+  Sales Information is **CC BY-NC-ND 4.0**, stated verbatim on the live portal. The **ND
+  (NoDerivatives)** term forbids distributing a reformatted version, which is precisely what parsing
+  the `.DAT` files into a site would be. Both halves of the split licence are blocked. This
+  independently reproduces the same conclusion reached on 2026-08-26; do not re-litigate.
+
+- **DO-NOT-BUILD — ACARA per-school data, killed on licence (2026-08-27).** School Profile, School
+  Location and Enrolments by Grade are published under the My School terms of use, which permit
+  reproduction **only for personal, non-commercial use** (cl 6.1, 6.4, 7.1(a)). They are not open
+  data, whatever the Data Access Program page suggests. `au-unis` remains the fleet's education-
+  statistics site; schools are not available.
+
+- **CONFIRMED REJECTION — AIHW Specialist Homelessness Services.** Independently re-researched this
+  round and the 2026-08-24 rejection reproduced in full: the licence (CC BY 4.0) is clean, but the
+  build cost and the pre-aggregated ceiling are unchanged. Marker retained; do not re-research a
+  third time.
+
+- **PROCESS NOTE for the routine itself — check the licence BEFORE building, not after.**
+  This round built a complete site, including a full 359,829-record historical pull, and only then
+  discovered that `robots.txt` disallowed the acquisition path and that the Terms of Use contain a
+  clause reading against republication. Roughly an hour of collection and the whole front end were
+  written before the blocking question was even asked. **Step 2 of the routine should require
+  fetching `/robots.txt` and reading the terms of use in full as part of idea verification**, with
+  an explicit "may this be republished, and may it be retrieved this way" gate that must pass before
+  Step 3 (Design & Plan) starts. Every candidate researched in a workflow this round *was* licence-
+  checked up front — the one that got built was the one taken from a prior round's brief, which had
+  recorded the CC BY 3.0 AU grant but had not checked robots.txt or read past clause 5.1.
