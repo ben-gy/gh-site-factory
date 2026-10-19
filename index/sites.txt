@@ -1,7 +1,11 @@
 gh-site-factory — Project Index
-Last updated: 2026-08-25
+Last updated: 2026-10-20
 
 === Web Sites ===
+
+Huttese
+  https://huttese.benrichardson.dev
+  Learn the language of Jabba the Hutt — lessons with Hutt script, pronunciation and audio.
 
 Air Episodes (AU)
   https://au-air-episodes.benrichardson.dev

@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-08-25",
+  "last_updated": "2026-10-20",
   "sites": [
+    {
+      "name": "Huttese",
+      "slug": "huttese",
+      "icon": "languages",
+      "category": "fun",
+      "description": "Learn Huttese, the language of Jabba the Hutt — bite-sized lessons with Hutt script, pronunciation and audio, from words fact-checked against Ben Burtt's Galactic Phrase Book and the films.",
+      "url": "https://huttese.benrichardson.dev",
+      "repo": "https://github.com/ben-gy/huttese",
+      "tags": [
+        "language-learning",
+        "star-wars",
+        "education",
+        "game"
+      ],
+      "type": "web",
+      "date": "2026-10-20"
+    },
     {
       "name": "Air Episodes",
       "slug": "au-air-episodes",

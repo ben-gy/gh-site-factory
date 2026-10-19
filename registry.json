@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-08-27",
+  "last_updated": "2026-10-20",
   "sites": [
     {
       "name": "au-fuel-prices",
@@ -1353,6 +1353,24 @@
       "repo_url": null,
       "blocked_reason": "Built and tested (138/138 passing) but deliberately NOT published. GrantConnect's robots.txt disallows /Reports/* — the only bulk-acquisition path — and its Terms of Use grant CC BY 3.0 AU (cl. 5.1) while cl. 5.5(a)(ii) forbids reformatting the site's information on another website, with no precedence clause between them. No repo, DNS, Pages config or directory entry was created. Resolve with grantconnect@finance.gov.au (the address ToU cl. 5.3 nominates) before deploying. Full detail and the three questions: sites/2026-08-26-au-grants/DEPLOYMENT-HOLD.md",
       "local_path": "sites/2026-08-26-au-grants"
+    },
+    {
+      "name": "huttese",
+      "repo": "ben-gy/huttese",
+      "date": "2026-10-20",
+      "description": "Learn Huttese, the language of Jabba the Hutt — bite-sized lessons with Hutt script, pronunciation and audio, from words fact-checked against Ben Burtt's Galactic Phrase Book and the films.",
+      "category": "education",
+      "stack": "astro",
+      "data_strategy": "static",
+      "data_sources": [
+        "Ben Burtt, Galactic Phrase Book & Travel Guide (2001), via Wookieepedia",
+        "Star Wars film dialogue and subtitles",
+        "Leland Chee's Huttese cheat sheet (Lucasfilm Story Group, 2023)"
+      ],
+      "status": "deployed",
+      "url": "https://huttese.benrichardson.dev",
+      "repo_url": "https://github.com/ben-gy/huttese",
+      "note": "Hand-built outside the factory routine; added to the index by request."
     }
   ]
 }
